@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #8aabd9 0%, #a0bbe2 5%, #a0bbe2 95%, #8aabd9 100%);
+    background-image: linear-gradient(to right, #71757d 0%, gray 5%, gray 95%, #71757d 100%);
     font-family: Helvetica, Arial, sans-serif;
     color: black;
     margin: 0;
@@ -118,7 +118,7 @@ header {
 /*/////////*/
 
 .index-servicios>h1 {
-    background-color: #c71f16;
+    background-color: #eff3f4;
     padding: 1em 0;
     margin: 0;
     text-align: center;
@@ -132,7 +132,7 @@ header {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    background-color: #c71f16;
+    background-color: #eff3f4;
 }
 
 .index-servicios-celda {
@@ -143,7 +143,7 @@ header {
     margin: 2em 6em;
     padding: 0 1em;
     border-radius: 0.5em;
-    background-image: linear-gradient(to right, #fd746c 0%, #ff9068 51%, #fd746c 100%);
+    background-image: linear-gradient(to right, #e2e9eb 0%, #eff3f4 51%, #e2e9eb 100%);
     box-shadow: 0.1em 0.1em 0.5em #124;
     font-size: 0.7em;
 }
