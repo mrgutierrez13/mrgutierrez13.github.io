@@ -5,6 +5,16 @@
 </head>
 
 <body>
+    <div class="modal" id="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-body">
+            <button class="modal-close" id="close">
+                <span class="sr-only">cerrar</span>
+            </button>
+            <h2>NOTICIA IMPORTANTE</h2>
+            <p>Esta noticia deberia interesarte!</p>
+        </div>
+    </div>
     <div class="icon-bar">
         <a class="facebook" href="http://facebook.com"><img src="images/link_facebook.svg"></a>
         <a class="twitter" href="http://twitter.com"><img src="images/link_twitter.svg"></a>
@@ -72,20 +82,20 @@
         </nav>
         <div class="container">
             <div class="box">
-              <img src="https://source.unsplash.com/1000x800">
-              <span>NOTICIA 1</span>
+                <img src="https://source.unsplash.com/1000x800">
+                <span>NOTICIA 1</span>
             </div>
             <div class="box">
-              <img src="https://source.unsplash.com/1000x802">
-              <span>NOTICIA 2</span>
+                <img src="https://source.unsplash.com/1000x802">
+                <span>NOTICIA 2</span>
             </div>
             <div class="box">
-              <img src="https://source.unsplash.com/1000x804">
-              <span>NOTICIA 3</span>
+                <img src="https://source.unsplash.com/1000x804">
+                <span>NOTICIA 3</span>
             </div>
             <div class="box">
-              <img src="https://source.unsplash.com/1000x806">
-              <span>NOTICIA 4</span>
+                <img src="https://source.unsplash.com/1000x806">
+                <span>NOTICIA 4</span>
             </div>
         </div>
         <div class="index-servicios" id="index-servicios">
@@ -197,7 +207,7 @@
                     <li>Calidad duradera</li>
                     <li>Recuerdo Boliviano</li>
                 </ul>
-                <img  src="images/img1.jpg">
+                <img src="images/img1.jpg">
             </div>
             <div class="index-oferta-celda">
                 <h2>Cuero</h2>
@@ -386,7 +396,7 @@
                     <a href="http://www.investmentmap.org/">Investment Map</a>
                     <a href="http://www.macmap.org/">Market Access Map</a>
                     <a href="http://www.p-maps.org/">Product Map</a>
-                    <a href="http://www.trademap.org/">Trade Map</a>   
+                    <a href="http://www.trademap.org/">Trade Map</a>
                 </div>
             </nav>
         </div>
@@ -396,4 +406,18 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript">
+        var button = document.getElementById('close');
+      var modal = document.getElementById('modal');
+      
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        modal.style.display = 'none';
+      });
+      
+      close.addEventListener('click', function(event) {
+        event.preventDefault();
+        modal.style.display = 'block';
+      });
+      </script>
 </body>

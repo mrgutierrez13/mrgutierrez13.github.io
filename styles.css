@@ -31,6 +31,57 @@ header {
     line-height: 0%;
 }
 
+/*modal*/
+.modal {
+    display: block;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-body {
+    position: fixed;
+    top: 3em;
+    bottom: 3em;
+    right: 20%;
+    left: 20%;
+    padding: 2em 3em;
+    background-color: white;
+    overflow: auto;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.3em;
+    font-size: 2em;
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+    border: 0;
+  }
+  .modal-close::before {
+    display: block;
+    content: '\00D7';
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+  }
+
+
 /*redes sociales*/
 
 .icon-bar {
