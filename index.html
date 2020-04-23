@@ -5,6 +5,13 @@
 </head>
 
 <body>
+    <div class="icon-bar">
+        <a class="facebook" href="http://facebook.com"><img src="images/link_facebook.svg"></a>
+        <a class="twitter" href="http://twitter.com"><img src="images/link_twitter.svg"></a>
+        <a class="youtube" href="http://youtube.com"><img src="images/link_youtube.svg"></a>
+        <a class="google" href="http://google.com"><img src="images/link_google.svg"></a>
+        <a class="linkedin" href="http://linkedin.com"><img src="images/link_linkedin.svg"></a>
+    </div>
     <div class="contenedor">
         <header>
             <img src="images/front2.jpg" class="img-principal" alt="Imagen frontal">
@@ -26,11 +33,13 @@
                 <div class="dropdown-nombre">INFORMACIÓN</div>
                 <div class="dropdown-menu">
                     <ul class="submenu">
-                        <li><a href="/informacion.html/#informacion-resoluciones">Resoluciones</a></li>
+                        <li><a href="/informacion.html/#informacion-guia">Guia del Exportador</a></li>
                         <li><a href="/informacion.html/#informacion-boletines">Boletines Informativos</a></li>
-                        <li><a href="/informacion.html/#informacion-fideicomisos">Fideicomisos</a></li>
                         <li><a href="/informacion.html/#informacion-normativa">Normativa</a></li>
                         <li><a href="/informacion.html/#informacion-sprocon">SPROCON</a></li>
+                        <li><a href="/informacion.html/#informacion-fideicomisos">Fideicomisos</a></li>
+                        <li><a href="/informacion.html/#brokers">Directorio de Brokers</a></li>
+                        <li><a href="/informacion.html/#proveedores">Directorio de Proveedores</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,30 +47,47 @@
                 <div class="dropdown-nombre">SERVICIOS</div>
                 <div class="dropdown-menu">
                     <ul class="submenu">
+                        <li><a href="/oferta_exportable.html">Oferta Exportable</a></li>
+                        <li><a href="/mapa_georeferencial.html">Mapas Georeferencial</a></li>
                         <li><a href="/consulta_dinamica.html">Consulta Dinamica</a></li>
-                        <li><a href="/brokers.html">Directorio de Brokers</a></li>
-                        <li><a href="/proveedores.html">Directorio de Proveedores</a></li>
-                        <li><a href="/mapas_descriptivos.html">Mapas Descriptivos</a></li>
                         <li><a href="/simulador_logistico.html">Simulador Logisitico</a></li>
                         <li><a href="/estadisticas.html">Estadisiticas</a></li>
                     </ul>
                 </div>
             </div>
             <div class="dropdown">
-                <div class="dropdown-nombre">INSTITUCIÓN</div>
+                <div class="dropdown-nombre">INSTITUCIONAL</div>
                 <div class="dropdown-menu">
                     <ul class="submenu">
-                        <li><a href="/institucion.html/#mision">Mision y Vision</a></li>
-                        <li><a href="/institucion.html/#trayectoria">Trayecyoria</a></li>
-                        <li><a href="/institucion.html/#organigrama">Organigrama</a></li>
+                        <li><a href="/institucion.html/#quien">¿Quiénes somos?</a></li>
+                        <li><a href="/institucion.html/#mision">Misión y Visión</a></li>
                         <li><a href="/institucion.html/#objetivos">Objetivos Institucionales</a></li>
-                        <li><a href="/institucion.html/#estructura">Estructura</a></li>
+                        <li><a href="/institucion.html/#organizacion">Organización</a></li>
                     </ul>
                 </div>
             </div>
             <a href="/asesora.html">VCI TE ASESORA</a>
-            <a class="navegador-buscar">Buscar</a>
+            <input type="text" placeholder="Buscar..">
+            <button type="submit"><img src="images/buscar.svg"></button>
         </nav>
+        <div class="container">
+            <div class="box">
+              <img src="https://source.unsplash.com/1000x800">
+              <span>NOTICIA 1</span>
+            </div>
+            <div class="box">
+              <img src="https://source.unsplash.com/1000x802">
+              <span>NOTICIA 2</span>
+            </div>
+            <div class="box">
+              <img src="https://source.unsplash.com/1000x804">
+              <span>NOTICIA 3</span>
+            </div>
+            <div class="box">
+              <img src="https://source.unsplash.com/1000x806">
+              <span>NOTICIA 4</span>
+            </div>
+        </div>
         <div class="index-servicios" id="index-servicios">
             <h1>SERVICIOS DE AYUDA AL EXPORTADOR</h1>
             <div class="index-servicios-contenedor">
@@ -73,21 +99,14 @@
                     </a>
                 </div>
                 <div class="index-servicios-celda">
-                    <h1>DIRECTORIO DE BROKERS</h1>
+                    <h1>OFERTA EXPORTABLE</h1>
                     <a href="http://siip.produccion.gob.bo/repSIIP2/">
-                        <img src="images/broker.svg" alt="directorio brokers">
+                        <img src="images/oferta.svg" alt="oferta exportable">
                         <h2>INGRESAR</h2>
                     </a>
                 </div>
                 <div class="index-servicios-celda">
-                    <h1>DIRECTORIO DE PROVEEDORES</h1>
-                    <a href="http://vcie.produccion.gob.bo/siexco/web/app.php/portal">
-                        <img src="images/proveedor.svg" alt="directorio proveedores">
-                        <h2>INGRESAR</h2>
-                    </a>
-                </div>
-                <div class="index-servicios-celda">
-                    <h1>MAPAS DESCRIPTIVOS</h1>
+                    <h1>MAPA GEOREFERENCIAL</h1>
                     <a href="http://vcie.produccion.gob.bo/siexco/web/app.php/portal">
                         <img src="images/mapa_desc.svg" alt="mapas descriptivos">
                         <h2>INGRESAR</h2>
@@ -178,7 +197,7 @@
                     <li>Calidad duradera</li>
                     <li>Recuerdo Boliviano</li>
                 </ul>
-                <img src="images/img1.jpg">
+                <img  src="images/img1.jpg">
             </div>
             <div class="index-oferta-celda">
                 <h2>Cuero</h2>
@@ -245,33 +264,33 @@
                     Instituciones Públicas
                 </button>
                 <div class="menu-dropdown">
-                    <a href="http://www.produccion.gob.bo/">Ministerio de Desarrollo Productivo y Economía Plural</a>
-                    <a href="http://www.ruralytierras.gob.bo/">Ministerio de Desarrollo Rural y Tierras</a>
-                    <a href="http://www.mmaya.gob.bo/">Ministerio de Medio Ambiente y Agua</a>
-                    <a href="http://www.hidrocarburos.gob.bo/">Ministerio de Hidrocarburos y Energía</a>
-                    <a href="http://www.mineria.gob.bo/">Ministerio de Minería y Metalurgia</a>
-                    <a href="http://www.rree.gob.bo/">Ministerio de Relaciones Exteriores</a>
-                    <a href="http://www.cancilleria.gob.bo/node/91">Viceministerio de Comercio Exterior e
-                        Integración</a>
-                    <a href="http://www.oopp.gob.bo/">Viceministerio de Transporte</a>
                     <a href="http://www.aspb.gob.bo/">Administración de Servicios Portuarios-Bolivia (ASP-B)</a>
                     <a href="http://www.aduana.gob.bo/aduana7/">Aduana Nacional (AN)</a>
+                    <a href="http://www.autoridadempresas.gob.bo/">Autoridad de Fiscalización y Control Social de
+                        Empresas (AEMP)</a>
                     <a href="http://www.emapa.gob.bo/">Empresa de Apoyo a la Producción de Alimentos (EMAPA)</a>
                     <a href="http://www.fundempresa.org.bo/">Fundempresa</a>
+                    <a href="http://www.ine.gob.bo/">Instituto Nacional de Estadística (INE)</a>
+                    <a href="http://www.ibmetro.gob.bo/">Instituto Boliviano de Metrología (IBMETRO)</a>
                     <a href="http://www.insumosbolivia.gob.bo/">INSUMOS Bolivia</a>
+                    <a href="http://www.produccion.gob.bo/">Ministerio de Desarrollo Productivo y Economía Plural</a>
+                    <a href="http://www.ruralytierras.gob.bo/">Ministerio de Desarrollo Rural y Tierras</a>
+                    <a href="http://www.hidrocarburos.gob.bo/">Ministerio de Hidrocarburos y Energía</a>
+                    <a href="http://www.mmaya.gob.bo/">Ministerio de Medio Ambiente y Agua</a>
+                    <a href="http://www.mineria.gob.bo/">Ministerio de Minería y Metalurgia</a>
+                    <a href="http://www.rree.gob.bo/">Ministerio de Relaciones Exteriores</a>
                     <a href="http://observatorio.agrobolivia.gob.bo/">Observatorio Agroambiental y Productivo (OAP)</a>
                     <a href="http://www.probolivia.gob.bo/">PRO Bolivia</a>
                     <a href="http://www.senapi.gob.bo/">Servicio Nacional de Propiedad Intelectual (SENAPI)</a>
                     <a href="http://www.sedem.gob.bo/">Servicio de Desarrollo de las Empresas Públicas Productivas
                         (SEDEM)</a>
-                    <a href="http://www.ibmetro.gob.bo/">Instituto Boliviano de Metrología (IBMETRO)</a>
-                    <a href="http://www.autoridadempresas.gob.bo/">Autoridad de Fiscalización y Control Social de
-                        Empresas (AEMP)</a>
                     <a href="http://www.senasag.gob.bo/">Servicio Nacional de Sanidad Agropecuaria e Inocuidad
                         Alimentaria (SENASAG)</a>
                     <a href="http://www.senavex.gob.bo/">Servicio Nacional de Verificación de Exportaciones
                         (SENAVEX)</a>
-                    <a href="http://www.ine.gob.bo/">Instituto Nacional de Estadística (INE)</a>
+                    <a href="http://www.cancilleria.gob.bo/node/91">Viceministerio de Comercio Exterior e
+                        Integración</a>
+                    <a href="http://www.oopp.gob.bo/">Viceministerio de Transporte</a>
                 </div>
             </nav>
             <nav class="index-enlaces-menu">
@@ -326,8 +345,9 @@
                     Agencias de Promoción de Exportación
                 </button>
                 <div class="menu-dropdown">
-                    <a href="http://www.exportar.org.ar/web2013/">EXPORTAR Argentina</a>
                     <a href="http://www.apexbrasil.com.br/home/index">APEX Brasil</a>
+                    <a href="http://www.avex.com.ve/">Asociación Venezolana de Exportaciones</a>
+                    <a href="http://www.exportar.org.ar/web2013/">EXPORTAR Argentina</a>
                     <a href="http://www.prochile.gob.cl/">PRO Chile</a>
                     <a href="http://www.procolombia.co/red-de-oficinas/suramerica/chile/">PRO Colombia</a>
                     <a href="http://www.proecuador.gob.ec/">PRO Ecuador</a>
@@ -335,7 +355,6 @@
                     <a href="http://www.promexico.gob.mx/">PRO México</a>
                     <a href="http://www.rediex.gov.py/"> Red de Inversiones y Exportaciones (REDIEX)</a>
                     <a href="http://www.uruguayxxi.gub.uy/">Uruguay XXI</a>
-                    <a href="http://www.avex.com.ve/">Asociación Venezolana de Exportaciones</a>
                 </div>
             </nav>
             <nav class="index-enlaces-menu">
@@ -364,15 +383,15 @@
                     Información de Comercio Exterior
                 </button>
                 <div class="menu-dropdown">
-                    <a href="http://www.p-maps.org/">Product Map</a>
-                    <a href="http://www.trademap.org/">Trade Map</a>
-                    <a href="http://www.macmap.org/">Market Access Map</a>
                     <a href="http://www.investmentmap.org/">Investment Map</a>
+                    <a href="http://www.macmap.org/">Market Access Map</a>
+                    <a href="http://www.p-maps.org/">Product Map</a>
+                    <a href="http://www.trademap.org/">Trade Map</a>   
                 </div>
             </nav>
         </div>
         <footer>
-            <text>Copyright © 2020 VCIE por SIEXCO. Todos los derechos Reservados</text>
+            <text>Viceministerio de Comercio e Imporatciones &nbsp;&nbsp; VCI 2020</text>
             <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0
             </div>
         </footer>
