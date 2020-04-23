@@ -366,7 +366,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     align-items: center;
-    background-color: #13aec0;
+    background-color: #55acee;
     color: white;
     gap: 2em;
     padding: 3em 4em;
