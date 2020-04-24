@@ -11,8 +11,7 @@
             <button class="modal-close" id="close">
                 <span class="sr-only">cerrar</span>
             </button>
-            <h2>NOTICIA IMPORTANTE</h2>
-            <p>Esta noticia deberia interesarte!</p>
+            <a class="modal-noticia" href="https://www.boliviasegura.gob.bo/"><img src="images/Banner-minimo.png"></a>
         </div>
     </div>
     <div class="icon-bar">
@@ -32,10 +31,10 @@
                 <div class="dropdown-menu">
                     <ul class="submenu">
                         <li><a href="#index-servicios">Lista de Servicios</a></li>
-                        <li><a href="#index-entidades">Entidades Relacionadas</a></li>
                         <li><a href="#index-guia">Guia del Exportador</a></li>
                         <li><a href="#index-oferta">Oferta Exportable</a></li>
                         <li><a href="#index-enlaces">Enlaces</a></li>
+                        <li><a href="#index-entidades">Entidades Relacionadas</a></li>
                     </ul>
                 </div>
             </div>
@@ -138,51 +137,6 @@
                 </div>
             </div>
         </div>
-        <div class="index-entidades" id="index-entidades">
-            <h1>ENTIDADES RELACCIONADAS</h1>
-            <div class="contenedor-entidades">
-                <div class="index-entidades-agencia">
-                    <a href="http://www.probolivia.gob.bo/">
-                        <img src="images/logo_probolivia_min.png">
-                    </a>
-                </div>
-                <div class="index-entidades-agencia">
-                    <a href="http://www.sedem.gob.bo/">
-                        <img src="images/Sedem_4_web_2.png">
-                    </a>
-                </div>
-                <div class="index-entidades-agencia">
-                    <a href="http://www.senavex.gob.bo/">
-                        <img src="images/logo_senavex_min.png">
-                    </a>
-                </div>
-                <div class="index-entidades-agencia">
-                    <a href="http://www.emapa.gob.bo/">
-                        <img src="images/EMAPA-min-1-1024x1024.jpg">
-                    </a>
-                </div>
-                <div class="index-entidades-agencia">
-                    <a href="http://www.senapi.gob.bo/">
-                        <img src="images/logo_senapi_min.png">
-                    </a>
-                </div>
-                <div class="index-entidades-agencia">
-                    <a href="http://www.insumosbolivia.gob.bo/">
-                        <img src="images/logo_insumos_min.png">
-                    </a>
-                </div>
-                <div class="index-entidades-agencia">
-                    <a href="http://www.aduana.gob.bo/aduana7/">
-                        <img src="images/logo_aduana.png">
-                    </a>
-                </div>
-                <div class="index-entidades-agencia">
-                    <a href="http://www.aspb.gob.bo/">
-                        <img src="images/logoaspbmini.png">
-                    </a>
-                </div>
-            </div>
-        </div>
         <div class="index-guia" id="index-guia">
             <a class="index-guia-portada"
                 href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/guiaExport/guiaExport2017.pdf">
@@ -201,7 +155,7 @@
             <h1>OFERTA EXPORTABLE</h1>
             <div class="index-oferta-celda">
                 <h2>Artesania y Ceramica</h2>
-                <ul>
+                <ul class="lista-artesania">
                     <li>Recuerdo Boliviano</li>
                     <li>Hecho a mano</li>
                     <li>Calidad duradera</li>
@@ -211,7 +165,7 @@
             </div>
             <div class="index-oferta-celda">
                 <h2>Cuero</h2>
-                <ul>
+                <ul class="lista-cuero">
                     <li>Material de primera</li>
                     <li>Resistente</li>
                     <li>Prendas de vestir con calidad</li>
@@ -221,7 +175,7 @@
             </div>
             <div class="index-oferta-celda">
                 <h2>Cereales Andinos</h2>
-                <ul>
+                <ul class="lista-cereales">
                     <li>Alimentos nutritivos</li>
                     <li>Sabor unico</li>
                     <li>Variedad de proteinas</li>
@@ -231,7 +185,7 @@
             </div>
             <div class="index-oferta-celda">
                 <h2>Madera y sus Manufacturas</h2>
-                <ul>
+                <ul class="lista-madera">
                     <li>De primera calidad</li>
                     <li>Variedad de modelos</li>
                     <li>El mejor acabado</li>
@@ -241,7 +195,7 @@
             </div>
             <div class="index-oferta-celda">
                 <h2>Textiles y sus manufacturas</h2>
-                <ul>
+                <ul class="lista-textiles">
                     <li>Prendas de calidad</li>
                     <li>Ropa de trabajo</li>
                     <li>Tejidos de camelidos</li>
@@ -250,7 +204,7 @@
             </div>
             <div class="index-oferta-celda">
                 <h2>Servicios</h2>
-                <ul>
+                <ul class="lista-servicios">
                     <li>Implementación de soluciones</li>
                     <li>Asistencia virtual</li>
                     <li>Software personalizado</li>
@@ -259,7 +213,7 @@
             </div>
             <div class="index-oferta-celda">
                 <h2>Materiales de construcción</h2>
-                <ul>
+                <ul class="lista-construccion">
                     <li>Ladrillos de construccion</li>
                     <li>Viguetas pretensadas</li>
                     <li>Piso ceramico esmaltado</li>
@@ -400,8 +354,53 @@
                 </div>
             </nav>
         </div>
+        <div class="index-entidades" id="index-entidades">
+            <h1>ENTIDADES RELACCIONADAS</h1>
+            <div class="contenedor-entidades">
+                <div class="index-entidades-agencia">
+                    <a href="http://www.probolivia.gob.bo/">
+                        <img src="images/logo_probolivia_min.png">
+                    </a>
+                </div>
+                <div class="index-entidades-agencia">
+                    <a href="http://www.sedem.gob.bo/">
+                        <img src="images/Sedem_4_web_2.png">
+                    </a>
+                </div>
+                <div class="index-entidades-agencia">
+                    <a href="http://www.senavex.gob.bo/">
+                        <img src="images/logo_senavex_min.png">
+                    </a>
+                </div>
+                <div class="index-entidades-agencia">
+                    <a href="http://www.emapa.gob.bo/">
+                        <img src="images/EMAPA-min-1-1024x1024.jpg">
+                    </a>
+                </div>
+                <div class="index-entidades-agencia">
+                    <a href="http://www.senapi.gob.bo/">
+                        <img src="images/logo_senapi_min.png">
+                    </a>
+                </div>
+                <div class="index-entidades-agencia">
+                    <a href="http://www.insumosbolivia.gob.bo/">
+                        <img src="images/logo_insumos_min.png">
+                    </a>
+                </div>
+                <div class="index-entidades-agencia">
+                    <a href="http://www.aduana.gob.bo/aduana7/">
+                        <img src="images/logo_aduana.png">
+                    </a>
+                </div>
+                <div class="index-entidades-agencia">
+                    <a href="http://www.aspb.gob.bo/">
+                        <img src="images/logoaspbmini.png">
+                    </a>
+                </div>
+            </div>
+        </div>
         <footer>
-            <text>Viceministerio de Comercio e Imporatciones &nbsp;&nbsp; VCI 2020</text>
+            <text>Viceministerio de Comercio Interno&nbsp;&nbsp; VCI 2020</text>
             <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0
             </div>
         </footer>

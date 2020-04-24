@@ -20,8 +20,8 @@ img {
 .contenedor {
     display: grid;
     grid-template-rows: repeat(9, auto);
-    grid-template-areas: "frente" "nav" "noti" "serv" "entidades" "guia" "oferta" "enlaces" "pie";
-    max-width: 1230px;
+    grid-template-areas: "frente" "nav" "noti" "serv" "guia" "oferta" "enlaces" "entidades" "pie";
+    max-width: 1440px;
     margin: 0 auto;
     box-shadow: 0.1em 0.1em 1.5em #124;
 }
@@ -31,32 +31,32 @@ header {
     line-height: 0%;
 }
 
-/*modal*/
+/*modal NOTICIA IMPORTANTE*/
 .modal {
     display: block;
   }
 
-  .modal-backdrop {
+.modal-backdrop {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-  }
+    z-index: 2;
+}
 
-  .modal-body {
+.modal-body {
     position: fixed;
-    top: 3em;
-    bottom: 3em;
-    right: 20%;
-    left: 20%;
-    padding: 2em 3em;
+    top: 5%;
+    right: 5%;
+    left: 5%;
     background-color: white;
     overflow: auto;
-  }
+    z-index: 3;
+}
 
-  .modal-close {
+.modal-close {
     position: absolute;
     top: 0;
     right: 0;
@@ -66,20 +66,21 @@ header {
     width: 1.5em;
     cursor: pointer;
     border: 0;
-  }
-  .modal-close::before {
+}
+
+.modal-close::before {
     display: block;
     content: '\00D7';
-  }
+}
 
-  .sr-only {
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
-  }
+}
 
 
 /*redes sociales*/
@@ -88,9 +89,7 @@ header {
     position: fixed;
     top: 50%;
     width: 3em;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    z-index: 1;
   }
   
   /* Style the icon bar links */
@@ -147,9 +146,8 @@ header {
     grid-auto-rows: 3em;
     align-items: center;
     text-align: center;
-    background-color: #222533;
-    padding: 1em 0;
-    background-image: linear-gradient(to right, #1F1C2C 0%, rgb(49, 48, 58) 51%, #1F1C2C 100%)
+    background-color: rgb(68, 68, 73);
+    padding: 0.2em 0;
 }
 
 .navegador>a {
@@ -243,7 +241,7 @@ header {
     width: 100%;
     padding: 4% 2%;
     box-sizing: border-box;
-    height: 50vh;
+    height: 70vh;
     background-color: white;
   }
   
@@ -294,8 +292,8 @@ header {
 .index-servicios-contenedor {
     grid-area: serv;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
-    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 1em;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
@@ -307,7 +305,7 @@ header {
     grid-template-rows: 2fr 6fr 1fr;
     background-color: white;
     align-items: center;
-    margin: 2em 6em;
+    margin: 2em 2em;
     padding: 0 1em;
     border-radius: 0.5em;
     background-image: linear-gradient(to right, #e2e9eb 0%, #eff3f4 51%, #e2e9eb 100%);
@@ -369,11 +367,13 @@ header {
     background-color: #55acee;
     color: white;
     gap: 2em;
-    padding: 3em 4em;
+    padding: 6em 8em;
 }
 
 .index-guia-portada {
-    box-shadow: 0.1em 0.1em 2.5em #124;
+    box-shadow: 0.1em 0.1em .5em #124;
+    line-height: 0;
+    margin-right: 4em;
 }
 
 /*//////*/
@@ -386,7 +386,8 @@ header {
     grid-area: oferta;
     display: grid;
     grid-template-rows: repeat(auto, minmax(15em, 1fr));
-    background-color: #21ac71;
+    background-color: #21ac72d5;
+    color: white;
     gap: 2em;
     text-align: center;
 }
@@ -430,11 +431,10 @@ header {
 
 .index-oferta-celda>ul li {
     position: relative;
-    background-color: whitesmoke;
-    padding: 0.4em 0;
-    border-radius: 0.5em;
-    background-image: linear-gradient(to right, #348F50 0%, #56B4D3 51%, #348F50 100%);
-    box-shadow: 0.1em 0.1em 0.5em #124;
+    color: white;
+    padding: 0.4em 0.3em;
+    border-radius: 0.1em;
+    font-weight: 800;
 }
 
 .index-oferta-celda>ul li:before {
@@ -448,10 +448,37 @@ header {
     background-repeat: no-repeat;
     background-image: url('images/signo_v2.svg');
     background-size: 1.6em;
-    background-color: grey;
+    background-color: white;
     background-position: center;
     border-radius: 0.5em;
-    box-shadow: 0.1em 0.1em 0.5em #124;
+}
+
+.lista-artesania>li{
+    background-color: #feae01;
+}
+
+.lista-cuero>li{
+    background-color: #e6007f;
+}
+
+.lista-cereales>li{
+    background-color: #005da2;
+}
+
+.lista-madera>li{
+    background-color: #51a035;
+}
+
+.lista-textiles>li{
+    background-color: #fff560;
+}
+
+.lista-servicios>li{
+    background-color: #9d1634;
+}
+
+.lista-construccion>li{
+    background-color: #03c7fa;
 }
 
 /*///////*/
