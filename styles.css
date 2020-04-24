@@ -47,14 +47,15 @@ header {
     font-family: "Times New Roman", Times, serif;
     text-transform: uppercase;
     text-shadow: 2px 2px black;
-    align-self: center;
-    font-size: 3em;
+    align-self: flex-end;
+    font-size: 2.7em;
 }
 
 .subtitulo {
     grid-area: subtitulo;
     color: white;
     font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
     text-shadow: 2px 2px black;
     align-self: top;
     font-size: 2em;
@@ -78,9 +79,9 @@ header {
 
 .modal-body {
     position: fixed;
-    top: 5%;
-    right: 5%;
-    left: 5%;
+    top: 10%;
+    right: 10%;
+    left: 10%;
     background-color: white;
     overflow: auto;
     z-index: 3;
@@ -121,8 +122,6 @@ header {
     z-index: 1;
 }
 
-/* Style the icon bar links */
-
 .icon-bar a {
     display: block;
     text-align: center;
@@ -131,8 +130,6 @@ header {
     color: white;
     font-size: 20px;
 }
-
-/* Style the social media icons with color, if you want */
 
 .icon-bar a:hover {
     background-color: white;
@@ -241,7 +238,6 @@ header {
     color: white;
     text-decoration: none;
 }
-
 .navegador input[type=text] {
     padding: 0.8em;
     border: none;
@@ -268,7 +264,6 @@ header {
     grid-area: noti;
     display: flex;
     width: 100%;
-    padding: 4% 2%;
     box-sizing: border-box;
     height: 70vh;
     background-color: white;
@@ -281,6 +276,7 @@ header {
     margin: 0 2%;
     box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
     line-height: 0;
+    margin: 0;
 }
 
 .box>img {
@@ -353,6 +349,7 @@ header {
     width: 75%;
     justify-content: center;
 }
+
 
 /*/////////*/
 
