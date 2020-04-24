@@ -7,7 +7,9 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #71757d 0%, gray 5%, gray 95%, #71757d 100%);
+    background-image: linear-gradient(45deg, transparent 20%, #4b4e54 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, #4b4e54 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, #4b4e54 80%, transparent 0), radial-gradient(#4b4e54 2px, transparent 0);
+    background-size: 30px 30px, 30px 30px;
+    background-color: #606369;
     font-family: Helvetica, Arial, sans-serif;
     color: black;
     margin: 0;
@@ -28,13 +30,41 @@ img {
 
 header {
     grid-area: frente;
-    line-height: 0%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 5fr; /*RESOLUCION LOGO*/
+    grid-template-areas: "logo titulo" 
+                         "logo subtitulo";
+    background-image: url("images/front2.jpg");
+    background-size: cover;
+    height: 224px; /*RESOLUCION DEL LA IMAGEN FRONTAL*/
+    background-repeat: no-repeat;
+}
+
+.titulo {
+    grid-area: titulo;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+    align-self: center;
+    font-size: 3em;
+}
+
+.subtitulo {
+    grid-area: subtitulo;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 2px 2px black;
+    align-self: top;
+    font-size: 2em;
 }
 
 /*modal NOTICIA IMPORTANTE*/
+
 .modal {
     display: block;
-  }
+}
 
 .modal-backdrop {
     position: fixed;
@@ -82,56 +112,56 @@ header {
     overflow: hidden;
 }
 
-
 /*redes sociales*/
 
 .icon-bar {
     position: fixed;
     top: 50%;
-    width: 3em;
+    width: 2.8em;
     z-index: 1;
-  }
-  
-  /* Style the icon bar links */
-  .icon-bar a {
+}
+
+/* Style the icon bar links */
+
+.icon-bar a {
     display: block;
     text-align: center;
-    padding: 0.6em;
+    padding: 0.5em;
     transition: all 0.3s ease;
     color: white;
     font-size: 20px;
-  }
-  
-  /* Style the social media icons with color, if you want */
-  .icon-bar a:hover {
+}
+
+/* Style the social media icons with color, if you want */
+
+.icon-bar a:hover {
     background-color: white;
-  }
-  
-  .facebook {
+}
+
+.facebook {
     background: #3B5998;
     color: white;
-  }
-  
-  .twitter {
+}
+
+.twitter {
     background: #55ACEE;
     color: white;
-  }
-  
-  .google {
+}
+
+.google {
     background: #dd4b39;
     color: white;
-  }
-  
-  .linkedin {
+}
+
+.linkedin {
     background: #007bb5;
     color: white;
-  }
-  
-  .youtube {
+}
+
+.youtube {
     background: #bb0000;
     color: white;
-  }
-
+}
 
 /*/////////*/
 
@@ -226,12 +256,11 @@ header {
     font-size: 1em;
     border: 1px solid blue;
     cursor: pointer;
-  }
-  
+}
+
 .navegador button:hover {
     background: #0b7dda;
-  }
-
+}
 
 /*NOTICIAS*/
 
@@ -243,38 +272,40 @@ header {
     box-sizing: border-box;
     height: 70vh;
     background-color: white;
-  }
-  
-  .box {
+}
+
+.box {
     flex: 1;
     overflow: hidden;
     transition: .5s;
     margin: 0 2%;
-    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
     line-height: 0;
-  }
-  
-  .box > img {
+}
+
+.box>img {
     width: 200%;
     height: calc(100% - 10vh);
-    object-fit: cover; 
+    object-fit: cover;
     transition: .5s;
-  }
-  
-  .box > span {
+}
+
+.box>span {
     font-size: 3.8vh;
     display: block;
     text-align: center;
     height: 10vh;
     line-height: 2.6;
-  }
-  
-  .box:hover { flex: 1 1 50%; }
-  .box:hover > img {
+}
+
+.box:hover {
+    flex: 1 1 50%;
+}
+
+.box:hover>img {
     width: 100%;
     height: 100%;
-  }
-   
+}
 
 /*/////////*/
 
@@ -334,7 +365,7 @@ header {
     display: grid;
     grid-template-areas: "entidades-titulo" "iconos-entidades";
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .index-entidades>h1 {
@@ -346,8 +377,8 @@ header {
 .contenedor-entidades {
     grid-area: iconos-entidades;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-    grid-gap: 4em;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    grid-gap: 2em;
     align-items: center;
     justify-content: space-evenly;
     padding: 0 2em 4em 2em;
@@ -364,7 +395,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     align-items: center;
-    background-color: #55acee;
+    background-color: #55aceebb;
     color: white;
     gap: 2em;
     padding: 6em 8em;
@@ -453,31 +484,31 @@ header {
     border-radius: 0.5em;
 }
 
-.lista-artesania>li{
+.lista-artesania>li {
     background-color: #feae01;
 }
 
-.lista-cuero>li{
+.lista-cuero>li {
     background-color: #e6007f;
 }
 
-.lista-cereales>li{
+.lista-cereales>li {
     background-color: #005da2;
 }
 
-.lista-madera>li{
+.lista-madera>li {
     background-color: #51a035;
 }
 
-.lista-textiles>li{
+.lista-textiles>li {
     background-color: #fff560;
 }
 
-.lista-servicios>li{
+.lista-servicios>li {
     background-color: #9d1634;
 }
 
-.lista-construccion>li{
+.lista-construccion>li {
     background-color: #03c7fa;
 }
 
@@ -489,7 +520,7 @@ header {
 
 .index-enlaces {
     grid-area: enlaces;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     padding-bottom: 2em;
 }
 
@@ -538,6 +569,3 @@ footer {
     padding: 2em;
     line-height: 1.5em;
 }
-  
-  
-  
