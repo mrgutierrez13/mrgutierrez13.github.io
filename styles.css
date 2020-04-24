@@ -31,7 +31,7 @@ img {
 header {
     grid-area: frente;
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 5fr; /*RESOLUCION LOGO*/
     grid-template-areas: "logo titulo" 
                          "logo subtitulo";
@@ -58,7 +58,7 @@ header {
     text-transform: uppercase;
     text-shadow: 2px 2px black;
     align-self: top;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 /*modal NOTICIA IMPORTANTE*/
@@ -319,6 +319,7 @@ header {
 .index-servicios-contenedor {
     grid-area: serv;
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     gap: 1em;
     align-items: center;
