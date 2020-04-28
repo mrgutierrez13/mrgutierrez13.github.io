@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="estilos_base.css">
-    <link rel="stylesheet" href="estilos_oferta.css">
+    <link rel="stylesheet" href="estilos_mapa_geo.css">
 </head>
 
 <body>
@@ -108,75 +108,39 @@
             <button type="submit"><img src="images/buscar.svg"></button>
         </nav>
         <div class="contenido">
-            <div class="index-oferta" id="index-oferta">
-                <h1>OFERTA EXPORTABLE</h1>
-                <div class="index-oferta-celda">
-                    <h2>Artesania y Ceramica</h2>
-                    <ul class="lista-artesania">
-                        <li>Recuerdo Boliviano</li>
-                        <li>Hecho a mano</li>
-                        <li>Calidad duradera</li>
-                        <li>Recuerdo Boliviano</li>
-                    </ul>
-                    <img src="images/img1.jpg">
+            <div class="contenido-mapa-georeferencial">
+                <h1>Consultas a la Oferta Exportable - MAPAS </h1>
+                <h2>Criterios de Búsqueda</h2>
+                <div class="sector-busqueda-contenedor">
+                    <div class="sector-busqueda">
+                        <div class="sector-busqueda-nombre">DEPARTAMENTO</div>
+                        <form>
+                            <textarea id="sector-busqueda-caja" name="sector-busqueda-caja" rows="5"></textarea>
+                        </form>
+                    </div>
+                    <div class="sector-busqueda">
+                        <div class="sector-busqueda-nombre">PRODUCTO / NANDINA</div>
+                        <form>
+                            <textarea id="sector-busqueda-caja" name="sector-busqueda-caja" rows="5"></textarea>
+                        </form>
+                    </div>
+                    <div class="sector-busqueda">
+                        <div class="sector-busqueda-nombre">SECTOR ECONÓMICO</div>
+                        <form>
+                            <textarea id="sector-busqueda-caja" name="sector-busqueda-caja" rows="5"></textarea>
+                        </form>
+                    </div>
+                    <div class="sector-busqueda">
+                        <div class="sector-busqueda-nombre">NOMBRE DE LA EMPRESA</div>
+                        <form>
+                            <textarea id="sector-busqueda-caja" name="sector-busqueda-caja" rows="5"></textarea>
+                        </form>
+                    </div>
                 </div>
-                <div class="index-oferta-celda">
-                    <h2>Cuero</h2>
-                    <ul class="lista-cuero">
-                        <li>Material de primera</li>
-                        <li>Resistente</li>
-                        <li>Prendas de vestir con calidad</li>
-                        <li>Complemanto adecuado</li>
-                    </ul>
-                    <img src="images/img2.jpg">
-                </div>
-                <div class="index-oferta-celda">
-                    <h2>Cereales Andinos</h2>
-                    <ul class="lista-cereales">
-                        <li>Alimentos nutritivos</li>
-                        <li>Sabor unico</li>
-                        <li>Variedad de proteinas</li>
-                        <li>Consumo efectivo</li>
-                    </ul>
-                    <img src="images/img3.jpg">
-                </div>
-                <div class="index-oferta-celda">
-                    <h2>Madera y sus Manufacturas</h2>
-                    <ul class="lista-madera">
-                        <li>De primera calidad</li>
-                        <li>Variedad de modelos</li>
-                        <li>El mejor acabado</li>
-                        <li>Detalles sobresalientes</li>
-                    </ul>
-                    <img src="images/img5.jpg">
-                </div>
-                <div class="index-oferta-celda">
-                    <h2>Textiles y sus manufacturas</h2>
-                    <ul class="lista-textiles">
-                        <li>Prendas de calidad</li>
-                        <li>Ropa de trabajo</li>
-                        <li>Tejidos de camelidos</li>
-                    </ul>
-                    <img src="images/img7.jpg">
-                </div>
-                <div class="index-oferta-celda">
-                    <h2>Servicios</h2>
-                    <ul class="lista-servicios">
-                        <li>Implementación de soluciones</li>
-                        <li>Asistencia virtual</li>
-                        <li>Software personalizado</li>
-                    </ul>
-                    <img src="images/img8.jpg">
-                </div>
-                <div class="index-oferta-celda">
-                    <h2>Materiales de construcción</h2>
-                    <ul class="lista-construccion">
-                        <li>Ladrillos de construccion</li>
-                        <li>Viguetas pretensadas</li>
-                        <li>Piso ceramico esmaltado</li>
-                    </ul>
-                    <img src="images/img9.jpg">
-                </div>
+                <button type="submit" id="submit-button" class="boton-mapa">Buscar</button>
+                <button id="clean-button" class="boton-mapa">Limpiar</button>
+                <a class="mapa-georeferencial" href="https://www.google.com/search?q=google+maps+bolivia#"
+                    target="_blank" rel="noopener noreferrer"><img src="images/placeholder.png"></a>
             </div>
         </div>
         <footer>

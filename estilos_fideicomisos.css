@@ -1,0 +1,55 @@
+.contenido-fideicomisos{
+    background-color: white;
+    display: grid;
+    font-size: 1.2em;
+    color: #666666;
+    padding-bottom: 2em;
+    text-align: justify;
+}
+
+.contenido-fideicomisos>h1{
+    padding-left: 2em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.contenido-fideicomisos>text{
+    padding-left: 4em;
+    padding-bottom: 2em;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.5);   
+}
+
+.fideicomiso-descripcion{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: "titulo-fid caract" "fid-desc fid-cond";
+    width: 90%;
+    justify-self: center;
+    padding-bottom: 2em;
+}
+
+.fideicomiso-descripcion>h1{
+    grid-area: titulo-fid;
+    font-size: 1.5rem;
+    background-color: #e84c3d;
+    margin-right: 22em;
+    padding:0.6em 0 0.5em 1em;
+    color: white;
+    font-weight: 100;
+}
+.fideicomiso-descripcion>h2{
+    grid-area: caract;
+    color: #b34f47;
+}
+
+.fid>bold{
+    font-weight: 600;
+}
+
+.fid1{
+    grid-area: fid-desc;
+    padding-right: 2em;
+}
+
+.fid2{
+    grid-area: fid-cond;
+}

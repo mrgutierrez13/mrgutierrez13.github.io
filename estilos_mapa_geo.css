@@ -1,0 +1,136 @@
+.contenido-mapa-georeferencial {
+    grid-area: contenido;
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.75);
+    grid-template-columns: 1fr 1fr 6fr;
+    grid-template-areas: "mapa-geo-titulo mapa-geo-titulo mapa-geo-titulo" 
+                         "mapa-geo-tit-busq mapa-geo-tit-busq mapa-geo-place" 
+                         "mapa-geo-busq mapa-geo-busq mapa-geo-place" 
+                         "mapa-boton-buscar mapa-boton-limpiar mapa-geo-place" 
+                         "blanco blanco mapa-geo-place";
+}
+
+.contenido-mapa-georeferencial>h1 {
+    grid-area: mapa-geo-titulo;
+    text-align: center;
+}
+
+.contenido-mapa-georeferencial>h2 {
+    grid-area: mapa-geo-tit-busq;
+    padding-left: 1.5em;
+}
+
+.sector-busqueda-contenedor {
+    grid-area: mapa-geo-busq;
+    justify-self: center;
+}
+
+.sector-busqueda-nombre {
+    background-color: #e84c3d;
+    width: 100%;
+    text-align: left;
+    padding: 0.5em 8em 0.5em 1em;
+    color: white;
+    border-radius: 0.3em;
+}
+
+#sector-busqueda-caja {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#submit-.boton-mapa {
+    grid-area: mapa-boton-buscar;
+}
+
+#clean-.boton-mapa {
+    grid-area: mapa-boton-limpiar;
+}
+
+/* General .boton-mapas */
+
+.boton-mapa {
+    width: 130px;
+    height: 40px;
+    background: linear-gradient(to bottom, #4eb5e5 0%, #389ed5 100%);
+    /* W3C */
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border-bottom: 4px solid #2b8bc6;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+    font-size: 15px;
+    text-align: left;
+    text-indent: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    /* Just for presentation */
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.boton-mapa:active {
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .2);
+    top: 1px;
+}
+
+.boton-mapa:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 20px solid #187dbc;
+    border-bottom: 20px solid #187dbc;
+    border-left: 16px solid transparent;
+    border-right: 20px solid #187dbc;
+    position: absolute;
+    opacity: 0.6;
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+/* .boton-mapa pointing left */
+
+.boton-mapa.back {
+    text-align: right;
+    padding-right: 12px;
+    box-sizing: border-box;
+}
+
+.boton-mapa.back:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 20px solid #187dbc;
+    border-bottom: 20px solid #187dbc;
+    border-right: 16px solid transparent;
+    border-left: 20px solid #187dbc;
+    position: absolute;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Single .boton-mapas */
+
+.boton-mapa.site {
+    width: 40px;
+    text-align: center;
+    text-indent: 0;
+}
+
+.boton-mapa.site:after {
+    display: none;
+}
+
+.mapa-georeferencial {
+    grid-area: mapa-geo-place;
+    padding: 1em;
+}
