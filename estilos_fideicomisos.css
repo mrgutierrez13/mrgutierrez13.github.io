@@ -5,6 +5,7 @@
     color: #666666;
     padding-bottom: 2em;
     text-align: justify;
+    line-height: 1.5em;
 }
 
 .contenido-fideicomisos>h1{
@@ -41,7 +42,7 @@
     color: #b34f47;
 }
 
-.fid>bold{
+bold{
     font-weight: 600;
 }
 

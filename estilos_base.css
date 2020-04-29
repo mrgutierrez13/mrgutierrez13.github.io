@@ -74,7 +74,7 @@ header {
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    z-index: 3;
 }
 
 .modal-body {
@@ -84,7 +84,7 @@ header {
     left: 10%;
     background-color: white;
     overflow: auto;
-    z-index: 3;
+    z-index: 4;
 }
 
 .modal-close {
@@ -119,7 +119,7 @@ header {
     position: fixed;
     top: 50%;
     width: 2.8em;
-    z-index: 1;
+    z-index: 2;
 }
 
 .icon-bar a {
@@ -185,6 +185,7 @@ header {
 .dropdown {
     display: inline-block;
     position: relative;
+    z-index: 1;
 }
 
 .dropdown-menu {

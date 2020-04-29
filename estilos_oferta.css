@@ -58,6 +58,7 @@
     padding: 0.4em 0.3em;
     border-radius: 0.1em;
     font-weight: 800;
+    z-index: 0;
 }
 
 .index-oferta-celda>ul li:before {
@@ -74,6 +75,7 @@
     background-color: white;
     background-position: center;
     border-radius: 0.5em;
+    z-index: 0;
 }
 
 .lista-artesania>li {

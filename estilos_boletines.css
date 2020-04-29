@@ -1,0 +1,16 @@
+.contenido-boletines{
+    grid-area: contenido;
+    display: grid;
+    background-color: white;
+}
+
+.contenido-boletines>h1{
+    text-align: center;
+}
+
+.matriz-boletines{
+    display: grid;
+    margin: 3em 10em;
+    grid-template-columns: repeat(4,1fr);
+    gap: 7em;
+}
