@@ -9,7 +9,7 @@
 body {
     background-image: linear-gradient(45deg, transparent 20%, #4b4e54 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, #4b4e54 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, #4b4e54 80%, transparent 0), radial-gradient(#4b4e54 2px, transparent 0);
     background-size: 30px 30px, 30px 30px;
-    background-color: #606369;
+    background-color: #939497;
     font-family: Helvetica, Arial, sans-serif;
     color: black;
     margin: 0;
@@ -35,7 +35,7 @@ header {
     grid-template-columns: 1fr 5fr;
     /*RESOLUCION LOGO*/
     grid-template-areas: "logo titulo" "logo subtitulo";
-    background-image: url("images/front2.jpg");
+    background-image: url("images/front3.jpg");
     background-size: cover;
     height: 224px;
     /*RESOLUCION DEL LA IMAGEN FRONTAL*/
@@ -151,8 +151,8 @@ header {
     color: white;
 }
 
-.linkedin {
-    background: #007bb5;
+.whatsapp {
+    background: #1bd741;
     color: white;
 }
 
@@ -174,7 +174,7 @@ header {
     align-items: center;
     text-align: center;
     justify-items: center;
-    background-color: rgb(68, 68, 73);
+    background-color: rgb(101, 101, 109);
     padding: 0.2em 0;
 }
 
@@ -270,6 +270,12 @@ footer {
     background-color: rgb(44, 46, 48);
     padding: 2em;
     line-height: 1.5em;
+}
+
+footer>img{
+    display: float;
+    float: right;
+    width: 10%;
 }
 
 .contenido {
