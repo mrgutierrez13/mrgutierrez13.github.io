@@ -1,5 +1,4 @@
 .contenido-boletines{
-    grid-area: contenido;
     display: grid;
     background-color: white;
 }

@@ -6,7 +6,6 @@
 /*//////*/
 
 .index-oferta {
-    grid-area: oferta;
     display: grid;
     grid-template-rows: repeat(auto, minmax(15em, 1fr));
     background-color: #21ac72d5;

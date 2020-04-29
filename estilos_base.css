@@ -32,12 +32,13 @@ header {
     grid-area: frente;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 5fr; /*RESOLUCION LOGO*/
-    grid-template-areas: "logo titulo" 
-                         "logo subtitulo";
+    grid-template-columns: 1fr 5fr;
+    /*RESOLUCION LOGO*/
+    grid-template-areas: "logo titulo" "logo subtitulo";
     background-image: url("images/front2.jpg");
     background-size: cover;
-    height: 224px; /*RESOLUCION DEL LA IMAGEN FRONTAL*/
+    height: 224px;
+    /*RESOLUCION DEL LA IMAGEN FRONTAL*/
     background-repeat: no-repeat;
 }
 
@@ -167,78 +168,81 @@ header {
 /*/////////*/
 
 .navegador {
-    grid-area: nav;
     display: grid;
     grid-template-columns: repeat(8, minmax(6em, 1fr)) 4em;
     grid-auto-rows: 3em;
     align-items: center;
     text-align: center;
+    justify-items: center;
     background-color: rgb(68, 68, 73);
     padding: 0.2em 0;
 }
 
-.navegador>a {
-    text-decoration: none;
-    color: white;
+.navegador ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-.dropdown {
-    display: inline-block;
+.navegador ul:before, .navegador ul:after {
+    content: "";
+    display: table;
+}
+
+.navegador ul:after {
+    clear: both;
+}
+
+.navegador ul>li {
     position: relative;
-    z-index: 1;
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 2.1em;
-    min-width: 100%;
-    background-color: #222533;
+.navegador a {
+    display: block;
+    padding: 0.6em 1.2em;
+    line-height: 1.2em;
+    color: white;
+    border-left: 1px solid #595959;
+    text-decoration: none;
+}
+
+.navegador a:hover {
+    text-decoration: none;
+    background: #595959;
+}
+
+.navegador li ul {
+    background: #273754;
+    width: 150%;
+}
+
+.navegador li ul a {
+    border: none;
     text-align: left;
 }
 
-.dropdown-nombre {
-    color: white;
-    padding: 0.5em 2em 0.5em 1.5em;
+.navegador li ul a:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-nombre::after {
-    content: "";
+.navegador li ul {
     position: absolute;
-    right: 1em;
-    top: 1em;
-    border: 0.3em solid;
-    border-color: white transparent transparent;
+    left: 0;
+    top: 2.4em;
+    z-index: 1;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
+.navegador li ul li {
+    overflow: hidden;
+    height: 0;
+    transition: height 200ms ease-in;
 }
 
-.dropdown:hover .dropdown-nombre::after {
-    top: 0.7em;
-    border-color: transparent transparent white;
+.navegador ul>li:hover ul li {
+    height: 3em;
 }
 
-.submenu {
-    padding-left: 0;
-    margin: 0;
-    list-style-type: none;
-    border: 1px solid;
-    box-shadow: 0.1em 0.1em 0.5em #124;
-}
-
-.submenu>li+li {
-    border-top: 1px solid;
-}
-
-.submenu>li>a {
-    display: block;
-    padding: 1em 1.5em;
-    color: white;
-    text-decoration: none;
-}
 .navegador input[type=text] {
     padding: 0.8em;
     border: none;
@@ -259,7 +263,6 @@ header {
     background: #0b7dda;
 }
 
-
 footer {
     grid-area: pie;
     border-top-color: rgb(80, 86, 114);
@@ -269,6 +272,6 @@ footer {
     line-height: 1.5em;
 }
 
-.contenido{
+.contenido {
     display: contenido;
 }
