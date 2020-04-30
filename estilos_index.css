@@ -113,6 +113,7 @@
     display: grid;
     grid-template-rows: 2fr 6fr 1fr;
     background-color: white;
+    position: relative;
     align-items: center;
     margin: 2em 2em;
     padding: 0 1em;
@@ -120,6 +121,9 @@
     background-image: linear-gradient(to right, #e2e9eb 0%, #eff3f4 51%, #e2e9eb 100%);
     box-shadow: 0.1em 0.1em 0.5em #124;
     font-size: 0.7em;
+    top: 0;
+    transition: top .2s ease-in-out;
+    transition-delay: .1s;
 }
 
 .index-servicios-celda>a {
@@ -130,6 +134,10 @@
 .index-servicios-celda>a>img {
     width: 75%;
     justify-content: center;
+}
+
+.index-servicios-celda:hover{
+    top: -1em;
 }
 
 
@@ -178,14 +186,19 @@
     color: white;
     gap: 2em;
     padding: 6em 8em;
+    text-align: justify;
 }
 
 .index-guia-portada {
     box-shadow: 0.1em 0.1em .5em #124;
     line-height: 0;
     margin-right: 4em;
+    transition: transform .2s ease-in-out;
+    transition-delay: .1s;
 }
-
+.index-guia-portada:hover{
+    transform: scale(1.05);
+}
 
 /*///////*/
 
