@@ -27,7 +27,8 @@ img {
     grid-template-rows: repeat(9, auto);
     grid-template-areas: "frente" "nav" "contenido" "pie";
     max-width: 1440px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    margin: 0 calc(50% - 720px);
     /*box-shadow: 0.1em 0.1em 1.5em #124;*/
 }
 
