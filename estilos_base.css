@@ -28,7 +28,7 @@ img {
 .contenedor {
     display: grid;
     grid-template-areas: "frente" "nav" "contenido" "pie";
-    max-width: 1440px;
+    max-width: 1520px;
     margin: 0 auto;
     /*margin: 0 calc(50% - 720px);*/
     /*box-shadow: 0.1em 0.1em 1.5em #124;*/
@@ -36,37 +36,26 @@ img {
 
 header {
     grid-area: frente;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 5fr;
-    /*RESOLUCION LOGO*/
-    grid-template-areas: "logo titulo" "logo subtitulo";
-    background-image: url("images/front3.jpg");
-    background-size: cover;
-    height: 224px;
-    /*RESOLUCION DEL LA IMAGEN FRONTAL*/
-    background-repeat: no-repeat;
-}
-
-.titulo {
-    grid-area: titulo;
-    color: white;
-    /*font-family: "Times New Roman", Times, serif;*/
-    text-transform: uppercase;
-    text-shadow: 2px 2px black;
-    align-self: flex-end;
-    font-size: 2.7em;
-    font-family: Georgia, serif;
-}
-
-.subtitulo {
-    grid-area: subtitulo;
-    color: white;
+    position: relative;
     font-family: "Times New Roman", Times, serif;
+    font-weight: 600;
+    color: white;
     text-transform: uppercase;
     text-shadow: 2px 2px black;
-    align-self: top;
-    font-size: 1.5em;
+    line-height: 0;
+}
+
+.titulo{
+    position: absolute;    
+    top: 34%;
+    left: 20%;
+    font-size: 2.1rem;
+}
+.subtitulo{
+    position: absolute;
+    top: 59%;
+    left: 20%;
+    font-size: 1.4rem;
 }
 
 /*modal NOTICIA IMPORTANTE*/
