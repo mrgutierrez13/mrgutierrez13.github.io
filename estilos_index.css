@@ -1,12 +1,9 @@
-.contenido{
+.contenido {
     display: grid;
     grid-template-areas: "noti" "serv" "guia" "enlaces" "entidades";
 }
 
-
-
 /*NOTICIAS*/
-
 
 .container {
     grid-area: noti;
@@ -20,7 +17,7 @@
 .box {
     flex: 1;
     position: relative;
-    display: inline-block; 
+    display: inline-block;
     overflow: hidden;
     transition: .5s;
     transition-delay: 0.25s;
@@ -51,10 +48,10 @@
     top: 10%;
     color: white;
     width: 50%;
-    background-color: rgba(105, 105, 105, 0.8); 
+    background-color: hsla(0, 0%, 41%, 0.8);
 }
 
-.box>text{
+.box>text {
     padding: 0.5em 1em;
     line-height: 1em;
     position: absolute;
@@ -67,7 +64,7 @@
     right: 0;
     top: 30%;
     color: black;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: hsla(0, 0%, 100%, 0.6);
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity .6s ease-in;
@@ -85,6 +82,7 @@
 .box:hover>span {
     display: block;
 }
+
 .box:hover>text {
     left: 0;
     visibility: visible;
@@ -97,15 +95,18 @@
 
 /*/////////*/
 
+.index-servicios {
+    grid-area: serv;
+}
+
 .index-servicios>h1 {
-    background-color: #eff3f4;
+    background-color: hsl(192, 19%, 95%);
     padding: 3em 0 1em 0;
     margin: 0;
     text-align: center;
 }
 
 .index-servicios-contenedor {
-    grid-area: serv;
     display: grid;
     padding-bottom: 4em;
     grid-auto-rows: 1fr;
@@ -115,7 +116,6 @@
     justify-content: space-evenly;
     text-align: center;
     background-color: hsl(192, 19%, 95%);
-    
 }
 
 .index-servicios-celda {
@@ -131,7 +131,7 @@
     box-shadow: 0.1em 0.1em 0.5em hsl(219, 60%, 17%);
     font-size: 0.6em;
     top: 0;
-    transition: top .2s cubic-bezier(.45,.05,.55,.95);
+    transition: top .2s cubic-bezier(.45, .05, .55, .95);
     transition-delay: .1s;
 }
 
@@ -140,19 +140,18 @@
     color: black;
     padding-top: 1em;
     background-clip: padding-box;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.3) inset,
-                0 .1em .2em -.05em rgba(0,0,0,.5);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .3) inset, 0 .1em .2em -.05em rgba(0, 0, 0, .5);
 }
 
 .index-servicios-celda>a>img {
     width: 75%;
     justify-content: center;
+    height: 16em;
 }
 
-.index-servicios-celda:hover{
+.index-servicios-celda:hover {
     top: -1em;
 }
-
 
 /*/////////*/
 
@@ -164,7 +163,7 @@
     grid-area: entidades;
     display: grid;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: hsla(0, 0%, 100%, 0.95);
 }
 
 .index-entidades>h1 {
@@ -188,26 +187,27 @@
     grid-row: 1 / 1;
     grid-column: 1 / 1;
 }
-  
-.contenedor-entidades > *:first-child {
+
+.contenedor-entidades>*:first-child {
     grid-row: 1 / 1;
     grid-column: 1 / 1;
 }
 
-.contenedor-entidades a{
+.contenedor-entidades a {
     display: flex;
     height: 100%;
     width: 100%;
     border-radius: 60%;
     box-shadow: 0.1em 0.1em 0.5em hsl(219, 60%, 17%);
     transition: transform .2s ease-in-out;
-    transition-delay: .1s;    
+    transition-delay: .1s;
 }
-.contenedor-entidades>a:hover{
+
+.contenedor-entidades>a:hover {
     transform: scale(1.05);
 }
 
-.contenedor-entidades a>img{
+.contenedor-entidades a>img {
     object-fit: contain;
     padding: 1.6em 1.6em 1.9em 1.6em;
 }
@@ -237,7 +237,8 @@
     transition: transform .2s ease-in-out;
     transition-delay: .1s;
 }
-.index-guia-portada:hover{
+
+.index-guia-portada:hover {
     transform: scale(1.05);
 }
 
@@ -249,52 +250,62 @@
 
 .index-enlaces {
     grid-area: enlaces;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: hsla(0, 0%, 100%, 0.7);
     padding: 2em 0;
+    text-align: center;
+    font-size: .9rem;
 }
 
 .index-enlaces *+* {
     margin-top: 0.5em;
 }
 
-div .menu-toggle {
-    margin-top: 2em;
-    font-size: 1.2em;
-    background-color: #e84c3d;
-    width: 100%;
-    text-align: left;
-    padding: 0.5em 0.5em;
-}
-
-.index-enlaces-contenedor{
-    display: grid;
-}
-
-.index-enlaces h1 {
-    text-align: center;
-    margin-top: 0;
-}
-
-.index-enlaces-menu {
+.index-enlaces-item>a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    color: white;
+    background-color: hsl(5, 79%, 57%);
     margin: auto;
-    width: 50%;
+    text-align: left;
+    cursor: pointer;
+    padding: .6em;
+    transition: background-color 0.2s ease-out;
+    border-radius: 0.8em 0 0.8em 0;
 }
 
-.menu-dropdown {
-    display: grid;
-    background-color: #fafafa;
-    padding-left: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+.index-enlaces-item>a:hover {
+    background-color: hsl(5, 79%, 70%);
+}
+
+.index-enlaces-lista {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    background: hsla(0, 0%, 100%);
     margin-top: 0;
+    overflow: hidden;
+    max-height: 0;
+    text-align: left;
+    padding-left: 2em;
+    transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in;
 }
 
-.menu-dropdown>a {
-    text-decoration: none;
+.index-enlaces-lista a {
     color: black;
+    text-decoration: none;
+    
 }
 
-.menu-dropdown>a:hover {
+.index-enlaces-lista a:hover {    
     text-decoration: underline;
 }
 
+.index-enlaces-lista.active {
+    transition: max-height 0.5s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in;
+    max-height: 50em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}

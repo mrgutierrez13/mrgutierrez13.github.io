@@ -29,8 +29,8 @@ img {
     display: grid;
     grid-template-areas: "frente" "nav" "contenido" "pie";
     max-width: 1440px;
-    /*margin: 0 auto;*/
-    margin: 0 calc(50% - 720px);
+    margin: 0 auto;
+    /*margin: 0 calc(50% - 720px);*/
     /*box-shadow: 0.1em 0.1em 1.5em #124;*/
 }
 
@@ -51,11 +51,12 @@ header {
 .titulo {
     grid-area: titulo;
     color: white;
-    font-family: "Times New Roman", Times, serif;
+    /*font-family: "Times New Roman", Times, serif;*/
     text-transform: uppercase;
     text-shadow: 2px 2px black;
     align-self: flex-end;
     font-size: 2.7em;
+    font-family: Georgia, serif;
 }
 
 .subtitulo {
@@ -182,7 +183,7 @@ header {
 
 .navegador {
     display: grid;
-    grid-template-columns: repeat(8, minmax(6em, 1fr)) 4em;
+    grid-template-columns: repeat(7, minmax(6em, 1fr)) 26em 3em;
     grid-auto-rows: 3em;
     grid-template-areas: "nav-ini nav-inst nav-serv nav-info nav-logi nav-tram nav-asesora";
     align-items: center;
@@ -190,6 +191,9 @@ header {
     justify-items: center;
     background-color: hsla(240, 4%, 41%, 0.7);
     padding: 0.2em 0;
+    font-size: 0.8rem;
+    font-family: 'Open Sans','Arial Narrow',Arial,sans-serif;
+    letter-spacing: 0.1rem;
 }
 
 .navegador ul {
@@ -234,6 +238,7 @@ header {
 .navegador li ul a {
     border: none;
     text-align: left;
+    font-size: 1.1rem;
 }
 
 .navegador li ul a:hover {
@@ -261,10 +266,11 @@ header {
     padding: 0.8em;
     border: none;
     font-size: 1em;
+    justify-self: right;
 }
 
 .navegador button {
-    width: 60%;
+    width: 2.3rem;
     background: hsl(211, 65%, 35%);
     padding: 0.4em;
     color: white;

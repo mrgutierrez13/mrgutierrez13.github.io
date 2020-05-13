@@ -108,33 +108,33 @@
         </nav>
         <div class="contenido">
             <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <div class="numbertext">NOTICIA 1</div>
+            <div class="slider" id="slider">        
+                <div class="slider-item">
                     <img src="images/prueba/800x600.jpg">
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">NOTICIA 2</div>
+                </div>        
+                <div class="slider-item">
                     <img src="images/prueba/800x601.jpg">
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">NOTICIA 3</div>
+                </div>        
+                <div class="slider-item">
                     <img src="images/prueba/800x602.jpg">
                 </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <!-- The dots/circles -->
-                <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
+                        
+                <!-- adding buttons for next and prev -->
+                <button class="prev">
+                    <!-- icon for button -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                </button>
+                <button class="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                </button>
+        
+                <!-- Slider Background to provide initial height of cool background -->
+                <img class="background" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAABfCAYAAADWH0qpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABBdEVYdERlc2NyaXB0aW9uADRrIHdhbGxwYXBlciBMb3ZlbHkgNGsgbWluaW1hbGlzdCB3YWxscGFwZXIgNjcgaW1hZ2VznMvVCQAAABl0RVh0Q29weXJpZ2h0ADRyZWNlbnRjYXJzLmNvbdzHkxgAAABBdEVYdENvbW1lbnQAQ1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gOTAKfVTa3QAAATFJREFUeF7t08EJwDAAAzGn++/c5tElDiQwnuDOtvcOCHr+B4IEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwBAmYAgTMIQJGMIEDGEChjABQ5iAIUzAECZgCBMwhAkYwgQMYQKGMAFDmIAhTMAQJmAIEzCECRjCBAxhAoYwAUOYgCFMwJC1fQ6sAb3QNcqwAAAAAElFTkSuQmCC">
+                
+                <!-- Span element consist of Swicthes -->
+                <span class="switch">
+                    <!-- dots representing current slider -->
+                </span>
             </div>
             <div class="index-servicios" id="index-servicios">
                 <h1>SERVICIOS DE AYUDA AL EXPORTADOR</h1>
@@ -190,14 +190,13 @@
                         explicabo nemo perspiciatis quaerat quidem! Incidunt, assumenda.</h2>
                 </div>
             </div>
+
             <div class="index-enlaces" id="index-enlaces">
                 <h1>ENLACES</h1>
                 <div class="index-enlaces-contenedor">
-                    <div class="index-enlaces-menu">
-                        <button class="menu-toggle">
-                            Instituciones del Proceso Exportador
-                        </button>
-                        <div class="menu-dropdown">
+                    <div class="index-enlaces-item">
+                        <a>Instituciones del Proceso Exportador</a>
+                        <div class="index-enlaces-lista">
                             <a href="http://www.aspb.gob.bo/" target="_blank" rel="noopener noreferrer">Administración
                                 de
                                 Servicios Portuarios-Bolivia (ASP-B)</a>
@@ -223,11 +222,9 @@
                                 Integración</a>
                         </div>
                     </div>
-                    <div class="index-enlaces-menu">
-                        <button class="menu-toggle">
-                            Instituciones Públicas
-                        </button>
-                        <div class="menu-dropdown">
+                    <div class="index-enlaces-item">
+                        <a>Instituciones Públicas</a>
+                        <div class="index-enlaces-lista">
                             <a href="http://www.autoridadempresas.gob.bo/" target="_blank"
                                 rel="noopener noreferrer">Autoridad
                                 de Fiscalización y Control Social de
@@ -279,11 +276,9 @@
                                 Transporte</a>
                         </div>
                     </div>
-                    <div class="index-enlaces-menu">
-                        <button class="menu-toggle">
-                            Embajadas en Bolivia
-                        </button>
-                        <div class="menu-dropdown">
+                    <div class="index-enlaces-item">
+                        <a>Embajadas en Bolivia</a>
+                        <div class="index-enlaces-lista">
                             <a href="http://www.la-paz.diplo.de/" target="_blank" rel="noopener noreferrer">Embajada de
                                 Alemania</a>
                             <a href="http://ebolv.cancilleria.gov.ar/" target="_blank"
@@ -330,11 +325,9 @@
                                 Venezuela</a>
                         </div>
                     </div>
-                    <div class="index-enlaces-menu">
-                        <button class="menu-toggle">
-                            Cámaras, Instituciones y Asociaciones
-                        </button>
-                        <div class="menu-dropdown">
+                    <div class="index-enlaces-item">
+                        <a>Cámaras, Instituciones y Asociaciones</a>
+                        <div class="index-enlaces-lista">
                             <a href="http://www.aopeb.org/" target="_blank" rel="noopener noreferrer">Asociación de
                                 Organizaciones de Productores Ecológicos de Bolivia
                                 (AOPEB)</a>
@@ -382,11 +375,9 @@
                                 Empresarios Privados de Bolivia (CEPB)</a>
                         </div>
                     </div>
-                    <div class="index-enlaces-menu">
-                        <button class="menu-toggle">
-                            Agencias de Promoción de Exportación
-                        </button>
-                        <div class="menu-dropdown">
+                    <div class="index-enlaces-item">
+                        <a>Agencias de Promoción de Exportación</a>
+                        <div class="index-enlaces-lista">
                             <a href="http://www.apexbrasil.com.br/home/index" target="_blank"
                                 rel="noopener noreferrer">APEX
                                 Brasil</a>
@@ -412,11 +403,9 @@
                                 XXI</a>
                         </div>
                     </div>
-                    <div class="index-enlaces-menu">
-                        <button class="menu-toggle">
-                            Organizaciones Internacionales
-                        </button>
-                        <div class="menu-dropdown">
+                    <div class="index-enlaces-item">
+                        <a>Organizaciones Internacionales</a>
+                        <div class="index-enlaces-lista">
                             <a href="http://aico.org/" target="_blank" rel="noopener noreferrer">Asociación
                                 Iberoamericana
                                 de
@@ -456,11 +445,9 @@
                                 Latinoamerica para el Comercio Justo</a>
                         </div>
                     </div>
-                    <div class="index-enlaces-menu">
-                        <button class="menu-toggle">
-                            Información de Comercio Exterior
-                        </button>
-                        <div class="menu-dropdown">
+                    <div class="index-enlaces-item">
+                        <a>Información de Comercio Exterior</a>
+                        <div class="index-enlaces-lista">
                             <a href="http://www.investmentmap.org/" target="_blank" rel="noopener noreferrer">Investment
                                 Map</a>
                             <a href="http://www.macmap.org/" target="_blank" rel="noopener noreferrer">Market Access
@@ -469,11 +456,9 @@
                             <a href="http://www.trademap.org/" target="_blank" rel="noopener noreferrer">Trade Map</a>
                         </div>
                     </div>
-                    <div class="index-enlaces-menu">
-                        <button class="menu-toggle">
-                            Gobernaciones
-                        </button>
-                        <div class="menu-dropdown">
+                    <div class="index-enlaces-item">
+                        <a>Gobernaciones</a>
+                        <div class="index-enlaces-lista">
                             <a href="https://www.beni.gob.bo/" target="_blank" rel="noopener noreferrer">Gobernación de
                                 Beni</a>
                             <a href="https://chuquisaca.gob.bo/" target="_blank" rel="noopener noreferrer">Gobernación
@@ -499,6 +484,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="index-entidades" id="index-entidades">
                 <h1>ENTIDADES DEL MINISTERIO DE DESARROLLO PRODUCTIVO Y ECONOMÍA PLURAL</h1>
                 <div class="contenedor-entidades">
@@ -530,7 +516,7 @@
             </div>
         </footer>
     </div>
-    <script type="text/javascript">
+    <script>
         var button = document.getElementById('close');
         var cerrar = document.getElementById('close-ext');
         var modal = document.getElementById('modal');
@@ -544,46 +530,81 @@
             event.preventDefault();
             modal.style.display = 'none';
         });
-
-        close.addEventListener('click', function (event) {
-            event.preventDefault();
-            modal.style.display = 'block';
-        });
     </script>
     <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+        const slider = document.querySelector("#slider");
+        if (slider) {
+            let e = slider.querySelectorAll(".slider-item"),
+                s = slider.querySelector(".switch");
+            const t = e.length;
+            let l,
+                i = 0;
+            for (; s.querySelectorAll("i").length != t;) {
+                let e = document.createElement("i");
+                s.appendChild(e);
+            }
+            s = s.querySelectorAll("i");
+            const c = (l) => {
+                0 == l
+                    ? (e[t - 1].classList.remove("show"),
+                        e[t - 1].classList.add("close"),
+                        s[t - 1].classList.remove("active"))
+                    : (e[l - 1].classList.remove("show"),
+                        e[l - 1].classList.add("close"),
+                        s[l - 1].classList.remove("active")),
+                    l == t - 1
+                        ? e[0].classList.remove("close")
+                        : e[l + 1].classList.remove("close"),
+                    s[l].classList.add("active"),
+                    e[l].classList.add("show");
+            },
+                r = (l) => {
+                    0 == l
+                        ? (e[t - 1].classList.remove("show"),
+                            e[t - 1].classList.add("close"),
+                            s[t - 1].classList.remove("active"))
+                        : (e[l - 1].classList.remove("show"),
+                            e[l - 1].classList.add("close"),
+                            s[l - 1].classList.remove("active")),
+                        l == t - 1
+                            ? e[0].classList.remove("close")
+                            : e[l + 1].classList.remove("close"),
+                        l < t - 1
+                            ? (e[l + 1].classList.remove("show"),
+                                s[l + 1].classList.remove("active"))
+                            : (e[0].classList.remove("show"), s[0].classList.remove("active")),
+                        s[l].classList.add("active"),
+                        e[l].classList.add("show");
+                };
+            function startSlideShow() {
+                l = setInterval(() => {
+                    nextSliderImage();
+                }, 6000);  
+            }
+            function nextSliderImage() {
+                i++, i == t && (i = 0), c(i), clearInterval(l), startSlideShow();
+            }
+            function previousSliderImage() {
+                i--, -1 == i && (i = t - 1), r(i), clearInterval(l), startSlideShow();
+            }
+            const a = slider.querySelector(".prev"),
+                o = slider.querySelector(".next");
+            o.addEventListener("click", nextSliderImage),
+                a.addEventListener("click", previousSliderImage),
+                c(i),
+                startSlideShow();
         }
+    </script>
+    <!-- VARIABLE t === CANTIDAD DE IMAGENES -->
+    <!-- VARIABLE i === numero de la imagen -->
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+    <script>
+        const items = document.querySelectorAll(".index-enlaces-item>a");
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            this.nextElementSibling.classList.toggle('active');
         }
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1} 
-            setTimeout(showSlides, 5000); 
-        } </script>
 </body>
