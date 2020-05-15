@@ -141,12 +141,14 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0.3em;
-    font-size: 2em;
-    height: 1.5em;
-    width: 1.5em;
+    padding: 0.1em;
+    font-size: 1.2em;
+    height: 1.2em;
+    width: 1.2em;
     cursor: pointer;
     border: 0;
+    background: hsl(231, 20%, 40%);
+    color: hsl(231, 20%, 80%);;
 }
 
 .mensaje-ayuda-cerrar::before {
@@ -166,6 +168,8 @@ header {
 #mensaje-ayuda-caja{
     resize: none;
     width: 100%;
+    transition: opacity 0.7s ease-in-out; 
+    transition: max-height 0.7s ease-in-out;   
 }
 
 #mensaje-ayuda>img {
