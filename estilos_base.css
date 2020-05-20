@@ -19,13 +19,15 @@ body {
     /*30px 30px 30px 30px*/
     background-color: hsl(225, 4%, 75%);
     font-family: Helvetica, Arial, sans-serif;
-    color: black;
+    color: hsl(228, 3%, 28%);
     margin: 0;
+    --cont-bg-color-neutral: hsla(225, 100%, 99%, 0.9); 
 }
 
 img {
     width: 100%;
 }
+
 
 .contenedor {
     display: grid;
@@ -49,15 +51,15 @@ header {
 
 .titulo {
     position: absolute;
-    top: 34%;
-    left: 20%;
-    font-size: 2.1rem;
+    top: 40%;
+    left: 15%;
+    font-size: 2.5rem;
 }
 
 .subtitulo {
     position: absolute;
     top: 59%;
-    left: 20%;
+    left: 15%;
     font-size: 1.4rem;
 }
 
@@ -132,9 +134,8 @@ header {
     display: block;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.7s ease-in-out; 
     max-height: 0;
-    transition: max-height 0.7s ease-in-out;   
+    transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out;     
 }
 
 .mensaje-ayuda-cerrar{
@@ -168,8 +169,7 @@ header {
 #mensaje-ayuda-caja{
     resize: none;
     width: 100%;
-    transition: opacity 0.7s ease-in-out; 
-    transition: max-height 0.7s ease-in-out;   
+    transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out; 
 }
 
 #mensaje-ayuda>img {
@@ -191,43 +191,48 @@ header {
     display: block;
     text-align: center;
     padding: 0.5em;
-    transition: all 0.3s ease;
     color: white;
     font-size: 20px;
+    box-shadow: inset -3px -3px 5px 0 hsla(0, 0%, 0%, 0.2);
+    border-radius: 0 3px 3px 0;
+    transition: transform .1s ease-in-out;
 }
 
 .icon-bar a:hover {
-    background-color: white;
+    transform: scaleX(1.1);
+}
+
+.icon-bar a img {
+    transition: filter .1s ease-in-out;
+}
+
+.icon-bar a:hover img {
+    filter: invert(100%);
 }
 
 .facebook {
     grid-area: facebook;
-    background: #3B5998;
-    color: white;
+    background: hsl(221, 44%, 41%);
 }
 
 .twitter {
     grid-area: twitter;
-    background: #55ACEE;
-    color: white;
+    background: hsl(206, 82%, 63%);
 }
 
 .google {
     grid-area: google;
-    background: #dd4b39;
-    color: white;
+    background: hsl(7, 71%, 55%);
 }
 
 .whatsapp {
     grid-area: whatsapp;
-    background: #1bd741;
-    color: white;
+    background: hsl(132, 78%, 47%);
 }
 
 .youtube {
     grid-area: youtube;
-    background: #bb0000;
-    color: white;
+    background: hsl(0, 100%, 37%);
 }
 
 /*/////////*/
@@ -244,7 +249,7 @@ header {
     align-items: center;
     text-align: center;
     justify-items: center;
-    background-color: hsla(240, 4%, 41%, 0.7);
+    background-color: hsl(221, 18%, 49%);
     padding: 0.2em 0;
     font-size: 0.8rem;
     font-family: 'Open Sans', 'Arial Narrow', Arial, sans-serif;
@@ -282,11 +287,11 @@ header {
 
 .navegador a:hover {
     text-decoration: none;
-    background: #595959;
+    background: hsl(221, 18%, 59%);
 }
 
 .navegador li ul {
-    background: #273754;
+    background: hsl(219, 37%, 24%);
     width: 150%;
 }
 
@@ -367,9 +372,10 @@ header {
 }
 
 footer {
+    position: relative;
     grid-area: pie;
     border-top-color: hsl(229, 18%, 38%);
-    color: hsl(210, 4%, 68%);
+    color: hsl(214, 4%, 68%);
     background-color: hsl(210, 4%, 18%);
     padding: 2em 6em;
     font-size: .9rem;
@@ -390,6 +396,9 @@ footer {
     max-width: 14em;
     max-height: 14em;
     border-radius: 50%;
+    border-width: 2px;
+    border-color: hsl(214, 4%, 68%);
+    border-style: inset;
 }
 
 footer text {
@@ -399,10 +408,18 @@ footer text {
 .footer-contacto ul {
     list-style: none;
 }
+.footer-contacto ul>li>bold{
+    font-weight: 700;
+}
 
 .footer-contacto-redes img {
     width: 2em;
-    fill: hsl(210, 4%, 68%);
+    /*color: hsl(225, 4%, 78%);*/
+    /*PARA SACAR EL COLOR ADECUADO USANDO FILTER: https://codepen.io/sosuke/pen/Pjoqqp*/
+    filter: invert(49%) sepia(6%) saturate(334%) hue-rotate(182deg) brightness(95%) contrast(88%);
+}
+.footer-contacto-redes img:hover {
+    filter: drop-shadow(1px 1px 8px hsl(225, 4%, 78%)) invert(99%) sepia(1%) saturate(6453%) hue-rotate(183deg) brightness(99%) contrast(60%);
 }
 
 .contenido {
