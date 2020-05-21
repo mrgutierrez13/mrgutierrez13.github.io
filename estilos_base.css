@@ -45,7 +45,7 @@ header {
     font-weight: 600;
     color: white;
     text-transform: uppercase;
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px hsl(214, 52%, 30%);
     line-height: 0;
 }
 
@@ -53,15 +53,25 @@ header {
     position: absolute;
     top: 40%;
     left: 15%;
-    font-size: 2.5rem;
+    font-size: 2.3vw;
 }
+@media screen and (min-width: 96em) {
+    .titulo{
+      font-size: 2.5em;
+    }
+  }
 
 .subtitulo {
     position: absolute;
     top: 59%;
     left: 15%;
-    font-size: 1.4rem;
+    font-size: 1.3vw;
 }
+@media screen and (min-width: 96em) {
+    .subtitulo {
+      font-size: 1.4em;
+    }
+  }
 
 /*modal NOTICIA IMPORTANTE*/
 
@@ -241,6 +251,8 @@ header {
 
 /*/////////*/
 
+@media screen and (min-width: 70em) {
+    
 .navegador {
     display: grid;
     grid-template-columns: repeat(7, minmax(6em, 1fr)) 26em 3em;
@@ -253,7 +265,6 @@ header {
     padding: 0.2em 0;
     font-size: 0.8rem;
     font-family: 'Open Sans', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 0.1rem;
 }
 
 .navegador ul {
@@ -281,8 +292,9 @@ header {
     padding: 0.6em 1.2em;
     line-height: 1.2em;
     color: white;
-    border-left: 1px solid #595959;
+    border-left: 1px solid hsl(0, 0%, 35%);
     text-decoration: none;
+    letter-spacing: .1em;
 }
 
 .navegador a:hover {
@@ -292,7 +304,12 @@ header {
 
 .navegador li ul {
     background: hsl(219, 37%, 24%);
-    width: 150%;
+    width: 220%;
+}
+@media (max-width:80em) {
+    .navegador li ul {
+        width: 300%;
+    }
 }
 
 .navegador li ul a {
@@ -340,7 +357,7 @@ header {
 }
 
 .navegador button:hover {
-    background: #0b7dda;
+    background: hsl(207, 90%, 45%);
 }
 
 .navegador-inicio {
@@ -370,6 +387,12 @@ header {
 .navegador-asesora {
     grid-area: nav-asesora;
 }
+
+}
+
+/*==============
+    FOOTER
+===============*/
 
 footer {
     position: relative;
