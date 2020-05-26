@@ -1,5 +1,6 @@
 :root {
     box-sizing: border-box;
+    font-size: calc(.1vw + 0.9em);
 }
 
 html {
@@ -11,28 +12,24 @@ html {
 }
 
 body {
-    background-image: linear-gradient(45deg, transparent 20%, hsl(225, 4%, 66%) 25%, transparent 25%),
-                      linear-gradient(-45deg, transparent 20%, hsl(225, 4%, 66%) 25%, transparent 25%), 
-                      linear-gradient(-45deg, transparent 75%, hsl(225, 4%, 66%) 80%, transparent 0), 
-                      radial-gradient(hsl(225, 4%, 66%) 2px, transparent 0);
+    background-image: linear-gradient(45deg, transparent 20%, hsl(225, 4%, 66%) 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, hsl(225, 4%, 66%) 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, hsl(225, 4%, 66%) 80%, transparent 0), radial-gradient(hsl(225, 4%, 66%) 2px, transparent 0);
     background-size: 41px 39px, 43px 71px;
     /*30px 30px 30px 30px*/
     background-color: hsl(225, 4%, 75%);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
     color: hsl(228, 3%, 28%);
     margin: 0;
-    --cont-bg-color-neutral: hsla(225, 100%, 99%, 0.9); 
+    --cont-bg-color-neutral: hsla(225, 100%, 99%, 0.9);
 }
 
 img {
     width: 100%;
 }
 
-
 .contenedor {
     display: grid;
     grid-template-areas: "frente" "nav" "contenido" "pie";
-    max-width: 1520px;
+    max-width: 100em;
     margin: 0 auto;
     /*margin: 0 calc(50% - 720px);*/
     /*box-shadow: 0.1em 0.1em 1.5em #124;*/
@@ -40,38 +37,36 @@ img {
 
 header {
     grid-area: frente;
-    position: relative;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 600;
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 1px 1px hsl(214, 52%, 30%);
-    line-height: 0;
+    display: none;
+}
+
+@media screen and (min-width: 55em) {
+    header {
+        display: block;
+        grid-area: frente;
+        position: relative;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        text-shadow: 1px 1px hsl(214, 52%, 30%);
+        line-height: 0;
+    }
 }
 
 .titulo {
     position: absolute;
     top: 40%;
     left: 15%;
-    font-size: 2.3vw;
+    font-size: calc(.26vw + 1.8em);
 }
-@media screen and (min-width: 96em) {
-    .titulo{
-      font-size: 2.5em;
-    }
-  }
 
 .subtitulo {
     position: absolute;
     top: 59%;
     left: 15%;
-    font-size: 1.3vw;
+    font-size: calc(.22vw + .9em);
 }
-@media screen and (min-width: 96em) {
-    .subtitulo {
-      font-size: 1.4em;
-    }
-  }
 
 /*modal NOTICIA IMPORTANTE*/
 
@@ -132,9 +127,7 @@ header {
     background: hsl(231, 20%, 40%);
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    box-shadow: inset 0 3px 2px rgba(255, 255, 255, .22),
-                inset 0 -3px 2px rgba(0, 0, 0, .17), 
-                inset 0 20px 10px rgba(255, 255, 255, .12), 0 0 4px 1px rgba(0, 0, 0, .1), 0 3px 2px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 3px 2px rgba(255, 255, 255, .22), inset 0 -3px 2px rgba(0, 0, 0, .17), inset 0 20px 10px rgba(255, 255, 255, .12), 0 0 4px 1px rgba(0, 0, 0, .1), 0 3px 2px rgba(0, 0, 0, .2);
     text-shadow: 0 1px rgba(255, 255, 255, 0.7);
     position: fixed;
     bottom: 5%;
@@ -145,10 +138,10 @@ header {
     visibility: hidden;
     opacity: 0;
     max-height: 0;
-    transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out;     
+    transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out;
 }
 
-.mensaje-ayuda-cerrar{
+.mensaje-ayuda-cerrar {
     position: absolute;
     top: 0;
     right: 0;
@@ -159,7 +152,8 @@ header {
     cursor: pointer;
     border: 0;
     background: hsl(231, 20%, 40%);
-    color: hsl(231, 20%, 80%);;
+    color: hsl(231, 20%, 80%);
+    ;
 }
 
 .mensaje-ayuda-cerrar::before {
@@ -176,10 +170,10 @@ header {
     overflow: hidden;
 }
 
-#mensaje-ayuda-caja{
+#mensaje-ayuda-caja {
     resize: none;
     width: 100%;
-    transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out; 
+    transition: opacity 0.7s ease-in-out, max-height 0.7s ease-in-out;
 }
 
 #mensaje-ayuda>img {
@@ -193,6 +187,7 @@ header {
     grid-template-areas: "facebook" "twitter" "whatsapp" "youtube" "google";
     position: fixed;
     top: 60%;
+    opacity: .9;
     width: 2.8em;
     z-index: 2;
 }
@@ -251,143 +246,131 @@ header {
 
 /*/////////*/
 
-@media screen and (min-width: 70em) {
-    
+/*
 .navegador {
-    display: grid;
-    grid-template-columns: repeat(7, minmax(6em, 1fr)) 26em 3em;
-    grid-auto-rows: 3em;
-    grid-template-areas: "nav-ini nav-inst nav-serv nav-info nav-logi nav-tram nav-asesora";
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    justify-items: center;
-    background-color: hsl(221, 18%, 49%);
-    padding: 0.2em 0;
-    font-size: 0.8rem;
-    font-family: 'Open Sans', 'Arial Narrow', Arial, sans-serif;
-}
-
-.navegador ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.navegador ul:before, .navegador ul:after {
-    content: "";
-    display: table;
-}
-
-.navegador ul:after {
-    clear: both;
-}
-
-.navegador ul>li {
-    position: relative;
-}
-
-.navegador a {
-    display: block;
-    padding: 0.6em 1.2em;
-    line-height: 1.2em;
-    color: white;
-    border-left: 1px solid hsl(0, 0%, 35%);
-    text-decoration: none;
-    letter-spacing: .1em;
-}
-
-.navegador a:hover {
-    text-decoration: none;
-    background: hsl(221, 18%, 59%);
-}
-
-.navegador li ul {
-    background: hsl(219, 37%, 24%);
-    width: 220%;
-}
-@media (max-width:80em) {
-    .navegador li ul {
-        width: 300%;
-    }
-}
-
-.navegador li ul a {
-    border: none;
+    justify-content: center;
     text-align: left;
-    font-size: 1.1rem;
+    background-color: hsl(221, 18%, 49%);
 }
+*/
 
-.navegador li ul a:hover {
-    background: hsla(0, 0%, 0%, 0.2);
-}
-
-.navegador li ul {
-    position: absolute;
-    left: 0;
-    top: 2.4em;
-    z-index: 1;
-}
-
-.navegador li ul li {
-    overflow: hidden;
-    height: 0;
-    transition: height 200ms ease-in;
-}
-
-.navegador ul>li:hover ul li {
-    height: 3em;
-}
-
-.navegador input[type=text] {
-    padding: 0.8em;
-    border: none;
-    font-size: 1em;
-    justify-self: right;
-}
-
-.navegador button {
-    width: 2.3rem;
-    background: hsl(211, 65%, 35%);
-    padding: 0.4em;
-    color: white;
-    font-size: 1em;
-    border: 1px solid blue;
-    cursor: pointer;
-}
-
-.navegador button:hover {
-    background: hsl(207, 90%, 45%);
-}
-
-.navegador-inicio {
-    grid-area: nav-ini;
-}
-
-.navegador-institucion {
-    grid-area: nav-inst;
-}
-
-.navegador-servicios {
-    grid-area: nav-serv;
-}
-
-.navegador-informacion {
-    grid-area: nav-info;
-}
-
-.navegador-logistica {
-    grid-area: nav-logi;
-}
-
-.navegador-tramites {
-    grid-area: nav-tram;
-}
-
-.navegador-asesora {
-    grid-area: nav-asesora;
-}
-
+@media screen and (min-width: 55em) {
+    .navegador {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(6em, 1fr)) 24em 3em;
+        grid-auto-rows: 3em;
+        grid-template-areas: "nav-ini nav-inst nav-serv nav-info nav-logi nav-tram nav-asesora";
+        align-items: center;
+        text-align: center;
+        justify-items: center;
+        background-color: hsl(221, 18%, 49%);
+        padding: 0.2em 0;
+        font-size: .8rem;
+        font-family: 'Open Sans', 'Arial Narrow', Arial, sans-serif;
+    }
+    .navegador>ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .navegador a {
+        padding: 0.6em 1.2em;
+        color: white;
+        text-decoration: none;
+    }
+    .navegador ul>li {
+        padding: 1em 1.2em;      
+        color: white;
+        position: relative;
+        z-index: 1;
+        letter-spacing: .1em;
+        border-width: 2px 0;
+    }
+    .navegador ul>li:hover {
+        background: hsl(221, 18%, 59%);
+        cursor: pointer;
+    }
+    .navegador ul>li:hover>ul>li {
+        display: block;
+        border-bottom:1px hsl(219, 37%, 34%) solid;
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+        z-index: -1;
+        background: hsl(219, 37%, 24%);
+        width: 180%;
+        text-align: left;
+        border-radius: 0 0 .3em .3em;
+        border-left:3px hsl(219, 37%, 34%) solid;
+        border-right:3px hsl(219, 37%, 34%) solid;
+    }
+    .dropdown-menu>li {
+        display: none;
+        color: white;
+        opacity: 0;
+        transform-origin: top center;
+        animation: slideDown 300ms 60ms ease-in-out forwards;
+    }
+    .dropdown-menu li>a {
+        text-decoration: none;
+        color: inherit;
+    }
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-2em);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .navegador input[type=text] {
+        padding: 0.8em;
+        border: none;
+        font-size: 1em;
+        justify-self: right;
+    }
+    .navegador button {
+        width: 2.3rem;
+        background: hsl(211, 65%, 35%);
+        padding: 0.4em;
+        color: white;
+        font-size: 1em;
+        border: 1px solid blue;
+        cursor: pointer;
+    }
+    .navegador button:hover {
+        background: hsl(207, 90%, 45%);
+    }
+    .navegador-inicio {
+        grid-area: nav-ini;
+    }
+    .navegador-institucion {
+        grid-area: nav-inst;
+    }
+    .navegador-servicios {
+        grid-area: nav-serv;
+    }
+    .navegador-informacion {
+        grid-area: nav-info;
+    }
+    .navegador-logistica {
+        grid-area: nav-logi;
+    }
+    .navegador-tramites {
+        grid-area: nav-tram;
+    }
+    .navegador-asesora {
+        grid-area: nav-asesora;
+    }
 }
 
 /*==============
@@ -431,7 +414,8 @@ footer text {
 .footer-contacto ul {
     list-style: none;
 }
-.footer-contacto ul>li>bold{
+
+.footer-contacto ul>li>bold {
     font-weight: 700;
 }
 
@@ -441,6 +425,7 @@ footer text {
     /*PARA SACAR EL COLOR ADECUADO USANDO FILTER: https://codepen.io/sosuke/pen/Pjoqqp*/
     filter: invert(49%) sepia(6%) saturate(334%) hue-rotate(182deg) brightness(95%) contrast(88%);
 }
+
 .footer-contacto-redes img:hover {
     filter: drop-shadow(1px 1px 8px hsl(225, 4%, 78%)) invert(99%) sepia(1%) saturate(6453%) hue-rotate(183deg) brightness(99%) contrast(60%);
 }
