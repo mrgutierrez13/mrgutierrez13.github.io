@@ -1,6 +1,6 @@
 :root {
     box-sizing: border-box;
-    font-size: calc(.1vw + 0.9em);
+    font-size: calc(.1vw + 12px);
 }
 
 html {
