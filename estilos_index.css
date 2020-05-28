@@ -109,7 +109,7 @@
     fill: hsl(0, 0%, 100%, 1)
 }
 
-@media (max-width:600px) {
+@media (max-width:55em) {
     .next, .prev {
         padding: 1rem
     }
@@ -268,7 +268,7 @@
     color: hsl(206, 82%, 97%);
     padding: 6em 12em;    
 }
-@media screen and (max-width: 70em) {
+@media screen and (max-width: 55em) {
     .index-guia{
       padding: 6em 2em;
     }
@@ -337,7 +337,7 @@
     transition: background-color 0.2s ease-out;
     border-radius: 0.8em 0 0.8em 0;
 }
-@media screen and (max-width: 70em) {
+@media screen and (max-width: 55em) {
     .index-enlaces-item>a{
       width: 90%;
     }
@@ -360,7 +360,7 @@
     padding-left: 2em;
     transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in;
 }
-@media screen and (max-width: 70em) {
+@media screen and (max-width: 55em) {
     .index-enlaces-lista{
       width: 90%;
     }

@@ -18,30 +18,38 @@
                 rel="noopener noreferrer"><img src="images/Banner-minimo.png"></a>
         </div>
     </div>
-    <div class="icon-bar">     
+    <div class="icon-bar">
         <a class="facebook" href="http://facebook.com/vcie.gob.bo" target="_blank" rel="noopener noreferrer">
             <img src="images/link_facebook.svg"></a>
         <a class="twitter" href="http://twitter.com/vcie_bo" target="_blank" rel="noopener noreferrer">
             <img src="images/link_twitter.svg"></a>
         <a class="youtube" href="http://youtube.com" target="_blank" rel="noopener noreferrer">
             <img src="images/link_youtube.svg"></a>
-        <a class="google" href="https://drive.google.com/file/d/1m9RxyovzM2dMzp3_154eQg0FkvB_nWsc/view?usp=sharing_eip&ts=5e9f62ef" target="_blank" rel="noopener noreferrer">
+        <a class="google"
+            href="https://drive.google.com/file/d/1m9RxyovzM2dMzp3_154eQg0FkvB_nWsc/view?usp=sharing_eip&ts=5e9f62ef"
+            target="_blank" rel="noopener noreferrer">
             <img src="images/link_google.svg"></a>
         <a class="whatsapp" href="" target="_blank" rel="noopener noreferrer">
             <img src="images/link_whatsapp.svg"></a>
     </div>
-    <div id="mensaje-ayuda">
+
+    <button id="myButton" class="open-button" onclick="openForm()">
         <img src="images/link_whatsapp.svg">
-        <text>Hola ¿Como podemos ayudarle?</text>
-        <button class="mensaje-ayuda-cerrar" id="mensaje-ayuda-cerrar">
-            <span class="mensaje-cerrar-icono">cerrar</span>
-        </button>
-        <form>
-            <textarea id="mensaje-ayuda-caja" name="mensaje-ayuda-caja" rows="5"></textarea>
+    </button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b>Mensaje</b></label>
+            <textarea placeholder="Escriba su consulta..." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Enviar al VCI</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Cerrar chat</button>
         </form>
     </div>
 
-    <div class="contenedor"> 
+    <div class="contenedor">
         <header>
             <div class="titulo">Viceministerio de Comercio Interno</div>
             <div class="subtitulo">El portal de la industria, comercio, logística, y exportaciones</div>
@@ -93,6 +101,7 @@
                         <li><a href="fideicomisos.html">Fideicomisos</a></li>
                         <li><a href="brokers.html">Directorio de Brokers</a></li>
                         <li><a href="proveedores.html">Directorio de Proveedores</a></li>
+                        <li><a href="videos.html">Videos Informativos</a></li>
                     </ul>
                 </li>
             </ul>
@@ -110,7 +119,7 @@
             <ul class="navegador-tramites">
                 <li>
                     <a>TRÁMITES</a>
-                    <ul class="dropdown-menu"> 
+                    <ul class="dropdown-menu">
                         <li><a href="ritex.html">RITEX</a></li>
                         <li><a href="costo-bruto.html">Costo Bruto de Producción</a></li>
                     </ul>
@@ -119,7 +128,11 @@
             <a class="navegador-vci-asesora" href="asesora.html">VCI TE ASESORA</a>
             <input type="text" placeholder="Buscar..">
             <button type="submit"><img src="images/buscar.svg"></button>
+            <!--a href="javascript:void(0);" class="burger-icon" onclick="menuMobiles()">
+                <img src="images/buscar.svg">
+            </a-->
         </nav>
+        <div class="titulo-mobil">Viceministerio de Comercio Interno</div>
         <div class="contenido">
             <!-- Slideshow container -->
             <div class="slider" id="slider">
@@ -534,7 +547,8 @@
                     <a href="http://www.insumosbolivia.gob.bo/">
                         <img src="images/logo_insumos_min.png">
                     </a>
-                    <a href="https://www.facebook.com/pages/category/Science--Technology---Engineering/Aurum-Bolivia-101285828148286/">
+                    <a
+                        href="https://www.facebook.com/pages/category/Science--Technology---Engineering/Aurum-Bolivia-101285828148286/">
                         <img src="images/aurum_logo.jpg">
                     </a>
                 </div>
@@ -547,9 +561,15 @@
                     <ul>
                         <li>Oficina Central - La Paz</li>
                         <li>Av. Camacho Nro 1488, Edificio Ex-Refo</li>
-                        <li><bold>Teléfono: </bold>77796069</li>
-                        <li><bold>Fax: </bold>123456789</li>
-                        <li><bold>Email: </bold>vci.te.asesora@gmail.com</li>
+                        <li>
+                            <bold>Teléfono: </bold>77796069
+                        </li>
+                        <li>
+                            <bold>Fax: </bold>123456789
+                        </li>
+                        <li>
+                            <bold>Email: </bold>vci.te.asesora@gmail.com
+                        </li>
                     </ul>
                     <div class="footer-contacto-redes">
                         <a class="footer-facebook" href="http://facebook.com/vcie.gob.bo" target="_blank"
@@ -570,9 +590,15 @@
                     <ul>
                         <li>Oficina Central - La Paz</li>
                         <li>Av. Camacho Nro 1488, Edificio Ex-Refo</li>
-                        <li><bold>Teléfono: </bold>77796069</li>
-                        <li><bold>Fax: </bold>123456789</li>
-                        <li><bold>Email: </bold>vci.te.asesora@gmail.com</li>
+                        <li>
+                            <bold>Teléfono: </bold>77796069
+                        </li>
+                        <li>
+                            <bold>Fax: </bold>123456789
+                        </li>
+                        <li>
+                            <bold>Email: </bold>vci.te.asesora@gmail.com
+                        </li>
                     </ul>
                     <div class="footer-contacto-redes">
                         <a class="footer-facebook" href="http://facebook.com/vcie.gob.bo" target="_blank"
@@ -597,7 +623,7 @@
             </text>
         </footer>
     </div>
-    
+
     <script>
         var button = document.getElementById('close');
         var cerrar = document.getElementById('close-ext');
@@ -688,24 +714,56 @@
         }
         items.forEach(item => item.addEventListener('click', toggleAccordion));
     </script>
+
     <script>
-        var element = document.getElementById("mensaje-ayuda");
+        var element = document.getElementById("myForm");
 
         var t = setTimeout(openPopUp, 5000);
         function openPopUp() {
-            element = document.getElementById("mensaje-ayuda");
+            element = document.getElementById("myForm");
             element.style.visibility = "visible";
             element.style.opacity = "1";
             element.style.maxHeight = "30em";
         }
 
-        var button = document.getElementById('mensaje-ayuda-cerrar');
+        var element2 = document.getElementById("myButton");
 
-        button.addEventListener('click', function (event) {
-            event.preventDefault();
-            element.style.display = 'none';
-        });
-
+        var t2 = setTimeout(openPopUp2, 5500);
+        function openPopUp2() {
+            element2 = document.getElementById("myButton");
+            element2.style.visibility = "visible";
+            element2.style.opacity = "1";
+            element2.style.maxHeight = "30em";
+        }
     </script>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.visibility = "visible";
+            document.getElementById("myForm").style.opacity = "1";
+            document.getElementById("myForm").style.maxHeight = "30em";
+            document.getElementById("myButton").style.visibility = "hidden";
+            document.getElementById("myButton").style.opacity = "0";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.visibility = "hidden";
+            document.getElementById("myForm").style.opacity = "0";
+            document.getElementById("myForm").style.maxHeight = "0";
+            document.getElementById("myButton").style.visibility = "visible";
+            document.getElementById("myButton").style.opacity = "1";
+        } 
+    </script>
+
+    <!---script>
+        function menuMobiles() {
+            var x = document.getElementById(".navegador>ul");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        } 
+    </script--->
 
 </body>
