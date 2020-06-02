@@ -249,8 +249,8 @@
 
 .contenedor-entidades a>img {
     object-fit: contain;
-    padding: 1.1em 1.1em 1.3em 1.1em;
-    border-radius: 40%;
+    padding: 0.6em;
+    border-radius: 50%;
     margin: auto;
 }
 
