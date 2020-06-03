@@ -156,18 +156,21 @@ header {
     z-index: 2;
     opacity: 0;
     visibility: hidden;
+    transform-origin: center;
     box-shadow: 0.1em 0.1em 0.5em hsl(219, 60%, 17%);
     transition: transform .1s ease-in;
 }
 
 .open-button:hover{
     transform: scale(1.02);
+    transform-origin: center;
     transition: transform .1s ease-out;
     background-color: hsl(0, 100%, 60%);
 }
 
 .open-button>img{
     filter: invert(1);
+    margin: auto;
 }
 
 .chat-popup {
