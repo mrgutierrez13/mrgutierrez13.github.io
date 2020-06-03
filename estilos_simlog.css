@@ -1,0 +1,14 @@
+.contenido>* {
+    text-align: center;
+    background-color: var(--cont-bg-color-neutral);
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+.simlog{
+    display: flex;
+    justify-content: center;
+}
+
+#viz_area{
+}
