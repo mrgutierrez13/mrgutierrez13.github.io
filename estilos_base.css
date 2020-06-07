@@ -33,7 +33,7 @@ img {
 .contenedor {
     display: grid;
     grid-template-areas: "frente" "nav" "titulo-mobil" "contenido" "pie";
-    max-width: 100em;
+    max-width: 100rem;
     margin: 0 auto;
     /*margin: 0 calc(50% - 720px);*/
     /*box-shadow: 0.1em 0.1em 1.5em #124;*/
@@ -318,7 +318,6 @@ header {
 .navegador {
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
     text-align: left;
     background-color: var(--cont-bg-color-oscuro);
@@ -487,6 +486,16 @@ header {
     }
     .navegador-asesora {
         grid-area: nav-asesora;
+    }
+
+    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        opacity: .9;
     }
 }
 
