@@ -12,14 +12,18 @@ html {
 }
 
 body {
-    background-image: linear-gradient(45deg, transparent 20%, hsl(225, 4%, 66%) 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, hsl(225, 4%, 66%) 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, hsl(225, 4%, 66%) 80%, transparent 0), radial-gradient(hsl(225, 4%, 66%) 2px, transparent 0);
+    --cont-bg-color-neutral: hsla(192, 49%, 97%, 0.9);
+    --cont-bg-color-oscuro: hsl(192, 32%, 37%);
+    background-image: linear-gradient(45deg, transparent 20%, var(--cont-bg-color-neutral) 25%, transparent 25%),
+                      linear-gradient(-45deg, transparent 20%, var(--cont-bg-color-neutral)  25%, transparent 25%),
+                      linear-gradient(-45deg, transparent 75%, var(--cont-bg-color-neutral)  80%, transparent 0), 
+                      radial-gradient(hsla(192, 49%, 37%, 0.3) 2px, transparent 0);
     background-size: 41px 39px, 43px 71px;
     /*30px 30px 30px 30px*/
-    background-color: hsl(225, 4%, 75%);
+    background-color: hsl(187, 14%, 89%);
     font-family: "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
-    color: hsl(228, 3%, 28%);
+    color: hsl(192, 32%, 17%);
     margin: 0;
-    --cont-bg-color-neutral: hsla(225, 100%, 99%, 0.9);
 }
 
 img {
@@ -317,7 +321,7 @@ header {
     align-items: left;
     justify-content: center;
     text-align: left;
-    background-color: hsl(221, 18%, 49%);
+    background-color: var(--cont-bg-color-oscuro);
     gap: 2em;
 }
 
@@ -358,7 +362,7 @@ header {
         align-items: center;
         text-align: center;
         justify-items: center;
-        background-color: hsl(221, 18%, 49%);
+        background-color: var(--cont-bg-color-oscuro);
         padding: 0.2em 0;
         font-size: .8rem;
         font-family: 'Open Sans', 'Arial Narrow', Arial, sans-serif;
@@ -375,26 +379,40 @@ header {
         letter-spacing: .1em;
         border-width: 2px 0;
     }
-    .navegador ul>li:hover {
-        background: hsl(221, 18%, 59%);
+    .navegador ul>li>a{
+        padding-right: 2em;
+        padding-left: .5em;        
+    }
+    .navegador ul>li>a:hover {
+        color: hsl(51, 73%, 53%);
+        cursor: pointer;        
+    }
+    #navegador-vci-asesora:hover{
+        color: hsl(51, 73%, 53%);
         cursor: pointer;
     }
     .navegador ul>li:hover>ul>li {
         display: block;
-        border-bottom: 1px hsl(219, 37%, 34%) solid;
+        border-bottom: 1px var(--cont-bg-color-oscuro) solid;
+    }
+    #nav-siexco{
+        border: 2px dotted hsl(51, 73%, 53%);
+        color: hsl(51, 73%, 53%);
     }
     .dropdown-menu {
         position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         top: 100%;
         left: 0;
         padding: 0;
         z-index: -1;
-        background: hsl(219, 37%, 24%);
-        width: 180%;
+        background: hsl(192, 32%, 47%);
+        width: 340%;
         text-align: left;
         border-radius: 0 0 .3em .3em;
-        border-left: 3px hsl(219, 37%, 34%) solid;
-        border-right: 3px hsl(219, 37%, 34%) solid;
+        border-left: 3px var(--cont-bg-color-oscuro) solid;
+        border-right: 3px var(--cont-bg-color-oscuro) solid;
     }
     .dropdown-menu>li {
         display: none;
@@ -407,6 +425,17 @@ header {
     .dropdown-menu li>a {
         text-decoration: none;
         color: inherit;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .dropdown-menu li>h3 {
+        color: hsl(192, 32%, 77%);
+        font-weight: 100;
+        font-size: .9rem;
+        margin: 0;
+        padding-top: .3em;
+        padding-left: .5em;
+        padding-bottom: 1em;
     }
     @keyframes slideDown {
         0% {
@@ -468,9 +497,8 @@ header {
 footer {
     position: relative;
     grid-area: pie;
-    border-top-color: hsl(229, 18%, 38%);
-    color: hsl(214, 4%, 68%);
-    background-color: hsl(210, 4%, 18%);
+    color: hsl(192, 32%, 77%);
+    background-color: var(--cont-bg-color-oscuro);
     padding: 2em 6em;
     font-size: .9rem;
     line-height: 1.5em;
@@ -509,13 +537,13 @@ footer text {
 
 .footer-contacto-redes img {
     width: 2em;
-    /*color: hsl(225, 4%, 78%);*/
     /*PARA SACAR EL COLOR ADECUADO USANDO FILTER: https://codepen.io/sosuke/pen/Pjoqqp*/
-    filter: invert(49%) sepia(6%) saturate(334%) hue-rotate(182deg) brightness(95%) contrast(88%);
+    color: #b2d0d7;
+    filter: invert(64%) sepia(44%) saturate(300%) hue-rotate(145deg) brightness(89%) contrast(86%);
 }
 
 .footer-contacto-redes img:hover {
-    filter: drop-shadow(1px 1px 8px hsl(225, 4%, 78%)) invert(99%) sepia(1%) saturate(6453%) hue-rotate(183deg) brightness(99%) contrast(60%);
+    filter: drop-shadow(1px 1px 8px hsl(225, 94%, 98%)) invert(95%) sepia(3%) saturate(3226%) hue-rotate(162deg) brightness(90%) contrast(85%);
 }
 
 .contenido {
