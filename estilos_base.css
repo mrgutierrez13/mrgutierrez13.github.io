@@ -378,18 +378,22 @@ header {
         letter-spacing: .1em;
         border-width: 2px 0;
     }
-    .navegador ul>li>a{
+    .navegador h2{
+        padding-right: 2em;
+        padding-left: .5em;   
+        font-size: inherit;
+        font-weight: inherit;
+        margin: 0;             
+    }
+    .navegador a{
         padding-right: 2em;
         padding-left: .5em;        
-    }
-    .navegador ul>li>a:hover {
+    }    
+    .navegador a:hover {
         color: hsl(51, 73%, 53%);
         cursor: pointer;        
     }
-    #navegador-vci-asesora:hover{
-        color: hsl(51, 73%, 53%);
-        cursor: pointer;
-    }
+
     .navegador ul>li:hover>ul>li {
         display: block;
         border-bottom: 1px var(--cont-bg-color-oscuro) solid;
