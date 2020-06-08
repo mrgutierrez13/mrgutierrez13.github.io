@@ -16,25 +16,64 @@
             <!-- Slideshow container -->
             <div class="slider" id="slider">
                 <div class="slider-item">
-                    <img src="images/prueba/1920x500-arroz.jpg">
+                    <!--
+                        PARA EVITAR CARGAR IMAGENES PESADAS EN DISPOSITIVOS MOBILES
+                        https://medium.com/@mike_masey/how-to-use-the-picture-element-to-prevent-images-loading-on-mobile-devices-1376e33b190e
+                    -->
+                    <picture>
+                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
+                        <source media="(min-width: 768px)" 
+                        srcset="images/prueba/1920x500-arroz.jpg" />
+                        <img src="images/prueba/1920x500-arroz.jpg" alt="arroz"/>
+                    </picture>
                 </div>
                 <div class="slider-item">
-                    <img src="images/prueba/1920x500-fruta.jpg">
+                    <picture>
+                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
+                        <source media="(min-width: 768px)" 
+                        srcset="images/prueba/1920x500-fruta.jpg" />
+                        <img src="images/prueba/1920x500-fruta.jpg" alt="fruta"/>
+                    </picture>
                 </div>
                 <div class="slider-item">
-                    <img src="images/prueba/1920x500-importacion.jpg">
+                    <picture>
+                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
+                        <source media="(min-width: 768px)" 
+                        srcset="images/prueba/1920x500-importacion.jpg" />
+                        <img src="images/prueba/1920x500-importacion.jpg" alt="importacion"/>
+                    </picture>
                 </div>
                 <div class="slider-item">
-                    <img src="images/prueba/1920x500-luna.jpg">
+                    <picture>
+                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
+                        <source media="(min-width: 768px)" 
+                        srcset="images/prueba/1920x500-luna.jpg" />
+                        <img src="images/prueba/1920x500-luna.jpg" alt="luna"/>
+                    </picture>
                 </div>
                 <div class="slider-item">
-                    <img src="images/prueba/1920x500-negocios.jpg">
+                    <picture>
+                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
+                        <source media="(min-width: 768px)" 
+                        srcset="images/prueba/1920x500-negocios.jpg" />
+                        <img src="images/prueba/1920x500-negocios.jpg" alt="negocios"/>
+                    </picture>
                 </div>
                 <div class="slider-item">
-                    <img src="images/prueba/1920x500-periodico.jpg">
+                    <picture>
+                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
+                        <source media="(min-width: 768px)" 
+                        srcset="images/prueba/1920x500-periodico.jpg" />
+                        <img src="images/prueba/1920x500-periodico.jpg" alt="periodico"/>
+                    </picture>
                 </div>
                 <div class="slider-item">
-                    <img src="images/prueba/1920x500-tecno.jpg">
+                    <picture>
+                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
+                        <source media="(min-width: 768px)" 
+                        srcset="images/prueba/1920x500-tecno.jpg" />
+                        <img src="images/prueba/1920x500-tecno.jpg" alt="tecnologia"/>
+                    </picture>
                 </div>
 
 

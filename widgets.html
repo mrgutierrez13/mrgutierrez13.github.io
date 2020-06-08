@@ -4,8 +4,14 @@
         <button class="modal-close" id="close">
             <span class="sr-only">cerrar</span>
         </button>
-        <a class="modal-noticia" href="https://www.boliviasegura.gob.bo/" target="_blank"
-            rel="noopener noreferrer"><img src="images/Banner-minimo.png"></a>
+        <a class="modal-noticia" href="https://www.boliviasegura.gob.bo/" target="_blank" rel="noopener noreferrer">
+            <picture>
+                <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
+                <source media="(min-width: 768px)" 
+                srcset="images/Banner-minimo.png" />
+                <img src="images/Banner-minimo.png" alt="banner"/>
+            </picture>
+        </a>
     </div>
 </div>
 <button id="myButton" class="open-button" onclick="openForm()">
@@ -14,7 +20,7 @@
 
 <div class="chat-popup" id="myForm">
     <form action="/action_page.php" class="form-container">
-        <h1>Chat</h1>
+        <h1>VCI te asesora</h1>
 
         <label for="msg"><b>¿En que podria ayudarle el VCI?</b></label>
         <textarea placeholder="Escriba su consulta..." name="msg" required></textarea>
@@ -23,5 +29,3 @@
         <button type="button" class="btn cancel" onclick="closeForm()">Cerrar chat</button>
     </form>
 </div>
-
-

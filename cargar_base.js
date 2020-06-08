@@ -37,8 +37,10 @@ fetch("icon_bar.html")
   });
 
 function toggleNav() {
-  document.getElementById("naveg").style.display= "block";
-  document.getElementById("naveg-ext").style.display= "block";
-  var element = document.getElementById("nav-icon");
-  element.classList.toggle("open");
+  var element1 = document.getElementById("naveg");
+  var element2 = document.getElementById("naveg-ext");
+  var element3= document.getElementById("nav-icon");
+  element1.classList.toggle("open");
+  element2.classList.toggle("open");
+  element3.classList.toggle("open");
 }

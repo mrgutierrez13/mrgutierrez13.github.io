@@ -1,22 +1,19 @@
 .contenido-fideicomisos{
-    background-color: white;
     display: grid;
     font-size: 1.2em;
-    color: #666666;
     padding-bottom: 2em;
     text-align: justify;
     line-height: 1.5em;
+    background-color: var(--cont-bg-color-fondo);
 }
 
 .contenido-fideicomisos>h1{
     padding-left: 2em;
-    background-color: rgba(255, 255, 255, 0.5);
 }
 .contenido-fideicomisos>text{
     padding-left: 4em;
     padding-bottom: 2em;
-    width: 90%;
-    background-color: rgba(255, 255, 255, 0.5);   
+    width: 90%;  
 }
 
 .fideicomiso-descripcion{
@@ -31,7 +28,7 @@
 .fideicomiso-descripcion>h1{
     grid-area: titulo-fid;
     font-size: 1.5rem;
-    background-color: #e84c3d;
+    background-color: var(--cont-bg-color-oscuro);
     margin-right: 22em;
     padding:0.6em 0 0.5em 1em;
     color: white;
@@ -39,7 +36,6 @@
 }
 .fideicomiso-descripcion>h2{
     grid-area: caract;
-    color: #b34f47;
 }
 
 bold{

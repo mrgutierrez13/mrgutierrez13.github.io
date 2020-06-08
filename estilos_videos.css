@@ -1,6 +1,6 @@
 .contenido-videos {
     display: flex;
-    background-color: var(--cont-bg-color-neutral);
+    background-color: var(--cont-bg-color-fondo);
     flex-flow: column;
     padding: 3em 2em;
     gap: 2em;
@@ -14,7 +14,7 @@
 
 .contenido>h1 {
     text-align: center;
-    background-color: var(--cont-bg-color-neutral);
+    background-color: var(--cont-bg-color-fondo);
     margin: 0 auto;
     padding-top: 2em;
 }

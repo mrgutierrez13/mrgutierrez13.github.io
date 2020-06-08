@@ -1,6 +1,6 @@
 .contenido>* {
     text-align: center;
-    background-color: var(--cont-bg-color-neutral);
+    background-color: var(--cont-bg-color-fondo);
     margin: 0 auto;
     padding-top: 2em;
 }
@@ -8,7 +8,4 @@
 .simlog{
     display: flex;
     justify-content: center;
-}
-
-#viz_area{
 }

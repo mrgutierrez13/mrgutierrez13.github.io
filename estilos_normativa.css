@@ -1,6 +1,6 @@
 .contenido-normativa{
     display: grid;
-    background-color: var(--cont-bg-color-neutral);
+    background-color: var(--cont-bg-color-fondo);
 }
 
 .contenido-normativa>h1{
