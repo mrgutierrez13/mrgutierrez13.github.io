@@ -7,7 +7,6 @@
                          "anun-spr anun-spr"
                          "logo-spr contacto-spr";
     font-size: 1.2em;
-    color: #666666;
     padding-bottom: 2em;
     text-align: justify;
     line-height: 1.5em;
@@ -16,14 +15,12 @@
 .contenido-sprocon>h1{
     grid-area: titulo-spr;
     padding-left: 2em;
-    background-color: rgba(255, 255, 255, 0.5);
 }
 .contenido-sprocon>text{
     grid-area: text-spr;
     padding-left: 4em;
     padding-bottom: 2em;
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.5);   
 }
 
 .sprocon-logo{
@@ -43,19 +40,21 @@
 .sprocon-contacto{
     grid-area: contacto-spr;
     font-size: 1rem;
+    padding-right: 4em;
 }
 
 .sprocon-anuncio{
     grid-area: anun-spr;
     font-size: 1.5rem;
-    background-color: #e84c3d;
+    background-color: var(--cont-bg-color-oscuro);
     width: 80%;
     justify-self: center;
     text-align: center;
-    padding:0.6em 0 0.5em 1em;
     color: white;
+    padding:0.6em 0 0.5em 1em;
     font-weight: 100;
     margin-bottom: 2em;
+    border-radius: .2em;
 }
 
 .sprocon-contacto>ul li {

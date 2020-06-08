@@ -1,6 +1,6 @@
 .contenido-mapa-georeferencial {
     display: grid;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: var(--cont-bg-color-neutral);
     grid-template-columns: 1fr 1fr 6fr;
     grid-template-areas: "mapa-geo-titulo mapa-geo-titulo mapa-geo-titulo" 
                          "mapa-geo-tit-busq mapa-geo-tit-busq mapa-geo-place" 

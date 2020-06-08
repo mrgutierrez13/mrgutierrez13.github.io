@@ -14,12 +14,8 @@ html {
 body {
     --cont-bg-color-neutral: hsla(192, 49%, 97%, 0.9);
     --cont-bg-color-oscuro: hsl(192, 32%, 37%);
-    background-image: linear-gradient(45deg, transparent 20%, var(--cont-bg-color-neutral) 25%, transparent 25%),
-                      linear-gradient(-45deg, transparent 20%, var(--cont-bg-color-neutral)  25%, transparent 25%),
-                      linear-gradient(-45deg, transparent 75%, var(--cont-bg-color-neutral)  80%, transparent 0), 
-                      radial-gradient(hsla(192, 49%, 37%, 0.3) 2px, transparent 0);
+    background-image: linear-gradient(45deg, transparent 20%, var(--cont-bg-color-neutral) 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, var(--cont-bg-color-neutral) 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, var(--cont-bg-color-neutral) 80%, transparent 0), radial-gradient(hsla(192, 49%, 37%, 0.3) 2px, transparent 0);
     background-size: 41px 39px, 43px 71px;
-    /*30px 30px 30px 30px*/
     background-color: hsl(187, 14%, 89%);
     font-family: "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
     color: hsl(192, 32%, 17%);
@@ -32,11 +28,9 @@ img {
 
 .contenedor {
     display: grid;
-    grid-template-areas: "frente" "nav" "titulo-mobil" "contenido" "pie";
+    grid-template-areas: "frente" "nav" "mobil-head" "contenido" "pie";
     max-width: 100rem;
     margin: 0 auto;
-    /*margin: 0 calc(50% - 720px);*/
-    /*box-shadow: 0.1em 0.1em 1.5em #124;*/
 }
 
 header {
@@ -44,10 +38,9 @@ header {
     display: none;
 }
 
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 60em) {
     header {
         display: block;
-        grid-area: frente;
         position: relative;
         font-family: "Times New Roman", Times, serif;
         font-weight: 600;
@@ -65,19 +58,16 @@ header {
     font-size: calc(.26vw + 1.8em);
 }
 
-.titulo-mobil {
-    grid-area: titulo-mobil;
-    background-color: var(--cont-bg-color-neutral);
+.mobil-head {
+    grid-area: mobil-head;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--cont-bg-color-oscuro);
+    color: white;
     text-align: center;
     font-size: 2rem;
     padding: .9em .3em;
     font-weight: 900;
-}
-
-@media screen and (min-width: 55em) {
-    .titulo-mobil {
-        display: none;
-    }
 }
 
 .subtitulo {
@@ -87,7 +77,9 @@ header {
     font-size: calc(.22vw + .9em);
 }
 
-/*modal NOTICIA IMPORTANTE*/
+/*=========================
+ modal NOTICIA IMPORTANTE
+==========================*/
 
 .modal {
     display: block;
@@ -141,10 +133,9 @@ header {
     overflow: hidden;
 }
 
-/*mensaje ayuda*/
-
-
-/* Button used to open the chat form - fixed at the bottom of the page */
+/*===============
+  CHAT de ayuda
+===============*/
 
 .open-button {
     background-color: hsl(0, 0%, 33%);
@@ -154,7 +145,7 @@ header {
     bottom: 6%;
     right: 3%;
     width: 6em;
-    background-color: hsl(0, 100%, 55%);    
+    background-color: hsl(0, 100%, 55%);
     border: 3px solid white;
     border-radius: 50%;
     z-index: 2;
@@ -165,14 +156,14 @@ header {
     transition: transform .1s ease-in;
 }
 
-.open-button:hover{
+.open-button:hover {
     transform: scale(1.02);
     transform-origin: center;
     transition: transform .1s ease-out;
     background-color: hsl(0, 100%, 60%);
 }
 
-.open-button>img{
+.open-button>img {
     filter: invert(1);
     margin: auto;
 }
@@ -191,15 +182,11 @@ header {
     border-radius: .5em;
 }
 
-/* Add styles to the form container */
-
 .form-container {
     max-width: 18em;
     padding: .8em;
     background-color: hsl(0, 11%, 93%);
 }
-
-/* Full-width textarea */
 
 .form-container textarea {
     width: 100%;
@@ -211,14 +198,10 @@ header {
     min-height: 12em;
 }
 
-/* When the textarea gets focus, do something */
-
 .form-container textarea:focus {
     background-color: hsl(0, 0%, 87%);
     outline: none;
 }
-
-/* Set a style for the submit/login button */
 
 .form-container .btn {
     background-color: hsl(122, 39%, 49%);
@@ -231,26 +214,23 @@ header {
     opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
-
 .form-container .cancel {
     background-color: hsl(0, 100%, 50%);
 }
-
-/* Add some hover effects to buttons */
 
 .form-container .btn:hover, .open-button:hover {
     opacity: 1;
 }
 
-
-/*redes sociales*/
+/*================
+ redes sociales
+===============*/
 
 .icon-bar {
     display: none;
 }
 
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 60em) {
     .icon-bar {
         display: grid;
         grid-template-areas: "facebook" "twitter" "whatsapp" "youtube" "google";
@@ -303,25 +283,37 @@ header {
     }
 }
 
-/*/////////*/
+/*==========
+ NAVEGADOR
+==========*/
 
-/*NAVEGADOR*/
-
-/*/////////*/
-
-/*
-#menuToggle {
+.nav-wrapper {
     display: none;
-}*/
+}
 
+.naveg-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: calc(100vw - 22em);
+    background-color: hsla(0, 0%, 0%, 0.5);
+    z-index: 3;
+}
 
 .navegador {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    position: fixed;
+    height: 100vh;
+    width: 22em;
+    grid-template-columns: 1fr;
     justify-content: center;
     text-align: left;
     background-color: var(--cont-bg-color-oscuro);
     gap: 2em;
+    z-index: 2;
+    overflow-y: scroll;
 }
 
 .navegador>ul {
@@ -337,11 +329,15 @@ header {
     text-decoration: none;
 }
 
-.dropdown-menu>li{
+.dropdown-menu>li {
     padding: .5em 0;
     text-decoration: underline;
     text-decoration-color: white;
     list-style: none;
+}
+
+.dropdown-menu h3 {
+    display: none;
 }
 
 .navegador input[type=text] {
@@ -352,11 +348,19 @@ header {
     display: none;
 }
 
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 60em) {
+    .nav-wrapper {
+        display: block;
+    }
+    .mobil-head {
+        display: none;
+    }
     .navegador {
         display: grid;
+        position: static;
         grid-template-columns: repeat(7, minmax(6em, 1fr)) 24em 3em;
         grid-auto-rows: 3em;
+        height: auto;
         grid-template-areas: "nav-ini nav-inst nav-serv nav-info nav-logi nav-tram nav-asesora";
         align-items: center;
         text-align: center;
@@ -366,6 +370,8 @@ header {
         font-size: .8rem;
         font-family: 'Open Sans', 'Arial Narrow', Arial, sans-serif;
         gap: 0;
+        width: 100%;
+        overflow-y: visible;
     }
     .navegador>ul {
         padding: 0;
@@ -378,27 +384,26 @@ header {
         letter-spacing: .1em;
         border-width: 2px 0;
     }
-    .navegador h2{
+    .navegador h2 {
         padding-right: 2em;
-        padding-left: .5em;   
+        padding-left: .5em;
         font-size: inherit;
         font-weight: inherit;
-        margin: 0;             
+        margin: 0;
     }
-    .navegador a{
+    .navegador a {
         padding-right: 2em;
-        padding-left: .5em;        
-    }    
+        padding-left: .5em;
+    }
     .navegador a:hover {
         color: hsl(51, 73%, 53%);
-        cursor: pointer;        
+        cursor: pointer;
     }
-
     .navegador ul>li:hover>ul>li {
         display: block;
         border-bottom: 1px var(--cont-bg-color-oscuro) solid;
     }
-    #nav-siexco{
+    #nav-siexco {
         border: 2px dotted hsl(51, 73%, 53%);
         color: hsl(51, 73%, 53%);
     }
@@ -432,6 +437,7 @@ header {
         font-weight: 600;
     }
     .dropdown-menu li>h3 {
+        display: block;
         color: hsl(192, 32%, 77%);
         font-weight: 100;
         font-size: .9rem;
@@ -491,16 +497,70 @@ header {
     .navegador-asesora {
         grid-area: nav-asesora;
     }
-
-    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+    /* para que acompañe el scroll de la pantalla */
     .sticky {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
         z-index: 2;
         opacity: .9;
     }
+}
+
+/* Icon 3 */
+
+#nav-icon {
+    width: 3em;
+    position: relative;
+    margin: 0 auto;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+  
+#nav-icon span {
+    display: block;
+    position: absolute;
+    height: .4em;
+    width: 100%;
+    background: white;
+    border-radius: .4em;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}  
+
+#nav-icon span:nth-child(1) {
+    top: 0;
+}
+
+#nav-icon span:nth-child(2), #nav-icon span:nth-child(3) {
+    top: 1em;
+}
+
+#nav-icon span:nth-child(4) {
+    top: 2em;
+}
+
+#nav-icon.open span:nth-child(1) {
+    top: 1em;
+    width: 0%;
+    left: 50%;
+}
+
+#nav-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+#nav-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+#nav-icon.open span:nth-child(4) {
+    top: 1em;
+    width: 0%;
+    left: 50%;
 }
 
 /*==============

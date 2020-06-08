@@ -7,11 +7,12 @@ fetch("cabezera.html")
 
     // Para que la barra de navegacion siga la pantalla
     window.onscroll = function () {
-      myFunction();
+      navStick();
     };
 
-    function myFunction() {
+    function navStick() {
       var header = document.getElementById("head");
+      var navbar = document.getElementById("navbar");
       var sticky = header.clientHeight;
       if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky");
@@ -34,3 +35,10 @@ fetch("icon_bar.html")
   .then((data) => {
     document.querySelector(".barra-enlaces").innerHTML = data;
   });
+
+function toggleNav() {
+  document.getElementById("naveg").style.display= "block";
+  document.getElementById("naveg-ext").style.display= "block";
+  var element = document.getElementById("nav-icon");
+  element.classList.toggle("open");
+}
