@@ -16,7 +16,7 @@ body {
     --cont-bg-color-oscuro: hsl(198, 100%, 37%);
     --cont-bg-color-light: hsl(198, 100%, 47%);
     --cont-bg-color-light-letra: hsl(198, 30%, 84%);
-    --cont-bg-color-highlight: hsl(205, 87%, 34%);
+    --cont-bg-color-highlight: hsl(66, 100%, 64%);
     background-image: linear-gradient(45deg, transparent 20%, var(--cont-bg-color-fondo) 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, hsl(198, 100%, 87%) 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, var(--cont-bg-color-fondo) 80%, transparent 0), radial-gradient(hsla(198, 100%, 47%, 0.3) 2px, transparent 0);
     background-size: 41px 39px, 43px 71px;
     background-color: hsla(198, 100%, 92%, 0.9);
@@ -124,23 +124,17 @@ header {
         top: 0;
         right: 0;
         padding: 0.3em;
-        font-size: 2em;
+        font-size: 2rem;
         height: 1.5em;
         width: 1.5em;
         cursor: pointer;
         border: 0;
     }
-    .modal-close::before {
-        display: block;
-        content: '\00D7';
-    }
-    .sr-only {
+    .modal-close label {
         position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
+        top: 0;
+        left: 33%;
+        font-weight: 500;
     }
 }
 
@@ -187,6 +181,7 @@ header {
     bottom: 5%;
     right: 2%;
     z-index: 2;
+    font-size: .3rem;
     border: 3px solid hsl(0, 0%, 95%);
     box-shadow: 0.1em 0.1em 0.5em hsl(219, 60%, 17%);
     transition: opacity .6s ease-in-out, max-height .3s ease-in-out;
@@ -194,22 +189,46 @@ header {
 }
 
 .form-container {
-    max-width: 18em;
+    max-width: 90em;
     padding: .8em;
     background-color: hsl(0, 11%, 93%);
+    position: relative;
 }
 
-.form-container textarea {
+.form-container h1{
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-container input {
     width: 100%;
     padding: 1em;
-    margin: .3em 0 1.5em 0;
     border: none;
     background: hsl(0, 0%, 95%);
     resize: none;
-    min-height: 12em;
 }
 
-.form-container textarea:focus {
+.form-container>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3em;
+}
+.form-container>div>label{
+    width: fit-content;
+}
+
+.form-container .one-row {
+    height: 1.5em;
+    width: 100%;
+}
+
+.form-container .many-row {
+    height: 8em;
+}
+
+.form-container input:focus {
     background-color: hsl(0, 0%, 87%);
     outline: none;
 }
@@ -226,7 +245,24 @@ header {
 }
 
 .form-container .cancel {
+    position: absolute;
     background-color: hsl(0, 100%, 50%);
+    opacity: 1;
+    top: -1em;
+    right: -1em;
+    width: 3em;
+    height: 3em;
+    padding: 0;
+    border-radius: 50%;    
+    border: 2px solid white;
+}
+
+.cancel label {
+    position: absolute;
+    font-weight: 500;
+    font-size: 2rem;
+    top: -0.15em;
+    left: 28%;
 }
 
 .form-container .btn:hover, .open-button:hover {
@@ -267,6 +303,7 @@ header {
         transform: scaleX(1.1);
     }
     .icon-bar a img {
+        filter: invert(0%) sepia(75%) saturate(207%) hue-rotate(129deg) brightness(91%) contrast(90%);
         transition: filter .1s ease-in-out;
     }
     .icon-bar a:hover img {
@@ -451,6 +488,7 @@ header {
     }
     .navegador ul>li:hover .dropdown-menu {
         padding-bottom: 1em;
+        border-bottom: 3px var(--cont-bg-color-oscuro) solid;
     }
     #nav-siexco {
         border: 2px dotted var(--cont-bg-color-highlight);
@@ -507,23 +545,23 @@ header {
     }
     .navegador input[type=text] {
         display: block;
-        padding: 0.8em;
+        padding: 0.5em;
         border: none;
-        font-size: 1em;
+        font-size: 1rem;
         justify-self: right;
     }
     .navegador button {
         display: block;
-        width: 2.3rem;
-        background: hsl(211, 65%, 35%);
+        width: 2.3em;
+        background: hsl(207, 90%, 45%);
         padding: 0.4em;
         color: white;
-        font-size: 1em;
+        font-size: 1rem;
         border: 1px solid blue;
         cursor: pointer;
     }
     .navegador button:hover {
-        background: hsl(207, 90%, 45%);
+        background: hsl(207, 90%, 55%);
     }
     /* para que acompañe el scroll de la pantalla */
     .sticky {

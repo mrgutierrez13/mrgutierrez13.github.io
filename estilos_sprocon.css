@@ -31,7 +31,6 @@
 }
 
 .sprocon-logo>img{
-    display: float;
     float: left;
     width: 40%;
     margin-right: 1em;
@@ -64,7 +63,7 @@
     position: relative;
     padding: 0.4em 0.3em;
     border-radius: 0.1em;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .sprocon-contacto>ul li:before {
