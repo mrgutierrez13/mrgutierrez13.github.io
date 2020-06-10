@@ -81,7 +81,7 @@ function openPopUp() {
   element = document.getElementById("myForm");
   element.style.visibility = "visible";
   element.style.opacity = "1";
-  element.style.maxHeight = "200em";
+  element.style.maxHeight = "60vh";
 }
 
 var element2 = document.getElementById("myButton");
@@ -91,13 +91,13 @@ function openPopUp2() {
   element2 = document.getElementById("myButton");
   element2.style.visibility = "visible";
   element2.style.opacity = "1";
-  element2.style.maxHeight = "200em";
+  element2.style.maxHeight = "60vh";
 }
 
 function openForm() {
   document.getElementById("myForm").style.visibility = "visible";
   document.getElementById("myForm").style.opacity = "1";
-  document.getElementById("myForm").style.maxHeight = "200em";
+  document.getElementById("myForm").style.maxHeight = "60vh";
   document.getElementById("myButton").style.visibility = "hidden";
   document.getElementById("myButton").style.opacity = "0";
 }

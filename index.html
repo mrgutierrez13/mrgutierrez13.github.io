@@ -88,6 +88,7 @@
                     <!-- dots representing current slider -->
                 </span>
             </div>
+
             <div class="index-servicios" id="index-servicios">
                 <h1>SERVICIOS DE AYUDA AL EXPORTADOR</h1>
                 <div class="index-servicios-contenedor">
@@ -107,7 +108,7 @@
                         <div>
                             <img src="images/oferta.svg" alt="oferta exportable">
                             <p>Provee acceso a los datos de oferta exportable del pais a traves de
-                                los portales exclusivos de cada producto 
+                                los portales exclusivos de cada producto
                             </p>
                         </div>
                         <span class="arrow"><span></span></span>
@@ -149,19 +150,38 @@
                     </a>
                 </div>
             </div>
-            <div class="index-guia" id="index-guia">
-                <a class="index-guia-portada"
-                    href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/guiaExport/guiaExport2017.pdf">
-                    <img src="images/portada_guia_web_medium.png">
-                </a>
-                <div class="index-guia-explicacion">
-                    <h1>GUIA DE EXPORTACIONES</h1>
-                    <h2>Lee Guia para la Exportación</h2>
-                    <h2>Este texto es una explicacion de quien escribio la guia y su porque deberia leerse.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum rem minus voluptatem!
-                        Mollitia dolorem est pariatur deleniti voluptas exercitationem praesentium, voluptatum nulla
-                        explicabo nemo perspiciatis quaerat quidem! Incidunt, assumenda.</h2>
+            <div class="index-libros" id="index-libros">
+                <div id="guia-exportador" class="index-libros-seccion">
+                    <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/guiaExport/guiaExport2017.pdf">
+                        <img src="images/portada_guia_web_medium.png">
+                    </a>
+                    <div class="index-libros-explicacion">
+                        <h1>GUIA DE EXPORTACIONES</h1>
+                        <h2>Lee Guia para la Exportación</h2>
+                        <h2>Este texto es una explicacion de quien escribio la guia y su porque deberia leerse.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum rem minus voluptatem!
+                            Mollitia dolorem est pariatur deleniti voluptas exercitationem praesentium, voluptatum nulla
+                            explicabo nemo perspiciatis quaerat quidem! Incidunt, assumenda.</h2>
+                    </div>
                 </div>
+                <div id="encuesta-logistica" class="index-libros-seccion">
+                    <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/guiaExport/guiaExport2017.pdf">
+                        <img src="images/portada_encuesta_min.png">
+                    </a>
+                    <div class="index-libros-explicacion">
+                        <h1>ENCUESTA NACIONAL DE LOGÍSTICA</h1>
+                        <h2>Resumen de resultados de la encuesta nacional de logística Bolivia</h2>
+                        <h2>Este texto es una explicacion de quien escribio la guia y su porque deberia leerse.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum rem minus voluptatem!
+                            Mollitia dolorem est pariatur deleniti voluptas exercitationem praesentium, voluptatum nulla
+                            explicabo nemo perspiciatis quaerat quidem! Incidunt, assumenda.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="index-proceso" id="index-proceso">
+                <h1>PROCESO EXPORTADOR</h1>
+                <canvas width="960" height="500"></canvas>
             </div>
 
             <div class="index-enlaces" id="index-enlaces">
@@ -565,6 +585,52 @@
             this.nextElementSibling.classList.toggle('active');
         }
         items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+
+    <script src="//d3js.org/d3.v4.0.0-alpha.4.min.js"></script>
+    <script>
+
+
+        var data = [1, 1, 1, 1, 1, 1, 1, 1];
+
+        var canvas = document.querySelector("canvas"),
+            context = canvas.getContext("2d");
+
+        var width = canvas.width,
+            height = canvas.height,
+            radius = Math.min(width, height) / 2;
+
+        var colors = [
+            "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
+            "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"
+        ];
+
+        var arc = d3.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(radius - 70)
+            .padAngle(0.03)
+            .context(context);
+
+        var pie = d3.pie();
+
+        var arcs = pie(data);
+
+        context.translate(width / 2, height / 2);
+
+        context.globalAlpha = 0.5;
+        arcs.forEach(function (d, i) {
+            context.beginPath();
+            arc(d);
+            context.fillStyle = colors[i];
+            context.fill();
+        });
+
+        context.globalAlpha = 1;
+        context.beginPath();
+        arcs.forEach(arc);
+        context.lineWidth = 1.5;
+        context.stroke();
+
     </script>
 
 </body>
