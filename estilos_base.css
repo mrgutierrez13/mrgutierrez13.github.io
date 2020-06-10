@@ -150,7 +150,7 @@ header {
     bottom: 6%;
     right: 3%;
     width: 6em;
-    background-color: hsl(0, 100%, 55%);
+    background-color: hsl(0, 75%, 45%);
     border: 3px solid white;
     border-radius: 50%;
     z-index: 2;
@@ -185,92 +185,105 @@ header {
     border: 3px solid hsl(0, 0%, 95%);
     box-shadow: 0.1em 0.1em 0.5em hsl(219, 60%, 17%);
     transition: opacity .6s ease-in-out, max-height .3s ease-in-out;
-    border-radius: .5em;
+    border-radius: .6em;
 }
 
-.form-container {
-    max-width: 90em;
-    padding: .8em;
-    background-color: hsl(0, 11%, 93%);
+.form-vci {
     position: relative;
+    max-width: 23em;
+    font-size: 1rem;
+    background: white;
+    padding: 2em 1em 1em 1em;
+    border: 2px solid hsl(211, 21%, 41%);
+    color: hsl(0, 0%, 50%);
+    border-radius: .6em;
 }
 
-.form-container h1{
-    font-size: 1.4rem;
-    font-weight: 700;
+.form-vci h1 {
     text-align: center;
+    margin-top: 0;
 }
 
-.form-container input {
-    width: 100%;
-    padding: 1em;
+.form-vci input[type=submit], .form-vci input[type=button], .form-vci input[type=text], .form-vci input[type=email], .form-vci textarea, .form-vci label {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.form-vci label {
+    display: grid;
+    margin-bottom: 1em;
+    gap: 1em;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr;
+}
+
+.form-vci input[type=text], .form-vci input[type=email] {
+    background: transparent;
     border: none;
-    background: hsl(0, 0%, 95%);
-    resize: none;
-}
-
-.form-container>div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 3em;
-    font-size: 1rem;
-}
-.form-container>label{
-    font-size: 1rem;
-}
-.form-container>div>label{
-    width: fit-content;
-}
-
-.form-container .one-row {
-    height: 1.5em;
     width: 100%;
-}
-
-.form-container .many-row {
-    height: 8em;
-}
-
-.form-container input:focus {
-    background-color: hsl(0, 0%, 87%);
+    border-bottom: 1px dashed hsl(210, 36%, 64%);
     outline: none;
-}
-
-.form-container .btn {
-    background-color: hsl(122, 39%, 49%);
-    color: white;
-    padding: 1em 1.2em;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: .6em;
-    opacity: 0.8;
-}
-
-.form-container .cancel {
-    position: absolute;
-    background-color: hsl(0, 100%, 50%);
-    opacity: 1;
-    top: -1em;
-    right: -1em;
-    width: 3em;
-    height: 3em;
     padding: 0;
-    border-radius: 50%;    
-    border: 2px solid white;
+    font-style: italic;
+    justify-self: right;
 }
 
-.cancel label {
+.form-vci textarea {
+    padding: 0.3em;
+    background: transparent;
+    outline: none;
+    border: 1px solid gray;
+    overflow: hidden;
+    resize: none;
+    height: 8em;
+    overflow-y: scroll;
+}
+
+.form-vci input[type=text]:focus, .form-vci input[type=email]:focus, .form-vci input[type=email] :focus {
+    border-bottom: 1px dashed hsl(87, 100%, 83%);
+}
+
+.form-vci input[type=submit], .form-vci input[type=button] {
+    background: gray;
+    border: none;
+    padding: .5em;
+    border-radius: .3em;
+    width: 100%;
+}
+
+#mensaje-vci {
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+#enviar-vci {
+    display: block;
     position: absolute;
-    font-weight: 500;
-    font-size: 2rem;
-    top: -0.1em;
-    left: 33%;
+    right: 1em;
+    bottom: .5em;
+    width: 40%;
 }
 
-.form-container .btn:hover, .open-button:hover {
+#enviar-vci>input[type=submit]:hover, #enviar-vci>input[type=button]:hover {
+    background: hsl(120, 50%, 45%);
+}
+
+.cancel {
+    position: absolute;
     opacity: 1;
+    top: .5em;
+    right: .5em;
+    width: 1em;
+    height: 1em;
+    background-color: inherit;
+    border: none;
+    padding: 0;    
+}
+
+.cancel svg{
+    filter: invert(55%) sepia(9%) saturate(2%) hue-rotate(34deg) brightness(90%) contrast(89%);
 }
 
 /*================
