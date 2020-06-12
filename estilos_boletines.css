@@ -9,7 +9,27 @@
 
 .matriz-boletines{
     display: grid;
-    margin: 3em 10em;
-    grid-template-columns: repeat(4,1fr);
-    gap: 7em;
+    margin: 0 6em 4em 6em;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill,minmax(15em, 1fr));
+    gap: 4em;
+}
+
+.matriz-boletines img{
+    border-radius: .3em;
+    transition: filter ;
+}
+
+.matriz-boletines img {
+    box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.5), 0 3px 6px hsla(0, 0%, 0%, 0.3);
+    position: relative;
+    top: 0;
+    transition: top .2s cubic-bezier(.45, .05, .55, .95), filter .1s cubic-bezier(.45, .05, .55, .95);
+    transition-delay: .1s;
+}
+
+.matriz-boletines img:hover {
+    transition: top .2s cubic-bezier(.45, .05, .55, .95), filter .1s cubic-bezier(.45, .05, .55, .95);
+    top: -.2em;
+    filter: brightness(105%);
 }

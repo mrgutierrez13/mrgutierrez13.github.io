@@ -497,9 +497,8 @@ header {
         margin: 0;
     }
     .navegador a {
-        padding-right: 2em;
-        padding-left: .5em;
-        padding-bottom: 0;
+        margin: auto 0;
+        padding: 0 2em 0 .5em;
     }
     .navegador a:hover {
         color: var(--cont-bg-color-highlight);
