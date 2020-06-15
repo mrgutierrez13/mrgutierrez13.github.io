@@ -231,13 +231,19 @@ header {
 
 .form-vci textarea {
     padding: 0.3em;
+    padding-right: .6em;
     background: transparent;
     outline: none;
     border: 1px solid hsl(60, 26%, 17%);
     overflow: hidden;
     resize: none;
+    color: black;
     height: 8em;
     overflow-y: scroll;
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-vci textarea::placeholder {
+    color: hsl(0, 0%, 30%);
 }
 
 .form-vci input[type=text]:focus, .form-vci input[type=email]:focus, .form-vci input[type=email] :focus {
@@ -305,7 +311,7 @@ header {
         top: 60%;
         left: 0%;
         height: auto;
-        width: calc(1.4em + 1vw);
+        width: 2.3em;
         z-index: 2;
         background-color: transparent;
     }
@@ -496,9 +502,9 @@ header {
         font-weight: inherit;
         margin: 0;
     }
-    .navegador a {
+    .navegador a{
         margin: auto 0;
-        padding: 0 2em 0 .5em;
+        padding: 0;
     }
     .navegador a:hover {
         color: var(--cont-bg-color-highlight);
@@ -506,10 +512,11 @@ header {
     }
     .navegador ul>li:hover>ul>li {
         display: block;
-        padding: 1em .5em 0 .5em;
+        padding: .6em .5em 0 .5em;
     }
     .navegador ul>li:hover .dropdown-menu {
-        padding-bottom: 1em;
+        padding-bottom: .8em;
+        padding-top: .3em;
         border-bottom: 3px var(--cont-bg-color-oscuro) solid;
         opacity: .95;
     }
@@ -521,9 +528,11 @@ header {
         position: absolute;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        opacity: 0;
         top: 100%;
         left: 0;
         padding: 0;
+        padding-left: 1em;
         z-index: -1;
         background: var(--cont-bg-color-light);
         width: 300%;
@@ -531,6 +540,8 @@ header {
         border-radius: 0 0 .3em .3em;
         border-left: 3px var(--cont-bg-color-oscuro) solid;
         border-right: 3px var(--cont-bg-color-oscuro) solid;
+        transition: opacity .2s ease-out;
+        transition-delay: .15s;
     }
     .dropdown-menu>li {
         display: none;
@@ -538,7 +549,7 @@ header {
         opacity: 0;
         text-decoration: none;
         transform-origin: top center;
-        animation: slideDown 300ms 60ms ease-in-out forwards;
+        animation: slideDown 400ms 60ms ease-in-out forwards;
     }
     .dropdown-menu li>a {
         text-decoration: none;
@@ -553,7 +564,7 @@ header {
         font-size: .9rem;
         margin: 0;
         padding-top: .3em;
-        padding-left: .5em;
+        padding-left: 0;
         padding-bottom: 1em;
     }
     @keyframes slideDown {

@@ -1,0 +1,37 @@
+.contenido{
+    text-align: center;
+    background-color: var(--cont-bg-color-fondo);
+}
+
+.contenido>h1 {    
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+/*
+#authors ul
+|
+-> li
+    |
+    -> img
+    |
+    -> span
+
+*/
+
+#authors{
+    display: flex;
+    flex-direction: column;
+}
+
+#authors li{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3em auto;
+    padding-bottom: 1em;
+}
+
+#authors span{
+    font-size: 2rem;
+    color: black;
+}

@@ -1,11 +1,12 @@
 ///CARGAR HTML GENERAL
-fetch("cabezera.html")
+fetch("../modules/cabezera.html")
   .then((response) => {
     return response.text();
   })
   .then((data) => {
-    document.querySelector(".cabezera").innerHTML = data;
 
+    document.querySelector(".cabezera").innerHTML = data;
+    
     // Para que la barra de navegacion siga la pantalla
     window.onscroll = function () {
       navStick();
@@ -22,14 +23,16 @@ fetch("cabezera.html")
       }
     }
   });
-fetch("footer.html")
+
+fetch("../modules/footer.html")
   .then((response) => {
     return response.text();
   })
   .then((data) => {
     document.querySelector("footer").innerHTML = data;
   });
-fetch("icon_bar.html")
+
+fetch("../modules/icon_bar.html")
   .then((response) => {
     return response.text();
   })
@@ -48,7 +51,7 @@ function toggleNav() {
 
 ///CARGAR AÑADIDOS: NOTICIA, POP-UP, ETC
 
-fetch("widgets.html")
+fetch("../modules/widgets.html")
   .then((response) => {
     return response.text();
   })
@@ -70,6 +73,9 @@ fetch("widgets.html")
         modal.style.display = "none";
       });
     }
+  })
+  .catch((error) => {
+    console.log("Esta pagina no carga Widgets");
   });
 
 ///MENSAJE POP-UP
@@ -79,9 +85,11 @@ var element = document.getElementById("myForm");
 var t = setTimeout(openPopUp, 5000);
 function openPopUp() {
   element = document.getElementById("myForm");
-  element.style.visibility = "visible";
-  element.style.opacity = "1";
-  element.style.maxHeight = "60vh";
+  if (element !== null) {
+    element.style.visibility = "visible";
+    element.style.opacity = "1";
+    element.style.maxHeight = "60vh";
+  }
 }
 
 var element2 = document.getElementById("myButton");
@@ -89,9 +97,11 @@ var element2 = document.getElementById("myButton");
 var t2 = setTimeout(openPopUp2, 5500);
 function openPopUp2() {
   element2 = document.getElementById("myButton");
-  element2.style.visibility = "visible";
-  element2.style.opacity = "1";
-  element2.style.maxHeight = "60vh";
+  if (element2 !== null) {
+    element2.style.visibility = "visible";
+    element2.style.opacity = "1";
+    element2.style.maxHeight = "60vh";
+  }
 }
 
 function openForm() {

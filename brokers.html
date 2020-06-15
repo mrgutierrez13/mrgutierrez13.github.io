@@ -1,8 +1,8 @@
 <!doctype html>
 
 <head>
-    <link rel="stylesheet" href="estilos_base.css">
-    <link rel="stylesheet" href="estilos_brokers.css">
+    <link rel="stylesheet" href="styles/estilos_base.css">
+    <link rel="stylesheet" href="styles/estilos_brokers.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -10,53 +10,44 @@
 <body>
     <div class="barra-enlaces"></div>
     <div class="contenedor">
-        <div class="cabezera"></div>        
+        <div class="cabezera"></div>
         <div class="contenido">
             <h1>Directorio de Brokers</h1>
-            <h1>Basic XHR example</h1>
-
-            <form>
-                <label for="verse-choose">Choose a verse</label>
-                <select id="verse-choose" name="verse-choose">
-                    <option>Verse 1</option>
-                    <option>Verse 2</option>
-                    <option>Verse 3</option>
-                    <option>Verse 4</option>
-                </select>
-            </form>
-
-            <h2>The Conqueror Worm, <em>Edgar Allen Poe, 1843</em></h2>
-
-            <pre>
-
-            </pre>
-
+            <ul id="authors"></ul>
         </div>
         <footer></footer>
     </div>
-    <script src="cargar_base.js"></script>
+    <script src="scripts/cargar_base.js"></script>
     <script>
-        var verseChoose = document.querySelector('select');
-        var poemDisplay = document.querySelector('pre');
 
-        verseChoose.onchange = function () {
-            var verse = verseChoose.value;
-            updateDisplay(verse);
-        };
+        function createNode(element) {
+            return document.createElement(element);
+        }
 
-        function updateDisplay(verse) {
-            verse = verse.replace(" ", "");
-            verse = verse.toLowerCase();
-            let url = verse + '.txt';
+        function append(parent, el) {
+            return parent.appendChild(el);
+        }
 
-            fetch(url).then(function (response) {
-                response.text().then(function (text) {
-                    poemDisplay.textContent = text;
-                });
-            });
-        };
+        const ul = document.getElementById('authors');
+        const url = 'https://randomuser.me/api/?results=10';
 
-        updateDisplay('Verse 1');
-        verseChoose.value = 'Verse 1';
+        fetch(url)
+            .then((resp) => resp.json())
+            .then(function (data) {
+                let authors = data.results;
+                return authors.map(function (author) {
+                    let li = createNode('li'),
+                        img = createNode('img'),
+                        span = createNode('span');
+                    img.src = author.picture.medium;
+                    span.innerHTML = `${author.name.first} ${author.name.last}`;
+                    append(li, img);
+                    append(li, span);
+                    append(ul, li);
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            });   
     </script>
 </body>

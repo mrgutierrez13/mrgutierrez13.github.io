@@ -205,7 +205,7 @@
 }
 
 .index-servicios-celda span span {
-    background: url(images/arrow.svg);
+    background: url(../images/arrow.svg);
     filter: invert(18%) sepia(19%) saturate(4944%) hue-rotate(169deg) brightness(95%) contrast(102%);
     background-repeat: no-repeat;
     display: block;
@@ -220,7 +220,7 @@
 
 .index-servicios-celda .arrow:before {
     content: "";
-    background: url(images/arrow.svg);
+    background: url(../images/arrow.svg);
     filter: invert(18%) sepia(19%) saturate(4944%) hue-rotate(169deg) brightness(95%) contrast(102%);
     background-repeat: no-repeat;
     display: block;
@@ -235,7 +235,7 @@
 
 .index-servicios-celda .arrow:after {
     content: "";
-    background: url(images/arrow.svg);
+    background: url(../images/arrow.svg);
     filter: invert(18%) sepia(19%) saturate(4944%) hue-rotate(169deg) brightness(95%) contrast(102%);
     background-repeat: no-repeat;
     display: block;
