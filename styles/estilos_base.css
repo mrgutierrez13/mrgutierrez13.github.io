@@ -7,8 +7,10 @@ html {
     scroll-behavior: smooth;
 }
 
-*, ::before, ::after {
+*, *::before, *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -22,7 +24,6 @@ body {
     background-color: hsla(198, 100%, 92%, 0.9);
     font-family: "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
     color: hsl(198, 100%, 17%);
-    margin: 0;
 }
 
 img {
@@ -148,8 +149,8 @@ header {
     position: fixed;
     bottom: 6%;
     right: 3%;
-    max-width: calc(2.9em + 2.5vw);
-    height: calc(2.9em + 2.5vw);
+    width: 6em;
+    height: 6em;
     background-color: hsl(0, 75%, 45%);
     border: 3px solid white;
     border-radius: 50%;
@@ -173,6 +174,7 @@ header {
     margin: auto;
     width: 95%;
     height: 95%;
+    padding: .4em;
 }
 
 .chat-popup {
@@ -224,7 +226,6 @@ header {
     width: 100%;
     border-bottom: 1px dashed hsl(60, 26%, 17%);
     outline: none;
-    padding: 0;
     font-style: italic;
     justify-self: right;
 }
@@ -288,7 +289,6 @@ header {
     height: 1em;
     background-color: inherit;
     border: none;
-    padding: 0;    
 }
 
 .cancel svg{
@@ -311,7 +311,7 @@ header {
         top: 60%;
         left: 0%;
         height: auto;
-        width: 2.3em;
+        width: 2.6em;
         z-index: 2;
         background-color: transparent;
     }
@@ -398,7 +398,6 @@ header {
 
 .navegador>ul {
     list-style: none;
-    margin: 0;
     padding: 0.5em;
     width: 100%;
 }
@@ -495,12 +494,14 @@ header {
         letter-spacing: .1em;
         border-width: 2px 0;
     }
+    .navegador>ul>li:hover{
+        background-color: hsl(198, 100%, 38%);
+    }
     .navegador h2 {
         padding-right: 2em;
         padding-left: .5em;
         font-size: inherit;
         font-weight: inherit;
-        margin: 0;
     }
     .navegador a{
         margin: auto 0;
@@ -562,7 +563,6 @@ header {
         color: var(--cont-bg-color-light-letra);
         font-weight: 100;
         font-size: .9rem;
-        margin: 0;
         padding-top: .3em;
         padding-left: 0;
         padding-bottom: 1em;

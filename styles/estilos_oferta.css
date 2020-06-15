@@ -36,7 +36,6 @@
 
 .index-oferta-celda>img {
     grid-area: oferta-imagen;
-    margin: 0;
 }
 
 .index-oferta-celda>ul {
