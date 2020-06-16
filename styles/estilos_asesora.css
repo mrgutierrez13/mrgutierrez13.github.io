@@ -70,7 +70,7 @@
 }
 
 #asesora-enviar input{
-    background-color: hsl(198, 100%, 17%);
+    background-color: var(--color-dark-letra);
     color: white;
     border-radius: .3em;
     width: 30%;

@@ -19,7 +19,7 @@
         overflow: hidden;
         z-index: 0;
         padding-top: 2em;
-        background-color: var(--cont-bg-color-fondo);
+        background-color: var(--color-fondo);
     }
     .slider-item {
         display: flex;
@@ -175,7 +175,7 @@
 }
 
 .index-servicios-celda:hover {
-    border-bottom: 2px solid var(--cont-bg-color-oscuro);
+    border-bottom: 2px solid var(--color-oscuro);
 }
 
 .index-servicios-celda img {
@@ -307,7 +307,7 @@
     grid-area: entidades;
     display: grid;
     text-align: center;
-    background-color: var(--cont-bg-color-fondo);
+    background-color: var(--color-fondo);
 }
 
 .index-entidades>h1 {
@@ -426,6 +426,7 @@
 #encuesta-logistica{
     background-color: hsl(196, 68%, 59%);
     flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
 }
 
 
@@ -480,7 +481,7 @@
 
 .index-enlaces {
     grid-area: enlaces;
-    background-color: var(--cont-bg-color-fondo);
+    background-color: var(--color-fondo);
     padding: 2em 0;
     text-align: center;
     font-size: .9rem;
@@ -496,7 +497,7 @@
     flex-direction: column;
     width: 90%;
     color: white;
-    background-color: var(--cont-bg-color-oscuro);
+    background-color: var(--color-oscuro);
     margin: auto;
     text-align: left;
     cursor: pointer;
@@ -512,7 +513,7 @@
 }
 
 .index-enlaces-item>a:hover {
-    background-color: var(--cont-bg-color-light);
+    background-color: var(--color-light);
 }
 
 .index-enlaces-lista {

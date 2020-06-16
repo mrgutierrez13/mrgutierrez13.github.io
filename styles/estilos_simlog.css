@@ -1,6 +1,6 @@
 .contenido>* {
     text-align: center;
-    background-color: var(--cont-bg-color-fondo);
+    background-color: var(--color-fondo);
     margin: 0 auto;
     padding-top: 2em;
 }

@@ -88,7 +88,7 @@ function openPopUp() {
   if (element !== null) {
     element.style.visibility = "visible";
     element.style.opacity = "1";
-    element.style.maxHeight = "60vh";
+    element.style.maxHeight = "60vmax";
   }
 }
 
@@ -100,14 +100,14 @@ function openPopUp2() {
   if (element2 !== null) {
     element2.style.visibility = "visible";
     element2.style.opacity = "1";
-    element2.style.maxHeight = "60vh";
+    element2.style.maxHeight = "60vmax";
   }
 }
 
 function openForm() {
   document.getElementById("myForm").style.visibility = "visible";
   document.getElementById("myForm").style.opacity = "1";
-  document.getElementById("myForm").style.maxHeight = "60vh";
+  document.getElementById("myForm").style.maxHeight = "60vmax";
   document.getElementById("myButton").style.visibility = "hidden";
   document.getElementById("myButton").style.opacity = "0";
 }

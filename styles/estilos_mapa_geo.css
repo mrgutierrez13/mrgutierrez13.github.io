@@ -1,6 +1,6 @@
 .interfaz-mapa {
     display: grid;
-    background-color: var(--cont-bg-color-fondo);
+    background-color: var(--color-fondo);
     grid-template-columns: 1fr 1fr 6fr;
     grid-template-areas: "mapa-geo-tit-busq mapa-geo-tit-busq mapa-geo-place" 
                          "mapa-geo-busq mapa-geo-busq mapa-geo-place" 

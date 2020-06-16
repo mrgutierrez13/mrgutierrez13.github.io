@@ -181,7 +181,7 @@
 
             <div class="index-proceso" id="index-proceso">
                 <h1>PROCESO EXPORTADOR</h1>
-                <canvas width="960" height="500"></canvas>
+                <!--canvas width="960" height="500"></canvas-->
             </div>
 
             <div class="index-enlaces" id="index-enlaces">
@@ -674,7 +674,7 @@
                 return (
                     rect.top >= 0 &&
                     rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    .75*rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
                     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                 );
             }

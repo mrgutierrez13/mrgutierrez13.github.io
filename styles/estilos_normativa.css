@@ -39,7 +39,7 @@
 }
 
 .tabla-normas>span:nth-child(-n+4) {
-    background-color: var(--cont-bg-color-oscuro); 
+    background-color: var(--color-oscuro); 
     color: white;
     font-weight: 700;  
 }
@@ -56,12 +56,12 @@
 }
 
 .tabla-acuerdos>span:nth-child(-n+3) {
-    background-color: var(--cont-bg-color-oscuro); 
+    background-color: var(--color-oscuro); 
     color: white;
     font-weight: 700;  
 }
 
 .tabla>span>a{
-    color: var(--cont-bg-color-oscuro);
+    color: var(--color-oscuro);
 }
 

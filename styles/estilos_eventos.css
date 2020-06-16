@@ -28,7 +28,7 @@ https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-a
     width: .4em;
     margin: 0 auto;
     padding-top: 3em;
-    background: hsl(198, 100%, 17%);
+    background: var(--color-dark-letra);
 }
 
 .timeline ul li::after {
@@ -112,7 +112,7 @@ time {
 
 .timeline-poster time{
     grid-area: p-fecha;
-    background-color: var(--cont-bg-color-oscuro);
+    background-color: var(--color-oscuro);
     padding: .3em;
     height: 100%;
     min-width: 4em;
