@@ -309,11 +309,15 @@ header {
         grid-template-areas: "facebook" "twitter" "whatsapp" "youtube";
         position: fixed;
         top: 60%;
-        left: 0%;
+        left: 0;
         height: auto;
         width: 2.6em;
         z-index: 2;
         background-color: transparent;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+        transform: translate3d(-2em, 0, 0);
     }
     .icon-bar a {
         display: block;
@@ -336,6 +340,17 @@ header {
     .icon-bar a:hover img {
         filter: invert(100%);
     }
+    
+    .icon-bar.in-view{
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+    }
+    .icon-bar::after {
+        transition: background .5s ease-in-out;
+    }    
+
+
     .facebook {
         grid-area: facebook;
         background: hsl(221, 44%, 41%);

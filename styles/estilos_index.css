@@ -148,7 +148,7 @@
     box-shadow: 0.1em 0.1em 0.5em hsl(219, 60%, 17%);
     font-size: 1rem;
     max-width: 28em;
-    min-height: 20em;
+    min-height: 18em;
     margin: 1em auto;
     text-decoration: none;
     color: inherit;
@@ -162,7 +162,7 @@
 .index-servicios-celda>h2{
     position: absolute;
     font-size: 1.2rem;
-    bottom: 1em;
+    bottom: 1.8em;
     right: 1em;    
 }
 .index-servicios-celda>div{
@@ -321,7 +321,7 @@
     .index-entidades>h1 {
         margin-bottom: 2em;
         margin-top: 1em;
-        padding: 3em 0 1em 0;
+        padding: 1em 0;
     }
 }
 
@@ -429,6 +429,31 @@
 }
 
 
+
+/*========
+  efectos
+=========*/
+
+.index-libros-seccion>a::after {
+    transition: background .5s ease-in-out;
+}
+
+
+.index-libros-seccion>a>img {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    transform: translate3d(0, -3em, 0);
+}
+
+
+.index-libros-seccion>a.in-view>img {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+
 /*=====================
   PROCESO EXPORTADOR
 ======================*/
@@ -440,6 +465,7 @@
 
 .index-proceso>h1{
     text-align: center;
+    padding: 2em 0;
 }
 
 .index-proceso>canvas{
@@ -522,3 +548,4 @@
     padding-top: 1em;
     padding-bottom: 1em;
 }
+
