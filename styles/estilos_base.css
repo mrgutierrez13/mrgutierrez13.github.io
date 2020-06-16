@@ -17,12 +17,12 @@ body {
     --cont-bg-color-fondo: hsla(200, 100%, 97%, 0.9);
     --cont-bg-color-oscuro: hsl(198, 100%, 37%);
     --cont-bg-color-light: hsl(198, 100%, 47%);
-    --cont-bg-color-light-letra: hsl(198, 30%, 84%);
+    --cont-bg-color-light-letra: hsl(198, 30%, 94%);
     --cont-bg-color-highlight: hsl(66, 100%, 64%);
     background-image: linear-gradient(45deg, transparent 20%, var(--cont-bg-color-fondo) 25%, transparent 25%), linear-gradient(-45deg, transparent 20%, hsl(198, 100%, 87%) 25%, transparent 25%), linear-gradient(-45deg, transparent 75%, var(--cont-bg-color-fondo) 80%, transparent 0), radial-gradient(hsla(198, 100%, 47%, 0.3) 2px, transparent 0);
     background-size: 41px 39px, 43px 71px;
     background-color: hsla(198, 100%, 92%, 0.9);
-    font-family: "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
+    font-family: 'PT Sans', "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
     color: hsl(198, 100%, 17%);
 }
 
@@ -46,7 +46,6 @@ header {
     header {
         display: block;
         position: relative;
-        font-family: "Times New Roman", Times, serif;
         font-weight: 600;
         color: white;
         text-transform: uppercase;
@@ -60,6 +59,7 @@ header {
     top: 40%;
     left: 15%;
     font-size: calc(.26vw + 1.8em);
+    font-family: 'PT Serif', "Lucida Sans", "Lucida Grande", Lucida, serif;
 }
 
 .mobil-head {
@@ -75,7 +75,6 @@ header {
 }
 
 .titulo-mobil {
-    font-family: "Times New Roman", Times, serif;
     font-weight: 400;
     color: white;
     text-transform: uppercase;
@@ -149,8 +148,8 @@ header {
     position: fixed;
     bottom: 6%;
     right: 3%;
-    width: 6em;
-    height: 6em;
+    width: 4.5em;
+    height: 4.5em;
     background-color: hsl(0, 75%, 45%);
     border: 3px solid white;
     border-radius: 50%;
@@ -174,7 +173,7 @@ header {
     margin: auto;
     width: 95%;
     height: 95%;
-    padding: .4em;
+    padding: .5em;
 }
 
 .chat-popup {
@@ -205,11 +204,8 @@ header {
 
 .form-vci h1 {
     text-align: center;
-    margin-top: 0;
-}
-
-.form-vci input[type=submit], .form-vci input[type=button], .form-vci input[type=text], .form-vci input[type=email], .form-vci textarea, .form-vci label {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'PT Serif', "Lucida Sans", "Lucida Grande", Lucida, serif;
+    margin-bottom: 1em;
 }
 
 .form-vci label {
@@ -241,7 +237,7 @@ header {
     color: black;
     height: 8em;
     overflow-y: scroll;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'PT Serif', "Lucida Sans", "Lucida Grande", Lucida, serif;
 }
 .form-vci textarea::placeholder {
     color: hsl(0, 0%, 30%);
@@ -477,8 +473,7 @@ header {
         justify-items: center;
         background-color: var(--cont-bg-color-oscuro);
         padding: 0.2em 0;
-        font-size: .8rem;
-        font-family: 'Open Sans', 'Arial Narrow', Arial, sans-serif;
+        font-size: .8rem;        
         gap: 0;
         width: 100%;
         overflow-y: visible;
@@ -491,7 +486,7 @@ header {
         color: white;
         position: relative;
         z-index: 1;
-        letter-spacing: .1em;
+        letter-spacing: .6px;
         border-width: 2px 0;
     }
     .navegador>ul>li:hover{
