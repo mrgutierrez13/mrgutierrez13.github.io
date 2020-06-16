@@ -1,23 +1,9 @@
-.contenido-boletines{
-    display: grid;
-    background-color: var(--cont-bg-color-fondo);
-}
-
-.contenido-boletines>h1{
-    text-align: center;
-}
-
 .matriz-boletines{
     display: grid;
     margin: 0 6em 4em 6em;
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fill,minmax(15em, 1fr));
     gap: 4em;
-}
-
-.matriz-boletines img{
-    border-radius: .3em;
-    transition: filter ;
 }
 
 .matriz-boletines img {
@@ -32,4 +18,23 @@
     transition: top .2s cubic-bezier(.45, .05, .55, .95), filter .1s cubic-bezier(.45, .05, .55, .95);
     top: -.2em;
     filter: brightness(105%);
+}
+
+
+.matriz-boletines>a::after {
+    transition: background .5s ease-in-out;
+}
+
+
+.matriz-boletines>a>img {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    transform: translate3d(0, -3em, 0);
+}
+
+.matriz-boletines>a.in-view>img {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
 }

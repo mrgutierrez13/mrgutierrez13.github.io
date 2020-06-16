@@ -7,14 +7,7 @@ https://webdesign.tutsplus.com/tutorials/building-a-vertical-timeline-with-css-a
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .contenido {
-    background-color: var(--cont-bg-color-fondo);
     --fondo-poster: hsl(197, 69%, 89%); 
-}
-
-.contenido h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    padding: 1em 0em;
 }
 
 .contenido p {

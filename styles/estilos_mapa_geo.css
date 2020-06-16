@@ -1,20 +1,15 @@
-.contenido-mapa-georeferencial {
+.interfaz-mapa {
     display: grid;
     background-color: var(--cont-bg-color-fondo);
     grid-template-columns: 1fr 1fr 6fr;
-    grid-template-areas: "mapa-geo-titulo mapa-geo-titulo mapa-geo-titulo" 
-                         "mapa-geo-tit-busq mapa-geo-tit-busq mapa-geo-place" 
+    grid-template-areas: "mapa-geo-tit-busq mapa-geo-tit-busq mapa-geo-place" 
                          "mapa-geo-busq mapa-geo-busq mapa-geo-place" 
                          "mapa-boton-buscar mapa-boton-limpiar mapa-geo-place" 
                          "blanco blanco mapa-geo-place";
 }
 
-.contenido-mapa-georeferencial>h1 {
-    grid-area: mapa-geo-titulo;
-    text-align: center;
-}
 
-.contenido-mapa-georeferencial>h2 {
+.interfaz-mapa>h2 {
     grid-area: mapa-geo-tit-busq;
     padding-left: 1.5em;
 }

@@ -12,13 +12,6 @@
     }
 }
 
-.contenido>h1 {
-    text-align: center;
-    background-color: var(--cont-bg-color-fondo);
-    margin: 0 auto;
-    padding-top: 2em;
-}
-
 .video-contenedor {
     position: relative;
     padding-bottom: 56%;

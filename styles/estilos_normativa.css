@@ -1,35 +1,21 @@
-.contenido-normativa{
-    display: grid;
-    background-color: var(--cont-bg-color-fondo);
-}
-
-.contenido-normativa>h1{
-    margin-top: 0;
-    padding-top: 1em;
-    text-align: center;
-}
-
-.contenido-normativa>h2{
+.contenido>h2{
     padding-left: 7em;
+    margin: 1em 0;
 }
 
+.tabla-acuerdos,
 .tabla-normas{
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 5fr;
+    margin: 0 auto;
     border-top: 1px solid black;
     border-right: 1px solid black;
-    margin: 2em;
     width: 80%;
     justify-self: center;
 }
 .tabla-acuerdos{
-    display: grid;
     grid-template-columns: 3fr 8fr 1fr;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    margin: 2em;
-    width: 80%;
-    justify-self: center;
+    margin-bottom: 2em;
 }
 
 .tabla>span{
