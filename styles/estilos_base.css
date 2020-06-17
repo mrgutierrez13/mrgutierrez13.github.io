@@ -37,6 +37,9 @@ img {
     max-width: 100rem;
     margin: 0 auto;
 }
+.contenedor>*{
+    max-width: inherit;
+}
 
 header {
     grid-area: frente;
