@@ -24,7 +24,7 @@ img {
 }
 
 .contenedor {    
-    max-width: 100rem;
+    max-width: 90rem;
     margin: 0 auto;
     background-color: hsl(0, 0%, 95%);
 }
@@ -197,26 +197,31 @@ TITULO DE LA PAGINA
 
 #titulo-pagina {
     padding: 0;
-    display: flex;
     justify-content: space-between;
-    height: 6em;
-    align-items: center;
+    height: 8em;
     border-bottom: 1px solid hsl(0, 0%, 90%);
     border-top: 1px solid hsl(0, 0%, 90%);
+    background-image: url("../images/banner_bolivia_min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(.18);
+    position: relative;
 }
 
 #titulo-pagina .titulo{
     font-family: 'PT Serif', "Lucida Sans", "Lucida Grande", Lucida, serif;
     font-size: 2.4rem;
     letter-spacing: -1.2px;
-    text-shadow: .5px .5px hsl(0, 0%, 90%);
+    text-shadow: .5px .5px black;
+    color: white;
 }
 
 #titulo-pagina .subtitulo{
     font-family: 'PT Sans', "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
     font-size: 1.4rem;
     letter-spacing: -.3px;
-    text-shadow: .5px .5px hsl(0, 0%, 80%);
+    text-shadow: .5px .5px black;
+    color: white;
 }
 #titulo-pagina>div{
     padding-left: 2em;
@@ -225,20 +230,23 @@ TITULO DE LA PAGINA
     width: 100%;
 }
 
+#logo-pais,
+#logo-ministerio{
+    position: absolute;
+    background-size: cover;
+    height: 5em;
+    width: 5em;
+    border: 2px solid hsl(0, 0%, 90%); 
+    border-radius: 50%;
+    bottom: -2.5em;
+    filter: sepia(.2);
+}
 
 #logo-pais{
-    background-size: cover;
-    height: 100%;
-    width: auto;
-    border: 2px solid hsl(0, 0%, 90%); 
-    outline: 2px solid hsl(0, 0%, 90%);  
+    right: 1em;
+}
+#logo-ministerio{
+    right: 7em;
 }
 
-#logo-ministerio{
-    background-size: cover;
-    height: 100%;
-    width: auto;
-    border: 2px solid hsl(0, 0%, 90%); 
-    outline: 2px solid hsl(0, 0%, 90%);
-}
 

@@ -1,4 +1,3 @@
-
 /*===========
   SERVICIOS
 ===========*/
@@ -21,7 +20,7 @@
 
 .index-servicios-contenedor {
     display: grid;
-    padding: 0 4em 4em 4em;
+    padding: 1em;
     gap: 1em;
     align-items: center;
     justify-content: space-evenly;
@@ -40,7 +39,7 @@
     border-radius: .5em;
     font-size: 1rem;
     max-width: 28em;
-    min-height: 22em;
+    min-height: 18em;
     margin: 1em auto;
     text-decoration: none;
     color: inherit;
@@ -48,27 +47,30 @@
     background-color: hsl(51, 80%, 50%);
 }
 
-.index-servicios-celda>h1{
+.index-servicios-celda>h1 {
     text-align: left;
     padding-left: 1em;
-    font-size: 1.4rem;
-}
-.index-servicios-celda>h2{
-    position: absolute;
     font-size: 1.1rem;
-    bottom: 1.8em;
-    right: 1em;    
 }
-.index-servicios-celda>div{
+
+.index-servicios-celda>h2 {
+    position: absolute;
+    font-size: 1rem;
+    bottom: 1.8em;
+    right: 1em;
+}
+
+.index-servicios-celda>div {
     display: flex;
     padding-bottom: 4em;
     padding-top: .5em;
     text-align: left;
 }
-.index-servicios-celda p{
+
+.index-servicios-celda p {
     flex: 5;
     padding-top: 1em;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: .7px;
 }
 
@@ -81,8 +83,8 @@
 
 /*Animacion de flechas*/
 
-.arrow{
-    --altura: 2em; 
+.arrow {
+    --altura: 2em;
     --ancho: 2em;
     --pos-y: 1em;
     --pos-x: 4em;
@@ -159,9 +161,7 @@
         transform: translateX(calc(-4 * var(--ancho)));
         opacity: 0;
     }
-
-    70%,
-    100% {
+    70%, 100% {
         transform: translateX(0);
         opacity: 1;
     }
@@ -172,9 +172,7 @@
         transform: translateX(calc(-2 * var(--ancho)));
         opacity: 0;
     }
-
-    70%,
-    100% {
+    70%, 100% {
         transform: translateX(0);
         opacity: 0.5;
     }
@@ -185,10 +183,15 @@
         transform: translateX(calc(-1 * var(--ancho)));
         opacity: 0;
     }
-
-    70%,
-    100% {
+    70%, 100% {
         transform: translateX(0);
         opacity: 0.3;
     }
 }
+
+/* ======
+  SLIDES
+ =======*/
+/*
+ https://codepen.io/suez/pen/ByvKXE
+ */
