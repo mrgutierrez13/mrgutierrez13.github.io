@@ -1,0 +1,194 @@
+
+/*===========
+  SERVICIOS
+===========*/
+
+.index-servicios {
+    grid-area: serv;
+}
+
+.index-servicios>h1 {
+    padding-top: 3em;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+@media screen and (min-width: 60em) {
+    .index-servicios>h1 {
+        padding: 3em 0 1em 0;
+    }
+}
+
+.index-servicios-contenedor {
+    display: grid;
+    padding: 0 4em 4em 4em;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+@media screen and (min-width: 60em) {
+    .index-servicios-contenedor {
+        grid-template-columns: repeat(auto-fit, minmax(28em, 1fr));
+    }
+}
+
+.index-servicios-celda {
+    position: relative;
+    padding: 1em 1em;
+    border-radius: .5em;
+    font-size: 1rem;
+    max-width: 28em;
+    min-height: 22em;
+    margin: 1em auto;
+    text-decoration: none;
+    color: inherit;
+    border: .2em solid hsl(0, 0%, 90%);
+    background-color: hsl(51, 80%, 50%);
+}
+
+.index-servicios-celda>h1{
+    text-align: left;
+    padding-left: 1em;
+    font-size: 1.4rem;
+}
+.index-servicios-celda>h2{
+    position: absolute;
+    font-size: 1.1rem;
+    bottom: 1.8em;
+    right: 1em;    
+}
+.index-servicios-celda>div{
+    display: flex;
+    padding-bottom: 4em;
+    padding-top: .5em;
+    text-align: left;
+}
+.index-servicios-celda p{
+    flex: 5;
+    padding-top: 1em;
+    font-size: 1.1rem;
+    letter-spacing: .7px;
+}
+
+.index-servicios-celda img {
+    flex: 2;
+    width: 7em;
+    margin: 1em 2em 1em 1em;
+    filter: invert(18%) sepia(19%) saturate(4944%) hue-rotate(169deg) brightness(95%) contrast(102%);
+}
+
+/*Animacion de flechas*/
+
+.arrow{
+    --altura: 2em; 
+    --ancho: 2em;
+    --pos-y: 1em;
+    --pos-x: 4em;
+}
+
+.index-servicios-celda span {
+    display: block;
+    width: var(--ancho);
+    bottom: var(--pos-y);
+    margin: auto;
+    right: calc(var(--pos-x) + 1em);
+    height: var(--altura);
+    position: absolute;
+}
+
+.index-servicios-celda span span {
+    background: url(../images/arrow.svg);
+    filter: invert(18%) sepia(19%) saturate(4944%) hue-rotate(169deg) brightness(95%) contrast(102%);
+    background-repeat: no-repeat;
+    display: block;
+    width: var(--ancho);
+    bottom: var(--pos-y);
+    margin: auto;
+    right: var(--pos-x);
+    height: var(--altura);
+    opacity: 1;
+    position: absolute;
+}
+
+.index-servicios-celda .arrow:before {
+    content: "";
+    background: url(../images/arrow.svg);
+    filter: invert(18%) sepia(19%) saturate(4944%) hue-rotate(169deg) brightness(95%) contrast(102%);
+    background-repeat: no-repeat;
+    display: block;
+    width: var(--ancho);
+    bottom: var(--pos-y);
+    margin: auto;
+    right: calc(var(--pos-x) + 1em);
+    height: var(--altura);
+    position: absolute;
+    opacity: 0.5;
+}
+
+.index-servicios-celda .arrow:after {
+    content: "";
+    background: url(../images/arrow.svg);
+    filter: invert(18%) sepia(19%) saturate(4944%) hue-rotate(169deg) brightness(95%) contrast(102%);
+    background-repeat: no-repeat;
+    display: block;
+    width: var(--ancho);
+    bottom: var(--pos-y);
+    margin: auto;
+    right: calc(var(--pos-x) + 2em);
+    height: var(--altura);
+    position: absolute;
+    opacity: 0.3;
+}
+
+.index-servicios-celda:hover .arrow:before {
+    animation: animate-arrow-2 1s ease-in-out infinite 0.1s;
+}
+
+.index-servicios-celda:hover .arrow:after {
+    animation: animate-arrow-3 1s ease-in-out infinite 0.2s;
+}
+
+.index-servicios-celda:hover .arrow span {
+    animation: animate-arrow-1 1s ease-in-out infinite;
+}
+
+@keyframes animate-arrow-1 {
+    0% {
+        transform: translateX(calc(-4 * var(--ancho)));
+        opacity: 0;
+    }
+
+    70%,
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animate-arrow-2 {
+    0% {
+        transform: translateX(calc(-2 * var(--ancho)));
+        opacity: 0;
+    }
+
+    70%,
+    100% {
+        transform: translateX(0);
+        opacity: 0.5;
+    }
+}
+
+@keyframes animate-arrow-3 {
+    0% {
+        transform: translateX(calc(-1 * var(--ancho)));
+        opacity: 0;
+    }
+
+    70%,
+    100% {
+        transform: translateX(0);
+        opacity: 0.3;
+    }
+}
