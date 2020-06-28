@@ -1,5 +1,6 @@
 :root {
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 html {
@@ -13,9 +14,12 @@ html {
 }
 
 body {
-    background-image: url("../images/textura.jpg");
-    font-family: 'PT Serif', "Lucida Sans", "Lucida Grande", Lucida, serif;
+    --fuente-serif: 'PT Serif', "Lucida Sans", "Lucida Grande", Lucida, serif;
+    --fuente-sans: 'PT Sans', "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
     --color-dark-letra: hsl(198, 100%, 17%);
+    --color-fondo-claro: hsl(0, 0%, 95%);
+    background-image: url("../images/textura.jpg");
+    font-family: var(--fuente-serif);
     color: var(--color-dark-letra);
 }
 
@@ -23,184 +27,305 @@ img {
     width: 100%;
 }
 
-.contenedor {    
-    max-width: 90rem;
+.contenedor {
+    max-width: 95rem;
     margin: 0 auto;
-    background-color: hsl(0, 0%, 95%);
+    background-color: var(--color-fondo-claro);
+    padding-top: 0;
 }
 
 .contenedor>* {
     max-width: inherit;
 }
 
-
 .contenido>h1 {
-    font-size: 2rem;
+    font-size: 1.1rem;
     text-align: center;
     padding: 1em 0;
 }
 
+.contenido {
+    padding-top: 2em;
+}
 
+@media screen and (min-width: 85rem) {
+    .contenido {
+        padding-top: 0;
+    }
+}
 
 /*=================
  MENU DE NAVEGACION
 ==================*/
 
-.menu-navegacion {
+.menu-navegacion-mobil {
     display: grid;
-    grid-template-columns: repeat(7, minmax(6em, 1fr)) 24em 3em;
-    height: 4em;
-    grid-template-areas: "nav-ini nav-inst nav-serv nav-info nav-logi nav-tram nav-asesora nav-busqueda nav-boton";
+    background-color: black;
+    height: 3.5em;
+    color: white;
     align-items: center;
-    text-align: center;
-    justify-items: center;
-    background-color: var(--color-fondo);
-    font-size: 1rem;
-    gap: 0;
-    width: 100%;
-    overflow-y: visible;
-    font-family: 'PT Sans', "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
+    justify-items: right;
+    font-family: var(--fuente-sans);
+    font-size: .6rem;
+    padding-right: 4em;
+}
+
+.menu-navegacion-mobil>h1 {
+    position: relative;
+    font-weight: 400;
+}
+
+.menu-navegacion-mobil>h1::after {
+    position: absolute;
+    content: '';
+    background-image: url(../images/burger.svg);
+    right: -1.5em;
+    top: .3em;
+    height: .9em;
+    width: .9em;
+    filter: invert(1);
+}
+
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    background-color: var(--color-fondo-claro);
+    padding: 1em;
+    height: 100vh;
+    gap: .8em;
+    overflow-y: scroll;
+    width: 15em;
+    visibility: hidden;
+    transform: translateX(-15em);
+    transition: transform .3s ease-out;
+}
+
+.menu-navegacion.open {
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.menu-navegacion-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    visibility: hidden;
+    transition: background-color .3s ease-out;
+}
+
+.menu-navegacion-backdrop.open {
+    visibility: visible;
+    background-color: hsla(0, 0%, 0%, 0.5);
 }
 
 .menu-navegacion a,
-.navegador-label{
-    text-decoration: none;
+.navegador-label {
+    display: block;
     color: inherit;
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-weight: 500;
 }
 
-.navegador-label{
-    padding: .2em 0;
-    border-bottom: .2em solid transparent;
-    transition: border-bottom .2s ease-in-out;
- }
-
- .navegador-seccion:hover .navegador-label{
-    border-bottom: .2em solid var(--color-dark-letra);
-}
-
-.navegador-flecha{
-    position: relative;
-}
-
-.navegador-flecha::after{
-    content: "";
-    position: absolute;
-    right: -1em;
-    bottom: 0.5em;
-    background-image: url("../images/arrow.svg");
-    width: .7em;
-    height: .7em;
-    transform: rotate(90deg);
-    filter: invert(20%) sepia(8%) saturate(6985%) hue-rotate(159deg) brightness(100%) contrast(107%);
-}
-
-.navegador-seccion {
-    position: relative;
-}
-
-.navegador-menu {
-    position: absolute;
-    visibility: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
-    text-align: left;
-    width: 700%;
-    top: 100%;
-    left: -1em;
-    border: .2em solid var(--color-light-letra);
-    border-radius: 0 .5em .5em .5em;
-    background-color: white;
-    transform-origin: top center;
-    opacity: 0;
-    transition: opacity .2s ease-in-out;
-    transition-delay: 150ms;
-}
-.navegador-seccion:hover .navegador-menu{
-    opacity: .95;
-}
-
-.navegador-menu>a{
-    opacity: 0;
-    transform: translateY(-.5em);
-    transition: opacity .4s ease-in-out, transform .4s ease-in-out;
-    transition-delay: 60ms;
-    padding: .3em .6em;
-    border-right: 1px solid hsl(0, 0%, 90%);
-}
-
-.navegador-seccion:hover .navegador-menu>a{
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.navegador-menu>a:hover{
-    background-color: hsl(0, 0%, 90%);
-}
-
-.navegador-seccion:hover .navegador-menu {
-    visibility: visible;
-    z-index: 2;
-}
-
-.navegador-menu a>h2{
+.navegador-menu a>h2 {
     color: var(--color-dark-letra);
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: inherit;
     letter-spacing: 1px;
     text-shadow: .5px .5px white;
-}
-.navegador-menu a>h3{
-    font-weight: 400;
-    font-size: 1.1rem;
-    color: gray;
+    padding-left: 2em;
 }
 
-
-.menu-navegacion input[type=text] {
-    display: block;
-    padding: 0.5em;
-    border: none;
-    font-size: 1rem;
-    justify-self: right;
+.navegador-menu a>h3, .menu-navegacion input[type=text], .menu-navegacion button {
+    display: none;
 }
 
-.menu-navegacion button {
-    display: block;
-    width: 2.3em;
-    background: hsl(207, 90%, 45%);
-    padding: 0.4em;
-    color: white;
-    font-size: 1rem;
-    border: 1px solid blue;
-    cursor: pointer;
+@media screen and (min-width: 73rem) {
+    .menu-navegacion-backdrop, .menu-navegacion-mobil {
+        display: none;
+    }
+    .menu-navegacion {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(7, minmax(5em, 1fr)) auto auto;
+        height: 3em;
+        grid-template-areas: "nav-ini nav-inst nav-serv nav-info nav-logi nav-tram nav-asesora nav-busqueda nav-boton";
+        align-items: center;
+        text-align: center;
+        justify-items: center;
+        background-color: var(--color-fondo);
+        gap: 0;
+        width: 100%;
+        overflow-y: visible;
+        font-family: var(--fuente-sans);
+        z-index: 1;
+        padding: 0;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .menu-navegacion a,
+    .navegador-label {
+        font-size: 1rem;
+    }
+    .menu-navegacion a {
+        text-decoration: none;
+    }
+    .navegador-label {
+        text-decoration: none;
+        border-bottom: .2em solid transparent;
+        transition: border-bottom .2s ease-in-out;
+    }
+    .navegador-seccion:hover .navegador-label {
+        border-bottom: .2em solid var(--color-dark-letra);
+    }
+    .navegador-flecha {
+        position: relative;
+    }
+    .navegador-flecha::after {
+        content: "";
+        position: absolute;
+        right: -1em;
+        bottom: 0.3em;
+        background-image: url("../images/arrow.svg");
+        width: .7em;
+        height: .7em;
+        transform: rotate(90deg);
+        filter: invert(20%) sepia(8%) saturate(6985%) hue-rotate(159deg) brightness(100%) contrast(107%);
+    }
+    .navegador-seccion {
+        position: relative;
+        padding: .5em 0;
+    }
+    .navegador-menu {
+        position: absolute;
+        visibility: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+        text-align: left;
+        width: 520%;
+        top: 100%;
+        left: -1em;
+        border-radius: 0 .5em .5em .5em;
+        background-color: white;
+        transform-origin: top center;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        transition-delay: 150ms;
+    }
+    @media screen and (min-width: 85rem) {
+        .navegador-menu {
+            width: 690%;
+        }
+    }
+    .navegador-seccion:hover .navegador-menu {
+        opacity: .95;
+    }
+    .navegador-menu>a {
+        opacity: 0;
+        transform: translateY(-.5em);
+        transition: opacity .4s ease-in-out, transform .4s ease-in-out;
+        transition-delay: 60ms;
+        padding: .3em .6em;
+    }
+    .navegador-menu>a:nth-child(odd) {
+        border-right: 1px solid hsl(0, 0%, 90%);
+    }
+    .navegador-menu>a:last-child {
+        padding-bottom: 1em;
+    }
+    .navegador-seccion:hover .navegador-menu>a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .navegador-menu>a:hover {
+        background-color: hsl(0, 0%, 90%);
+    }
+    .navegador-seccion:hover .navegador-menu {
+        visibility: visible;
+        z-index: 2;
+    }
+    .menu-navegacion input[type=text] {
+        display: block;
+        padding: 0.5em;
+        border: none;
+        font-size: inherit;
+        justify-self: right;
+        margin-left: 1em;
+        width: 10em;
+    }
+    @media screen and (min-width: 85rem) {
+        .menu-navegacion input[type=text] {
+            margin-left: 10em;
+        }
+    }
+    .navegador-menu a>h2 {
+        padding-left: 0;
+    }
+    .navegador-menu a>h3 {
+        display: block;
+        font-weight: 400;
+        font-size: .85rem;
+        color: gray;
+    }
+    .menu-navegacion button {
+        display: block;
+        width: 2.2em;
+        background: hsl(207, 90%, 45%);
+        padding: 0.4em;
+        color: white;
+        font-size: inherit;
+        border: 1px solid blue;
+        cursor: pointer;
+    }
+    .menu-navegacion button:hover {
+        background: hsl(207, 90%, 55%);
+    }
+    #navegador-inicio {
+        grid-area: nav-ini;
+    }
+    #navegador-institucion {
+        grid-area: nav-inst;
+    }
+    #navegador-servicios {
+        grid-area: nav-serv;
+    }
+    #navegador-informacion {
+        grid-area: nav-info;
+    }
+    #navegador-logistica {
+        grid-area: nav-logi;
+    }
+    #navegador-tramites {
+        grid-area: nav-tram;
+    }
+    #navegador-asesora {
+        grid-area: nav-asesora;
+    }
+    #menu-navegacion input {
+        grid-area: nav-busqueda;
+    }
+    #menu-navegacion button {
+        grid-area: nav-boton;
+    }
 }
 
-.menu-navegacion button:hover {
-    background: hsl(207, 90%, 55%);
-}
-
-#navegador-inicio { grid-area: nav-ini; }
-#navegador-institucion { grid-area: nav-inst; }
-#navegador-servicios { grid-area: nav-serv; }
-#navegador-informacion { grid-area: nav-info; }
-#navegador-logistica { grid-area: nav-logi; }
-#navegador-tramites { grid-area: nav-tram; }
-#navegador-asesora { grid-area: nav-asesora; }
-#menu-navegacion input { grid-area: nav-busqueda; }
-#menu-navegacion button { grid-area: nav-boton; }
 /*=================
-TITULO DE LA PAGINA
+BANNER DE LA PAGINA
 ==================*/
 
-#titulo-pagina {
-    padding: 0;
+#banner-pagina {
     justify-content: space-between;
-    height: 8em;
-    border-bottom: 1px solid hsl(0, 0%, 90%);
-    border-top: 1px solid hsl(0, 0%, 90%);
+    height: 6em;
     background-image: url("../images/banner_bolivia_min.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -208,45 +333,129 @@ TITULO DE LA PAGINA
     position: relative;
 }
 
-#titulo-pagina .titulo{
-    font-family: 'PT Serif', "Lucida Sans", "Lucida Grande", Lucida, serif;
-    font-size: 2.4rem;
+#banner-pagina .titulo {
+    font-family: var(--fuente-serif);
+    font-size: 2.6rem;
+    font-weight: 500;
     letter-spacing: -1.2px;
+    line-height: .9em;
     text-shadow: .5px .5px black;
     color: white;
 }
 
-#titulo-pagina .subtitulo{
-    font-family: 'PT Sans', "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
-    font-size: 1.4rem;
-    letter-spacing: -.3px;
-    text-shadow: .5px .5px black;
-    color: white;
+#banner-pagina .subtitulo {
+    display: none;
 }
-#titulo-pagina>div{
-    padding-left: 2em;
-    padding-top: 1.5em;
+
+#banner-pagina>div {
+    padding-left: .5em;
+    padding-top: .6em;
     height: 100%;
     width: 100%;
 }
 
-#logo-pais,
-#logo-ministerio{
+#logo-pais, #logo-ministerio {
     position: absolute;
     background-size: cover;
-    height: 5em;
-    width: 5em;
-    border: 2px solid hsl(0, 0%, 90%); 
+    height: 4em;
+    width: 4em;
+    border: 2px solid hsl(0, 0%, 90%);
     border-radius: 50%;
-    bottom: -2.5em;
+    bottom: -2em;
     filter: sepia(.2);
 }
 
-#logo-pais{
+#logo-pais {
     right: 1em;
 }
-#logo-ministerio{
-    right: 7em;
+
+#logo-ministerio {
+    right: 6em;
 }
 
+@media screen and (min-width: 73rem) {
+    #banner-pagina .subtitulo {
+        display: block;
+        font-family: var(--fuente-sans);
+        font-size: 1.5rem;
+        letter-spacing: -.1px;
+        text-shadow: .5px .5px black;
+        color: white;
+    }
+    #banner-pagina>div {
+        padding-left: 2em;
+        padding-top: 1.3em;
+    }
+    #logo-pais, #logo-ministerio {
+        height: 5em;
+        width: 5em;
+        bottom: -2.5em;
+    }
+    #logo-ministerio {
+        right: 7em;
+    }
+}
 
+/*==============
+    FOOTER
+===============*/
+
+footer {
+    padding: 2em 2em;
+    background-color: hsl(0, 0%, 90%);
+}
+
+@media screen and (min-width: 73rem) {
+    footer {
+        padding: 2em 5em;
+    }
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-info>* {
+    margin-bottom: 2em;
+}
+
+.footer-info>img {
+    max-width: 14em;
+    max-height: 14em;
+    border-radius: 50%;
+}
+
+#copyright>div {
+    text-align: right;
+    font-size: .7rem;
+}
+
+.footer-contacto {
+    padding: 1em;
+}
+
+.footer-contacto>h2 {
+    font-size: 1rem;
+}
+
+.footer-contacto ul {
+    list-style: none;
+    padding: .9em 0;
+    font-size: 1rem;
+}
+
+.footer-contacto ul>li>bold {
+    font-weight: 700;
+}
+
+.footer-contacto-redes img {
+    width: 2em;
+    filter: invert(19%) sepia(38%) saturate(1552%) hue-rotate(159deg) brightness(94%) contrast(103%);
+    /*PARA SACAR EL COLOR ADECUADO USANDO FILTER: https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+.footer-contacto-redes img:hover {
+    filter: invert(20%) sepia(63%) saturate(2892%) hue-rotate(178deg) brightness(97%) contrast(103%);
+}
