@@ -30,6 +30,14 @@ fetch("../modules/footer.html")
     document.querySelector("footer").innerHTML = data;
   });
 
+fetch("../modules/icon_bar.html")
+  .then((response) => {
+    return response.text();
+  })
+  .then((data) => {
+    document.querySelector(".barra-enlaces").innerHTML = data;
+  });
+
 function toggleNav() {
   var nav = document.querySelector(".menu-navegacion");
   var navBack = document.querySelector(".menu-navegacion-backdrop");

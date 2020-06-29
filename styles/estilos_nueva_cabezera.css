@@ -127,8 +127,7 @@ img {
     background-color: hsla(0, 0%, 0%, 0.5);
 }
 
-.menu-navegacion a,
-.navegador-label {
+.menu-navegacion a, .navegador-label {
     display: block;
     color: inherit;
     font-size: .9rem;
@@ -166,14 +165,12 @@ img {
         width: 100%;
         overflow-y: visible;
         font-family: var(--fuente-sans);
-        z-index: 1;
+        z-index: 2;
         padding: 0;
         visibility: visible;
         transform: translateX(0);
     }
-
-    .menu-navegacion a,
-    .navegador-label {
+    .menu-navegacion a, .navegador-label {
         font-size: 1rem;
     }
     .menu-navegacion a {
@@ -252,7 +249,7 @@ img {
     }
     .navegador-seccion:hover .navegador-menu {
         visibility: visible;
-        z-index: 2;
+        z-index: 10;
     }
     .menu-navegacion input[type=text] {
         display: block;
@@ -337,7 +334,7 @@ BANNER DE LA PAGINA
     font-family: var(--fuente-serif);
     font-size: 2.6rem;
     font-weight: 500;
-    letter-spacing: -1.2px;
+    letter-spacing: -.5px;
     line-height: .9em;
     text-shadow: .5px .5px black;
     color: white;
@@ -395,6 +392,75 @@ BANNER DE LA PAGINA
         right: 7em;
     }
 }
+
+/*================
+ redes sociales
+===============*/
+
+.icon-bar {
+    --icon-bar-escala: 1vh;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 1%;
+    left: 5%;
+    width: calc(25*var(--icon-bar-escala));
+    height: auto;
+    justify-content: space-between;
+    z-index: 2;
+    background-color: transparent;
+}
+
+@media screen and (min-width: 73em) {
+    .icon-bar {
+        flex-direction: column;
+        bottom: unset;
+        top: 60%;
+        left: 1%;
+        height: calc(25*var(--icon-bar-escala));
+        width: auto;
+    }
+}
+
+
+.icon-bar a {
+    position: relative;
+    display: block;
+    height: calc(5*var(--icon-bar-escala));
+    width: calc(5*var(--icon-bar-escala));
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+.icon-bar a>img {
+    position: absolute;
+    top: var(--icon-bar-escala);
+    left: var(--icon-bar-escala);
+    width: calc(3*var(--icon-bar-escala));
+    height: calc(3*var(--icon-bar-escala));
+    filter: invert(.9);
+}
+
+.icon-bar a:hover img {
+    filter: invert(100%);
+}
+
+.facebook:hover {
+    background: hsla(221, 44%, 41%, 0.9);
+}
+
+.twitter:hover {
+    background: hsla(206, 82%, 63%, 0.9);
+}
+
+.whatsapp:hover {
+    background: hsla(132, 78%, 47%, 0.9);
+}
+
+.youtube:hover {
+    background: hsla(0, 100%, 37%, 0.9);
+}
+
 
 /*==============
     FOOTER
