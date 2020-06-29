@@ -1,121 +1,61 @@
 ///CARGAR HTML GENERAL
-fetch("../modules/cabezera.html")
-  .then((response) => {
-    return response.text();
-  })
-  .then((data) => {
+///<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif&display=swap" rel="stylesheet">
 
-    document.querySelector(".cabezera").innerHTML = data;
-    
-    // Para que la barra de navegacion siga la pantalla
-    window.onscroll = function () {
-      navStick();
-    };
+"use strict";
 
-    function navStick() {
-      var header = document.getElementById("head");
-      var navbar = document.getElementById("navbar");
-      var sticky = header.clientHeight;
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-  });
+const tipo_fuente = document.createElement("link");
 
-fetch("../modules/footer.html")
-  .then((response) => {
-    return response.text();
-  })
-  .then((data) => {
-    document.querySelector("footer").innerHTML = data;
-  });
+tipo_fuente.setAttribute("rel", "stylesheet");
 
-fetch("../modules/icon_bar.html")
-  .then((response) => {
-    return response.text();
-  })
-  .then((data) => {
-    document.querySelector(".barra-enlaces").innerHTML = data;
-  });
+let str =
+  "https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif&display=swap";
+
+tipo_fuente.setAttribute("href", str);
+
+document.querySelector("head").appendChild(tipo_fuente);
+
+cargarElemento("../modules/cabezera.html", ".cabezera");
+cargarElemento("../modules/footer.html", "footer");
+cargarElemento("../modules/icon_bar.html", ".barra-enlaces");
+
+function cargarElemento(nombreHTML, elementoDOM) {
+  if (typeof nombreHTML == "string" && typeof elementoDOM == "string") {
+    fetch(nombreHTML)
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        document.querySelector(elementoDOM).innerHTML = data;
+      });
+  } else {
+    console.log("no se pasaron los elementos Web correctos");
+  }
+}
+
+//logica para menu de navegacion mobil
 
 function toggleNav() {
-  var element1 = document.getElementById("naveg");
-  var element2 = document.getElementById("naveg-ext");
-  var element3 = document.getElementById("nav-icon");
-  element1.classList.toggle("open");
-  element2.classList.toggle("open");
-  element3.classList.toggle("open");
+  let nav = document.querySelector(".menu-navegacion");
+  let navBack = document.querySelector(".menu-navegacion-backdrop");
+  nav.classList.toggle("open");
+  navBack.classList.toggle("open");
 }
 
-///CARGAR AÑADIDOS: NOTICIA, POP-UP, ETC
+//para que el menu de navegacion siga la pantalla
 
-fetch("../modules/widgets.html")
-  .then((response) => {
-    return response.text();
-  })
-  .then((data) => {
-    document.querySelector(".widgets").innerHTML = data;
-
-    ///PARA CERRAR MODAL///
-    let button = document.getElementById("close");
-    let cerrar = document.getElementById("close-ext");
-    let modal = document.getElementById("modal");
-
-    if (button !== null && cerrar !== null) {
-      button.addEventListener("click", function (event) {
-        event.preventDefault();
-        modal.style.display = "none";
-      });
-      cerrar.addEventListener("click", function (event) {
-        event.preventDefault();
-        modal.style.display = "none";
-      });
-    }
-  })
-  .catch((error) => {
-    console.log("Esta pagina no carga Widgets");
-  });
-
-///MENSAJE POP-UP
-
-var element = document.getElementById("myForm");
-
-var t = setTimeout(openPopUp, 5000);
-function openPopUp() {
-  element = document.getElementById("myForm");
-  if (element !== null) {
-    element.style.visibility = "visible";
-    element.style.opacity = "1";
-    element.style.maxHeight = "60vmax";
+function siguePantalla() {
+  let navbar = document.querySelector(".menu-navegacion");
+  if (window.pageYOffset >= 400 && window.pageYOffset < 500) {
+    navbar.classList.add("animacion");
+  } else {
+    navbar.classList.remove("animacion");
+  }
+  if (window.pageYOffset >= 500) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
   }
 }
 
-var element2 = document.getElementById("myButton");
-
-var t2 = setTimeout(openPopUp2, 5500);
-function openPopUp2() {
-  element2 = document.getElementById("myButton");
-  if (element2 !== null) {
-    element2.style.visibility = "visible";
-    element2.style.opacity = "1";
-    element2.style.maxHeight = "60vmax";
-  }
-}
-
-function openForm() {
-  document.getElementById("myForm").style.visibility = "visible";
-  document.getElementById("myForm").style.opacity = "1";
-  document.getElementById("myForm").style.maxHeight = "60vmax";
-  document.getElementById("myButton").style.visibility = "hidden";
-  document.getElementById("myButton").style.opacity = "0";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.visibility = "hidden";
-  document.getElementById("myForm").style.opacity = "0";
-  document.getElementById("myForm").style.maxHeight = "0";
-  document.getElementById("myButton").style.visibility = "visible";
-  document.getElementById("myButton").style.opacity = "1";
-}
+window.addEventListener("scroll", siguePantalla);
+window.addEventListener("load", siguePantalla);

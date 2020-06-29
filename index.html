@@ -4,91 +4,14 @@
     <link rel="stylesheet" href="styles/estilos_base.css">
     <link rel="stylesheet" href="styles/estilos_index.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <div class="widgets"></div>
     <div class="barra-enlaces"></div>
     <div class="contenedor">
         <div class="cabezera"></div>
         <div class="contenido">
-            <!-- Slideshow container -->
-            <div class="slider" id="slider">
-                <div class="slider-item">
-                    <!--
-                        PARA EVITAR CARGAR IMAGENES PESADAS EN DISPOSITIVOS MOBILES
-                        https://medium.com/@mike_masey/how-to-use-the-picture-element-to-prevent-images-loading-on-mobile-devices-1376e33b190e
-                    -->
-                    <picture>
-                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
-                        <source media="(min-width: 768px)" srcset="images/prueba/1920x500-arroz.jpg" />
-                        <img src="images/prueba/1920x500-arroz.jpg" alt="arroz" />
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
-                        <source media="(min-width: 768px)" srcset="images/prueba/1920x500-fruta.jpg" />
-                        <img src="images/prueba/1920x500-fruta.jpg" alt="fruta" />
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
-                        <source media="(min-width: 768px)" srcset="images/prueba/1920x500-importacion.jpg" />
-                        <img src="images/prueba/1920x500-importacion.jpg" alt="importacion" />
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
-                        <source media="(min-width: 768px)" srcset="images/prueba/1920x500-luna.jpg" />
-                        <img src="images/prueba/1920x500-luna.jpg" alt="luna" />
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
-                        <source media="(min-width: 768px)" srcset="images/prueba/1920x500-negocios.jpg" />
-                        <img src="images/prueba/1920x500-negocios.jpg" alt="negocios" />
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
-                        <source media="(min-width: 768px)" srcset="images/prueba/1920x500-periodico.jpg" />
-                        <img src="images/prueba/1920x500-periodico.jpg" alt="periodico" />
-                    </picture>
-                </div>
-                <div class="slider-item">
-                    <picture>
-                        <source media="(max-width: 767px)" sizes="1px" srcset="images/blank.gif 1w" />
-                        <source media="(min-width: 768px)" srcset="images/prueba/1920x500-tecno.jpg" />
-                        <img src="images/prueba/1920x500-tecno.jpg" alt="tecnologia" />
-                    </picture>
-                </div>
-
-
-                <!-- adding buttons for next and prev -->
-                <button class="prev">
-                    <!-- icon for button -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" /></svg>
-                </button>
-                <button class="next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" /></svg>
-                </button>
-
-                <!-- Slider Background to provide initial height of cool background -->
-                <div class="background"></div>
-                <!-- Span element consist of Swicthes -->
-                <span class="switch">
-                    <!-- dots representing current slider -->
-                </span>
-            </div>
-
             <div class="index-servicios" id="index-servicios">
                 <h1>SERVICIOS DE AYUDA AL EXPORTADOR</h1>
                 <div class="index-servicios-contenedor">
@@ -150,6 +73,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="index-libros" id="index-libros">
                 <div id="guia-exportador" class="index-libros-seccion">
                     <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/guiaExport/guiaExport2017.pdf">
@@ -177,11 +101,6 @@
                             explicabo nemo perspiciatis quaerat quidem! Incidunt, assumenda.</h2>
                     </div>
                 </div>
-            </div>
-
-            <div class="index-proceso" id="index-proceso">
-                <h1>PROCESO EXPORTADOR</h1>
-                <!--canvas width="960" height="500"></canvas-->
             </div>
 
             <div class="index-enlaces" id="index-enlaces">
@@ -505,80 +424,14 @@
                     </a>
                 </div>
             </div>
+
         </div>
         <footer></footer>
     </div>
 
     <script src="scripts/cargar_base.js"></script>
-
-    <!--PARA EL CONTROL DE LOS SLIDES-->
-    <script>
-        const slider = document.querySelector("#slider");
-        if (slider) {
-            let e = slider.querySelectorAll(".slider-item"),
-                s = slider.querySelector(".switch");
-            const t = e.length;
-            let l,
-                i = 0;
-            for (; s.querySelectorAll("i").length != t;) {
-                let e = document.createElement("i");
-                s.appendChild(e);
-            }
-            s = s.querySelectorAll("i");
-            const c = (l) => {
-                0 == l
-                    ? (e[t - 1].classList.remove("show"),
-                        e[t - 1].classList.add("close"),
-                        s[t - 1].classList.remove("active"))
-                    : (e[l - 1].classList.remove("show"),
-                        e[l - 1].classList.add("close"),
-                        s[l - 1].classList.remove("active")),
-                    l == t - 1
-                        ? e[0].classList.remove("close")
-                        : e[l + 1].classList.remove("close"),
-                    s[l].classList.add("active"),
-                    e[l].classList.add("show");
-            },
-                r = (l) => {
-                    0 == l
-                        ? (e[t - 1].classList.remove("show"),
-                            e[t - 1].classList.add("close"),
-                            s[t - 1].classList.remove("active"))
-                        : (e[l - 1].classList.remove("show"),
-                            e[l - 1].classList.add("close"),
-                            s[l - 1].classList.remove("active")),
-                        l == t - 1
-                            ? e[0].classList.remove("close")
-                            : e[l + 1].classList.remove("close"),
-                        l < t - 1
-                            ? (e[l + 1].classList.remove("show"),
-                                s[l + 1].classList.remove("active"))
-                            : (e[0].classList.remove("show"), s[0].classList.remove("active")),
-                        s[l].classList.add("active"),
-                        e[l].classList.add("show");
-                };
-            function startSlideShow() {
-                l = setInterval(() => {
-                    nextSliderImage();
-                }, 6000);
-            }
-            function nextSliderImage() {
-                i++, i == t && (i = 0), c(i), clearInterval(l), startSlideShow();
-            }
-            function previousSliderImage() {
-                i--, -1 == i && (i = t - 1), r(i), clearInterval(l), startSlideShow();
-            }
-            const a = slider.querySelector(".prev"),
-                o = slider.querySelector(".next");
-            o.addEventListener("click", nextSliderImage),
-                a.addEventListener("click", previousSliderImage),
-                c(i),
-                startSlideShow();
-        }
-    </script>
-
-    <!--PARA EL CLICK EN EL AREA DE ENLACES-->
-    <script>
+     <!--PARA EL CLICK EN EL AREA DE ENLACES-->
+     <script>
         const items = document.querySelectorAll(".index-enlaces-item>a");
         function toggleAccordion() {
             this.classList.toggle('active');
@@ -586,114 +439,5 @@
         }
         items.forEach(item => item.addEventListener('click', toggleAccordion));
     </script>
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script>
-
-
-        var data = [1, 1, 1, 1, 1, 1, 1, 1];
-
-        var canvas = document.querySelector("canvas"),
-            context = canvas.getContext("2d");
-
-        var width = canvas.width,
-            height = canvas.height,
-            radius = Math.min(width, height) / 2;
-
-        var colors = [
-            "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",
-            "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22"
-        ];
-
-        var arc = d3.arc()
-            .outerRadius(radius - 10)
-            .innerRadius(radius - 70)
-            .padAngle(0.03)
-            .context(context);
-
-        var pie = d3.pie();
-
-        var arcs = pie(data);
-
-        context.translate(width / 2, height / 2);
-
-        context.globalAlpha = 0.5;
-        arcs.forEach(function (d, i) {
-            context.beginPath();
-            arc(d);
-            context.fillStyle = colors[i];
-            context.fill();
-        });
-
-        context.globalAlpha = 1;
-        context.beginPath();
-        arcs.forEach(arc);
-        context.lineWidth = 1.5;
-        context.stroke();
-
-
-        /* ------- TEXT LABELS -------*/
-
-        var key = function (d) { return d.data.label; };
-
-        pie.append("g")
-            .attr("class", "slices");
-        pie.append("g")
-            .attr("class", "labels");
-        pie.append("g")
-            .attr("class", "lines");
-
-        var color = d3.scale.ordinal()
-            .domain(["Lorem ipsum", "dolor sit", "amet", "consectetur", "adipisicing", "elit", "sed", "do", "eiusmod", "tempor", "incididunt"])
-            .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
-
-        var text = pie.select(".labels").selectAll("text")
-            .data(pie(data), key);
-
-        text.enter()
-            .append("text")
-            .attr("dy", ".35em")
-            .text(function (d) {
-                return d.data.label;
-            });
-
-    </script>
-
-    <script>
-        (function () {
-
-            'use strict';
-
-            // define variables
-            var items = document.querySelectorAll(".index-libros-seccion>a");
-
-            // check if an element is in viewport
-            // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-            function isElementInViewport(el) {
-                var rect = el.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    .75*rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
-            }
-
-            function callbackFunc() {
-                for (var i = 0; i < items.length; i++) {
-                    if (isElementInViewport(items[i])) {
-                        items[i].classList.add("in-view");
-                    }
-                }
-            }
-
-            // listen for events
-            window.addEventListener("load", callbackFunc);
-            window.addEventListener("resize", callbackFunc);
-            window.addEventListener("scroll", callbackFunc);
-
-        })();
-    </script>
-
 
 </body>

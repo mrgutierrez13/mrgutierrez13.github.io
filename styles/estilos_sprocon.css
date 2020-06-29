@@ -12,7 +12,7 @@
 }
 
 .contenido>h2{
-    background-color: var(--color-oscuro);
+    background-color: var(--color-dark-letra);
     color: white;
     padding: 1em;
     margin: 2em auto 0 auto;

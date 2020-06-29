@@ -1,6 +1,5 @@
 .contenido-videos {
     display: flex;
-    background-color: var(--color-fondo);
     flex-flow: column;
     padding: 3em 2em;
     gap: 2em;

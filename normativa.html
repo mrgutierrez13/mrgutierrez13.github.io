@@ -45,7 +45,7 @@
 
     <script>
 
-        fetch('leyes.json').then(function (response) {
+        fetch('db/leyes.json').then(function (response) {
             return response.json();
         }).then(function (json) {
             let leyes = json;
@@ -82,7 +82,7 @@
             console.log('Problema de pedido: ' + err.message);
         });
 
-        fetch('leyes2.json').then(function (response) {
+        fetch('db/leyes2.json').then(function (response) {
             return response.json();
         }).then(function (json) {
             let leyes2 = json;

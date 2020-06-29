@@ -112,7 +112,7 @@ time {
 
 .timeline-poster time{
     grid-area: p-fecha;
-    background-color: var(--color-oscuro);
+    background-color: var(--color-dark-letra);
     padding: .3em;
     height: 100%;
     min-width: 4em;
