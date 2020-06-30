@@ -51,19 +51,14 @@ function siguePantalla() {
   // Evalua el primero, si este no es valido usa el segundo (short circuit evaluation)
   let st = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (st >= 0) {
-    navbar.classList.add("sticky");
+  navbar.classList.add("sticky");
 
-    if (st > lastScrollTop) {
-      // downscroll code
-      navbar.classList.remove("efecto");
-    } else {
-      // upscroll code
-      navbar.classList.add("efecto");
-    }
-  } else {
-    navbar.classList.remove("sticky");
+  if (st > lastScrollTop) {
+    // downscroll code
     navbar.classList.remove("efecto");
+  } else {
+    // upscroll code
+    navbar.classList.add("efecto");
   }
 
   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
