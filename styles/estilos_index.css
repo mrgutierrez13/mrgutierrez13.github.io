@@ -17,6 +17,7 @@
     padding: 1em 4em;
     grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
     grid-auto-rows: max-content;
+    grid-auto-flow: dense;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
@@ -75,6 +76,33 @@
 @media screen and (min-width: 85rem) {
     .index-servicios-celda img {
         height: 10em;
+    }
+    .index-servicios-contenedor {
+        padding-left: 0;
+        padding-right: 8em;
+    }
+    #consulta-dinamica-celda {
+        width: 70%;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 50rem) {
+    #consulta-dinamica-celda {
+        grid-row: span 2;
+    }
+    #consulta-dinamica-celda>div {
+        flex-direction: column;
+        height: 100%;
+    }
+    #consulta-dinamica-celda img {
+        flex: 2;
+        height: 11em;
+        width: 11em;
+        margin: auto;
+    }
+    #consulta-dinamica-celda p {
+        flex: 2;
     }
 }
 
@@ -261,7 +289,6 @@
     position: relative;
     justify-items: left;
     padding: 0 1em;
-    --ancho-enlaces: 50%;
 }
 
 .index-enlaces-item {
@@ -313,13 +340,14 @@
         height: 2em;
         margin-bottom: 1em;
         margin-top: 0;
+        width: var(--ancho-enlaces);
     }
     .index-enlaces-item:last-of-type {
         margin-bottom: 0;
     }
     .index-enlaces-item>h2 {
         position: relative;
-        width: var(--ancho-enlaces);
+        width: 100%;
         cursor: pointer;
         margin: unset;
         padding-top: .4em;
@@ -329,19 +357,25 @@
     }
     .index-enlaces-item>h2::before {
         position: absolute;
-        left: 1em;
-        top: .7em;
+        top: .6em;
+        left: 1.4em;
         content: '';
         padding: .3em;
+        font-size: 1rem;
         background-image: url(../images/arrow.svg);
+        background-repeat: no-repeat;
         width: .5em;
         height: .5em;
+    }
+    .index-enlaces-contenedor {
+        padding: 0 3em;
+        --ancho-enlaces: 40%;
     }
     .index-enlaces-contenedor::after, .index-enlaces-lista {
         position: absolute;
         top: 0;
-        left: calc(var(--ancho-enlaces) + 2.2rem);
-        width: calc(100% - var(--ancho-enlaces) - 6rem);
+        left: calc(var(--ancho-enlaces) + 1rem);
+        width: calc(100% - var(--ancho-enlaces) - 3rem);
         height: 100%;
         overflow-y: scroll;
     }
@@ -369,6 +403,10 @@
         }
         .index-enlaces-contenedor {
             --ancho-enlaces: 30%;
+            padding: 0 4em;
+        }
+        .index-enlaces-item {
+            width: calc(var(--ancho-enlaces) - 2em);
         }
     }
     .index-enlaces-lista a:hover {
