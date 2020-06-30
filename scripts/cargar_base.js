@@ -43,19 +43,31 @@ function toggleNav() {
 
 //para que el menu de navegacion siga la pantalla
 
+let lastScrollTop = 0;
+
 function siguePantalla() {
   let navbar = document.querySelector(".menu-navegacion");
-  if (window.pageYOffset >= 400 && window.pageYOffset < 500) {
-    navbar.classList.add("animacion");
-  } else {
-    navbar.classList.remove("animacion");
-  }
-  if (window.pageYOffset >= 500) {
+
+  // Evalua el primero, si este no es valido usa el segundo (short circuit evaluation)
+  let st = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (st >= 0) {
     navbar.classList.add("sticky");
+
+    if (st > lastScrollTop) {
+      // downscroll code
+      navbar.classList.remove("efecto");
+    } else {
+      // upscroll code
+      navbar.classList.add("efecto");
+    }
   } else {
     navbar.classList.remove("sticky");
+    navbar.classList.remove("efecto");
   }
+
+  lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 }
 
-window.addEventListener("scroll", siguePantalla);
-window.addEventListener("load", siguePantalla);
+window.addEventListener("scroll", siguePantalla, false);
+window.addEventListener("load", siguePantalla, false);

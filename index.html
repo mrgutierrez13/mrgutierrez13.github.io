@@ -107,7 +107,7 @@
                 <h1>ENLACES</h1>
                 <div class="index-enlaces-contenedor">
                     <div class="index-enlaces-item">
-                        <a>Instituciones del Proceso Exportador</a>
+                        <h2>Instituciones del Proceso Exportador</h2>
                         <div class="index-enlaces-lista">
                             <a href="http://www.aspb.gob.bo/" target="_blank" rel="noopener noreferrer">Administración
                                 de
@@ -135,7 +135,7 @@
                         </div>
                     </div>
                     <div class="index-enlaces-item">
-                        <a>Instituciones Públicas</a>
+                        <h2>Instituciones Públicas</h2>
                         <div class="index-enlaces-lista">
                             <a href="http://www.autoridadempresas.gob.bo/" target="_blank"
                                 rel="noopener noreferrer">Autoridad
@@ -189,7 +189,7 @@
                         </div>
                     </div>
                     <div class="index-enlaces-item">
-                        <a>Embajadas en Bolivia</a>
+                        <h2>Embajadas en Bolivia</h2>
                         <div class="index-enlaces-lista">
                             <a href="http://www.la-paz.diplo.de/" target="_blank" rel="noopener noreferrer">Embajada de
                                 Alemania</a>
@@ -238,7 +238,7 @@
                         </div>
                     </div>
                     <div class="index-enlaces-item">
-                        <a>Cámaras, Instituciones y Asociaciones</a>
+                        <h2>Cámaras, Instituciones y Asociaciones</h2>
                         <div class="index-enlaces-lista">
                             <a href="http://www.aopeb.org/" target="_blank" rel="noopener noreferrer">Asociación de
                                 Organizaciones de Productores Ecológicos de Bolivia
@@ -288,7 +288,7 @@
                         </div>
                     </div>
                     <div class="index-enlaces-item">
-                        <a>Agencias de Promoción de Exportación</a>
+                        <h2>Agencias de Promoción de Exportación</h2>
                         <div class="index-enlaces-lista">
                             <a href="http://www.apexbrasil.com.br/home/index" target="_blank"
                                 rel="noopener noreferrer">APEX
@@ -316,7 +316,7 @@
                         </div>
                     </div>
                     <div class="index-enlaces-item">
-                        <a>Organizaciones Internacionales</a>
+                        <h2>Organizaciones Internacionales</h2>
                         <div class="index-enlaces-lista">
                             <a href="http://aico.org/" target="_blank" rel="noopener noreferrer">Asociación
                                 Iberoamericana
@@ -358,7 +358,7 @@
                         </div>
                     </div>
                     <div class="index-enlaces-item">
-                        <a>Información de Comercio Exterior</a>
+                        <h2>Información de Comercio Exterior</h2>
                         <div class="index-enlaces-lista">
                             <a href="http://www.investmentmap.org/" target="_blank" rel="noopener noreferrer">Investment
                                 Map</a>
@@ -369,7 +369,7 @@
                         </div>
                     </div>
                     <div class="index-enlaces-item">
-                        <a>Gobernaciones</a>
+                        <h2>Gobernaciones</h2>
                         <div class="index-enlaces-lista">
                             <a href="https://www.beni.gob.bo/" target="_blank" rel="noopener noreferrer">Gobernación de
                                 Beni</a>
@@ -430,14 +430,49 @@
     </div>
 
     <script src="scripts/cargar_base.js"></script>
-     <!--PARA EL CLICK EN EL AREA DE ENLACES-->
-     <script>
-        const items = document.querySelectorAll(".index-enlaces-item>a");
-        function toggleAccordion() {
-            this.classList.toggle('active');
-            this.nextElementSibling.classList.toggle('active');
+    <!--PARA EL CLICK EN EL AREA DE ENLACES-->
+    <script>
+
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                const items = document.querySelectorAll(".index-enlaces-item");
+                let holderViejo = items[0];
+                holderViejo.classList.toggle('active');
+
+                function toggleAccordion() {
+                    let holderNuevo = this;
+                    this.classList.toggle('active');
+                    holderViejo.classList.toggle('active');
+                    holderViejo = holderNuevo;
+                }
+                items.forEach(item => item.addEventListener('mouseover', toggleAccordion));
+            } else {
+                myFunction2(x);
+            }
         }
-        items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+        var x = window.matchMedia("screen and (min-width: 73rem)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes 
+
+        
+        function myFunction2(y) {
+            if (x.matches) { // If media query matches
+                const items = document.querySelectorAll(".index-enlaces-item");
+                function extAccordion() {
+                    this.classList.toggle('extender');
+                }
+                items.forEach(item => item.addEventListener('click', extAccordion));
+
+            } else {
+                myFunction(y);     
+            }
+        }
+
+        var y = window.matchMedia("screen and (max-width: 73rem)")
+        myFunction2(y) // Call listener function at run time
+        y.addListener(myFunction2) // Attach listener function on state changes 
+
     </script>
 
 </body>

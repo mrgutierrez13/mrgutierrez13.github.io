@@ -2,12 +2,12 @@
   SERVICIOS
 ===========*/
 
-.index-servicios{
+.index-servicios {
     padding-top: 3em;
     padding-bottom: 2em;
-
 }
-.index-servicios>h1 {    
+
+.index-servicios>h1 {
     text-align: center;
     font-size: 1.5rem;
 }
@@ -33,7 +33,7 @@
     text-decoration: none;
     color: inherit;
     border: .2em solid hsl(0, 0%, 90%);
-    background-color: hsl(51, 80%, 50%);
+    background-color: hsl(51, 90%, 50%)
 }
 
 .index-servicios-celda>h1 {
@@ -78,7 +78,6 @@
     }
 }
 
-
 /*Animacion de flechas*/
 
 .arrow {
@@ -98,23 +97,21 @@
     position: absolute;
 }
 
-.index-servicios-celda span span,
-.index-servicios-celda .arrow:before,
-.index-servicios-celda .arrow:after{
+.index-servicios-celda span span, .index-servicios-celda .arrow:before, .index-servicios-celda .arrow:after {
     position: absolute;
     background: url(../images/arrow.svg);
     filter: invert(18%) sepia(19%) saturate(4944%) hue-rotate(169deg) brightness(95%) contrast(102%);
     display: block;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     width: var(--ancho);
     bottom: var(--pos-y);
     height: var(--altura);
     margin: auto;
-} 
+}
 
-.index-servicios-celda span span {  
-    right: var(--pos-x);    
-    opacity: 1;    
+.index-servicios-celda span span {
+    right: var(--pos-x);
+    opacity: 1;
 }
 
 .index-servicios-celda .arrow:before {
@@ -177,17 +174,16 @@
 /* ======
   SLIDES
  =======*/
+
 /*
  https://codepen.io/suez/pen/ByvKXE
  */
 
-
- 
 /*========
   LIBROS
 ========*/
 
-.index-libros-seccion {    
+.index-libros-seccion {
     display: flex;
     color: white;
     padding: 6em 1em;
@@ -207,10 +203,8 @@
     }
     .index-libros-seccion>a {
         margin: 0 3em;
-    }    
+    }
 }
-
-
 
 .index-libros-seccion>a>img {
     transform: translateY(0);
@@ -227,7 +221,7 @@
 .index-libros-explicacion {
     flex: 2;
     margin: auto 2em;
-    min-width: 20em;    
+    min-width: 20em;
 }
 
 .index-libros-explicacion>h2 {
@@ -236,11 +230,12 @@
     font-family: var(--fuente-sans);
 }
 
-#guia-exportador{
+#guia-exportador {
     background-color: hsl(88, 54%, 51%);
     flex-wrap: wrap-reverse;
 }
-#encuesta-logistica{
+
+#encuesta-logistica {
     background-color: hsl(196, 68%, 59%);
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
@@ -255,69 +250,138 @@
     text-align: center;
 }
 
-.index-enlaces>h1{
+.index-enlaces>h1 {
     font-size: 1.5rem;
+    margin-bottom: 1em;
 }
 
-.index-enlaces *+* {
-    margin-top: 0.5em;
-}
-
-.index-enlaces-item>a {
+.index-enlaces-contenedor {
     display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-items: left;
+    padding: 0 1em;
+    --ancho-enlaces: 50%;
+}
+
+.index-enlaces-item {
+    margin-top: .5em;
+}
+
+.index-enlaces-item>h2 {
     background-color: hsl(0, 0%, 90%);
-    width: 90%;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
     color: var(--color-dark-letra);
     box-shadow: 1px 1px 0px 0px hsla(0, 0%, 0%, 0.3);
-    margin: auto;
     font-size: .9rem;
+    padding: .5em;
+    margin: auto;
     text-align: left;
-    cursor: pointer;
-    padding: .6em;
     border-radius: 0.8em 0 0.8em 0;
 }
 
 .index-enlaces-lista {
     display: flex;
     flex-direction: column;
-    width: 90%;
     font-size: .9rem;
     margin: auto;
-    background: hsla(0, 0%, 100%);
-    margin-top: 0;
     overflow: hidden;
+    row-gap: .5em;
+    margin-top: 0;
     max-height: 0;
+    width: 100%;
     text-align: left;
-    padding-left: 2em;
-}
-
-@media screen and (min-width: 73rem) {
-    .index-enlaces-item>a,
-    .index-enlaces-lista {
-        width: 70%;
-    }
-}
-
-@media screen and (min-width: 85rem) {
-    .index-enlaces-item>a,
-    .index-enlaces-lista {
-        width: 50%;
-    }
+    background: hsla(0, 0%, 100%);
 }
 
 .index-enlaces-lista a {
-    color: black;
+    color: hsl(0, 0%, 30%);
     text-decoration: none;
+    padding-left: 1em;
 }
 
-.index-enlaces-lista a:hover {
-    text-decoration: underline;
+.index-enlaces-item.extender .index-enlaces-lista {
+    max-height: 50rem;
+    padding: .5em;
 }
 
-.index-enlaces-lista.active {
-    max-height: 50em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+@media screen and (min-width: 73rem) {
+    .index-enlaces-item {
+        display: flex;
+        height: 2em;
+        margin-bottom: 1em;
+        margin-top: 0;
+    }
+    .index-enlaces-item:last-of-type {
+        margin-bottom: 0;
+    }
+    .index-enlaces-item>h2 {
+        position: relative;
+        width: var(--ancho-enlaces);
+        cursor: pointer;
+        margin: unset;
+        padding-top: .4em;
+        padding-left: 3em;
+        border-radius: 0.8em 0 0 0.8em;
+        transition: background-color .1s ease-in, color .1s ease-in;
+    }
+    .index-enlaces-item>h2::before {
+        position: absolute;
+        left: 1em;
+        top: .7em;
+        content: '';
+        padding: .3em;
+        background-image: url(../images/arrow.svg);
+        width: .5em;
+        height: .5em;
+    }
+    .index-enlaces-contenedor::after, .index-enlaces-lista {
+        position: absolute;
+        top: 0;
+        left: calc(var(--ancho-enlaces) + 2.2rem);
+        width: calc(100% - var(--ancho-enlaces) - 6rem);
+        height: 100%;
+        overflow-y: scroll;
+    }
+    .index-enlaces-contenedor::after {
+        content: '';
+        z-index: 0;
+        background: hsla(0, 0%, 100%);
+    }
+    .index-enlaces-lista {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 2em;
+        align-items: center;
+        row-gap: 1em;
+        visibility: hidden;
+        opacity: 0;
+        padding: 1em 0;
+        max-height: unset;
+        transition: opacity .1s ease-in;
+        z-index: 1;
+    }
+    @media screen and (min-width: 85rem) {
+        .index-enlaces-lista {
+            grid-template-columns: 1fr 1fr;
+        }
+        .index-enlaces-contenedor {
+            --ancho-enlaces: 30%;
+        }
+    }
+    .index-enlaces-lista a:hover {
+        text-decoration: underline;
+    }
+    .index-enlaces-item.active>h2 {
+        background-color: hsl(226, 50%, 50%);
+        color: white;
+    }
+    .index-enlaces-item.active .index-enlaces-lista {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 /*===========
@@ -366,5 +430,3 @@
     border-radius: 50%;
     margin: auto;
 }
-
-

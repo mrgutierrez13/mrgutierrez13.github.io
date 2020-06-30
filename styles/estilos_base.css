@@ -148,11 +148,21 @@ img {
 }
 
 @media screen and (min-width: 73rem) {
-    .menu-navegacion-backdrop, .menu-navegacion-mobil {
+    .menu-navegacion-backdrop{
         display: none;
     }
+    .menu-navegacion-mobil{
+        height: 5em;
+    }
+    /* https://stackoverflow.com/questions/5873565/set-width-of-a-position-fixed-div-relative-to-parent-div */
+    .cabezera{
+        width:100%;
+        max-width: 95rem;
+    }
     .menu-navegacion {
-        position: static;
+        position: fixed;
+        top: 0;
+        left: 0;
         display: grid;
         grid-template-columns: repeat(7, minmax(5em, 1fr)) auto auto;
         height: 3em;
@@ -160,28 +170,37 @@ img {
         align-items: center;
         text-align: center;
         justify-items: center;
-        background-color: var(--color-fondo);
+        background-color: var(--color-fondo-claro);
         gap: 0;
-        width: 100%;
+        width: inherit;
+        max-width: inherit;
         overflow-y: visible;
         font-family: var(--fuente-sans);
         z-index: 2;
         padding: 0;
+        box-shadow: 0 0 1px 0 hsla(0, 0%, 0%, 0.4);
         visibility: visible;
         transform: translateX(0);
     }
-    .animacion{
-        transform: translateY(-3em);
-    }
     .sticky{
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: var(--color-fondo-claro);
-        box-shadow: 0 0 1px 0 hsla(0, 0%, 0%, 0.3);
-        transform: translateY(0);
-        transition: transform .5s ease-out;
+        transform: translateY(-3em);
+        transition: transform .3s ease-out;
     }
+    .efecto{
+        transform: translateY(0);
+    }
+
+    /*
+    .efecto-abajo{
+        transform: translateY(-3em);
+    }*/
+
+    @media screen and (min-width: 101rem){
+        .menu-navegacion {
+            left: calc(50% - 47.5rem);
+        }
+    } 
+
     .menu-navegacion a, .navegador-label {
         font-size: 1rem;
     }
@@ -193,6 +212,7 @@ img {
         border-bottom: .2em solid transparent;
         transition: border-bottom .2s ease-in-out;
     }
+    #navegador-servicios .navegador-label,
     .navegador-seccion:hover .navegador-label {
         border-bottom: .2em solid var(--color-dark-letra);
     }
@@ -212,7 +232,7 @@ img {
     }
     .navegador-seccion {
         position: relative;
-        padding: .76em 0;
+        padding: .75em 0;
     }
     .navegador-menu {
         position: absolute;
