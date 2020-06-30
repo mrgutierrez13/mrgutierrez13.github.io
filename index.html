@@ -435,8 +435,8 @@
     <script>
 
         function enlacesResponsivos(x) {
-            if (x.matches) { // If media query matches
-                const items = document.querySelectorAll(".index-enlaces-item");
+            const items = document.querySelectorAll(".index-enlaces-item");
+            if (x.matches) { // If media query matches                
                 let holderViejo = items[0];
                 holderViejo.classList.toggle('active');
 
@@ -448,7 +448,6 @@
                 }
                 items.forEach(item => item.addEventListener('mouseover', toggleAccordion));
             } else {
-                const items = document.querySelectorAll(".index-enlaces-item");
                 function extAccordion() {
                     this.classList.toggle('extender');
                 }
