@@ -69,7 +69,8 @@
 .perfil {
     max-width: 16em;
     border: .6em double hsl(0, 0%, 80%);    
-    text-align: center; 
+    text-align: center;
+    box-shadow: 1px 1px 4px 1px hsla(0, 0%, 0%, 0.5); 
 }
 .perfil img{
     filter: grayscale(.3);
