@@ -2,20 +2,25 @@
   SERVICIOS
 ===========*/
 
-html{
-    scroll-snap-type: y mandatory;
-}
-
-.menu-navegacion-mobil{
-    scroll-snap-align: start;
-}
-
-.contenido>div{
-    scroll-snap-align: start;
-}
-
-.index-libros-seccion{
-    scroll-snap-align: start;
+@media screen and (min-width: 73rem) {
+    html {
+        scroll-snap-type: y mandatory;
+    }
+    .menu-navegacion-mobil {
+        scroll-snap-align: start;
+    }
+    .contenido>div {
+        scroll-snap-align: center;
+    }
+    #index-libros {
+        scroll-snap-align: none;
+    }
+    .index-libros-seccion {
+        scroll-snap-align: center;
+    }
+    footer {
+        scroll-snap-align: end;
+    }
 }
 
 .index-servicios {
@@ -239,7 +244,7 @@ html{
     flex: 1;
     line-height: 0;
     margin: 0 auto;
-    max-width: 21em;    
+    max-width: 21em;
 }
 
 @media screen and (min-width: 85rem) {
@@ -257,7 +262,7 @@ html{
     transition-delay: .1s;
     min-width: 20em;
     border-radius: .5em;
-    box-shadow: 2px 2px hsla(0, 0%, 0%, 0.2);    
+    box-shadow: 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 
 .index-libros-seccion>a>img:hover {
@@ -415,7 +420,7 @@ html{
         padding: 1em 0;
         max-height: unset;
         transition: opacity .1s ease-in;
-        z-index: 1;        
+        z-index: 1;
     }
     @media screen and (min-width: 85rem) {
         .index-enlaces-lista {
