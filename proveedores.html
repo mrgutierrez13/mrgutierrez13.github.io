@@ -54,13 +54,15 @@
                 let celular = document.createElement('td');
 
                 razon.innerText = proveedores[i].razon_social;
+                razon.setAttribute('title', proveedores[i].razon_social); //para dar la informacion completa en un tooltip
                 nit.innerText = proveedores[i].nit_ci;
                 encargado.innerText = proveedores[i].repleg_nombres + ' ' + proveedores[i].repleg_ap_pat + ' ' + proveedores[i].repleg_ap_mat;
+                encargado.setAttribute('title', proveedores[i].repleg_nombres + ' ' + proveedores[i].repleg_ap_pat + ' ' + proveedores[i].repleg_ap_mat);
                 email.innerText = proveedores[i].repleg_email;
+                email.setAttribute('title', proveedores[i].repleg_email);
                 celular.innerText = proveedores[i].celular;
 
 
-                // append the elements to the DOM as appropriate, to add the product to the UI
                 fila.appendChild(nit);
                 fila.appendChild(razon);
                 fila.appendChild(encargado);
@@ -74,5 +76,5 @@
         });
 
     </script>
-    
+
 </body>
