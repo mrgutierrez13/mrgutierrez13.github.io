@@ -2,6 +2,22 @@
   SERVICIOS
 ===========*/
 
+html{
+    scroll-snap-type: y mandatory;
+}
+
+.menu-navegacion-mobil{
+    scroll-snap-align: start;
+}
+
+.contenido>div{
+    scroll-snap-align: start;
+}
+
+.index-libros-seccion{
+    scroll-snap-align: start;
+}
+
 .index-servicios {
     padding-top: 3em;
     padding-bottom: 2em;

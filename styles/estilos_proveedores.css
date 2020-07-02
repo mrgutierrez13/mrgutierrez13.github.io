@@ -1,27 +1,60 @@
-/*
-#authors ul
-|
--> li
-    |
-    -> img
-    |
-    -> span
 
-*/
-
-#authors{
+.contenedor-tabla-directorio{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3em;
+    overflow-x: auto;
 }
 
-#authors li{
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 3em auto;
-    padding-bottom: 1em;
+.tabla{
+    width: 90%;
+    table-layout: fixed;
+    border-collapse: collapse; 
+    font-size: .9rem;   
 }
 
-#authors span{
-    font-size: 2rem;
-    color: black;
+.tabla thead th:nth-child(1){/*NIT*/
+    width: 8%;
+}
+.tabla thead th:nth-child(2){/*RAZON SOCIAL*/
+    width: 36%;
+}
+.tabla thead th:nth-child(3){/*NOMBRE DEL ENCARGADO*/
+    width: 29%;
+}
+.tabla thead th:nth-child(4){/*EMAIL*/
+    width: 20%;
+}
+.tabla thead th:nth-child(5){/*CELULAR*/
+    width: 7%;
+}
+
+.tabla thead{
+    background-color: var(--color-dark-letra);
+    color: white;
+}
+
+.tabla th,
+.tabla td{
+    position: relative;
+    padding: .5em;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    transition: overflow .2s ease-in;
+    transition-delay: 1s;  
+}
+
+tbody{
+    background-color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background: hsl(0, 0%, 95%);
+  }
+
+.tabla tr{
+    height: 1.5em;
 }
