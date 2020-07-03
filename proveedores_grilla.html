@@ -1,0 +1,101 @@
+<!doctype html>
+
+<head>
+    <link rel="stylesheet" href="styles/estilos_base.css">
+    <link rel="stylesheet" href="styles/estilos_proveedores.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="barra-enlaces"></div>
+    <div class="contenedor">
+        <div class="cabezera"></div>
+        <div class="contenido">
+
+            <h1>Directorio de proveedores</h1>
+
+            <div class="contenedor-tabla-directorio">
+                <div class="grilla">
+                </div>
+            </div>
+
+        </div>
+        <footer></footer>
+    </div>
+    <script src="scripts/cargar_base.js"></script>
+    <script>
+
+        'use strict'
+
+        fetch('db/directorio_proveedores_muestra_grande.json').then(function (response) {
+            return response.json();
+        }).then(function (json) {
+
+            let proveedores = json;
+
+            let grilla = document.querySelector('.grilla');
+
+            for (let i = 0; i < proveedores.length; i++) {
+
+                let celdaProveedor = document.createElement('div');
+                celdaProveedor.classList.add('celda-proveedor');
+
+                let titulo = document.createElement('h2');
+                let nit = document.createElement('div');
+                nit.classList.add('proveedor-nit');
+                let tipo = document.createElement('div');
+                tipo.classList.add('proveedor-tipo');
+                let propietario = document.createElement('div');
+                propietario.classList.add('proveedor-propietario');
+                let email = document.createElement('div');
+                email.classList.add('proveedor-email');
+                let celular = document.createElement('div');
+                celular.classList.add('proveedor-celular');
+                let departamento = document.createElement('div');
+                departamento.classList.add('proveedor-departamento');
+                let barrio = document.createElement('div');
+                barrio.classList.add('proveedor-barrio');
+                let calle = document.createElement('div');
+                calle.classList.add('proveedor-calle');
+                let numeroProductos = document.createElement('a');
+                numeroProductos.classList.add('proveedor-numero-productos');
+
+                titulo.innerText = proveedores[i].razon_social;
+                nit.innerText = proveedores[i].nit_ci;
+                tipo.innerText = proveedores[i].tipo_empresa.toLowerCase();
+                propietario.innerText = proveedores[i].repleg_nombres + ' ' + proveedores[i].repleg_ap_pat + ' ' + proveedores[i].repleg_ap_mat;
+                email.innerText = proveedores[i].repleg_email;
+                if (proveedores[i].celular !== "") {
+                    celular.innerText = proveedores[i].celular;
+                }
+                else{ celular.innerText = "Celular no disponible"}
+                departamento.innerText = proveedores[i].departamento;
+                barrio.innerText = proveedores[i].zona_barrio.toLowerCase() + ' ' + proveedores[i].nombre_zb.toLowerCase();
+                calle.innerText = proveedores[i].tipo_via.toLowerCase() + ' ' + proveedores[i].nombre_via.toLowerCase() + ' #' + proveedores[i].numero;
+                numeroProductos.innerText = "5 productos";
+
+                titulo.setAttribute('title', proveedores[i].razon_social);
+                numeroProductos.setAttribute('href', "");
+
+                celdaProveedor.appendChild(titulo);
+                celdaProveedor.appendChild(nit);
+                celdaProveedor.appendChild(tipo);
+                celdaProveedor.appendChild(propietario);
+                celdaProveedor.appendChild(email);
+                celdaProveedor.appendChild(celular);
+                celdaProveedor.appendChild(departamento);
+                celdaProveedor.appendChild(barrio);
+                celdaProveedor.appendChild(calle);
+                celdaProveedor.appendChild(numeroProductos);
+
+                grilla.appendChild(celdaProveedor);
+            }
+
+        }).catch(function (err) {
+            console.log('Problema de pedido: ' + err.message);
+        });
+
+    </script>
+
+</body>

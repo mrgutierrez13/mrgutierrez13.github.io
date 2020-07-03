@@ -2,6 +2,7 @@
   SERVICIOS
 ===========*/
 
+/*
 @media screen and (min-width: 73rem) {
     html {
         scroll-snap-type: y mandatory;
@@ -22,6 +23,7 @@
         scroll-snap-align: end;
     }
 }
+*/
 
 .index-servicios {
     padding-top: 3em;
@@ -427,7 +429,7 @@
             grid-template-columns: 1fr 1fr;
         }
         .index-enlaces-contenedor {
-            --ancho-enlaces: 30%;
+            --ancho-enlaces: 32%;
             padding: 0 4em;
         }
         .index-enlaces-item {
