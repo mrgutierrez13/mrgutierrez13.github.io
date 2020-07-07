@@ -15,9 +15,15 @@
 
             <h1>Directorio de proveedores</h1>
 
+            <div class="barra-paginas">
+            </div>
+
             <div class="contenedor-tabla-directorio">
                 <div class="grilla">
                 </div>
+            </div>
+
+            <div class="barra-paginas">
             </div>
 
         </div>
@@ -28,52 +34,75 @@
 
         'use strict'
 
+        let paginaActiva = 1;
+
+        let mostrarNumeroCeldas = 30;
+
         fetch('db/directorio_proveedores_muestra_grande.json').then(function (response) {
             return response.json();
         }).then(function (json) {
 
             let proveedores = json;
 
-            let grilla = document.querySelector('.grilla');
+            const grilla = document.querySelector('.grilla');
 
-            for (let i = 0; i < proveedores.length; i++) {
+            const barras = document.querySelectorAll(".barra-paginas");
+
+            let numeroCeldas = proveedores.length / mostrarNumeroCeldas;
+
+
+            barras.forEach(barra => {
+                for (let i = 1; i < numeroCeldas + 1; i++) {
+                    const celdaPagina = document.createElement('a');
+                    celdaPagina.innerText = `${i}`;
+                    barra.appendChild(celdaPagina);
+                }
+            });
+
+
+            for (let i = 0; i < mostrarNumeroCeldas; i++) {
 
                 let celdaProveedor = document.createElement('div');
                 celdaProveedor.classList.add('celda-proveedor');
 
-                let titulo = document.createElement('h2');
-                let nit = document.createElement('div');
+                const titulo = document.createElement('h2');
+                const nit = document.createElement('div');
+                const tipo = document.createElement('div');
+                const propietario = document.createElement('div');
+                const email = document.createElement('div');
+                const celular = document.createElement('div');
+                const departamento = document.createElement('div');
+                const barrio = document.createElement('div');
+                const calle = document.createElement('div');
+                const numeroProductos = document.createElement('a');
+
                 nit.classList.add('proveedor-nit');
-                let tipo = document.createElement('div');
                 tipo.classList.add('proveedor-tipo');
-                let propietario = document.createElement('div');
                 propietario.classList.add('proveedor-propietario');
-                let email = document.createElement('div');
                 email.classList.add('proveedor-email');
-                let celular = document.createElement('div');
                 celular.classList.add('proveedor-celular');
-                let departamento = document.createElement('div');
                 departamento.classList.add('proveedor-departamento');
-                let barrio = document.createElement('div');
                 barrio.classList.add('proveedor-barrio');
-                let calle = document.createElement('div');
                 calle.classList.add('proveedor-calle');
-                let numeroProductos = document.createElement('a');
                 numeroProductos.classList.add('proveedor-numero-productos');
 
                 titulo.innerText = proveedores[i].razon_social;
                 nit.innerText = proveedores[i].nit_ci;
                 tipo.innerText = proveedores[i].tipo_empresa.toLowerCase();
                 propietario.innerText = proveedores[i].repleg_nombres + ' ' + proveedores[i].repleg_ap_pat + ' ' + proveedores[i].repleg_ap_mat;
-                email.innerText = proveedores[i].repleg_email;
+
+                if (proveedores[i].repleg_email !== "") {
+                    email.innerText = proveedores[i].repleg_email;
+                }
+                else { email.innerText = "Correo no disponible..." }
                 if (proveedores[i].celular !== "") {
                     celular.innerText = proveedores[i].celular;
                 }
-                else{ celular.innerText = "Celular no disponible"}
+                else { celular.innerText = "N/D" }
                 departamento.innerText = proveedores[i].departamento;
                 barrio.innerText = proveedores[i].zona_barrio.toLowerCase() + ' ' + proveedores[i].nombre_zb.toLowerCase();
                 calle.innerText = proveedores[i].tipo_via.toLowerCase() + ' ' + proveedores[i].nombre_via.toLowerCase() + ' #' + proveedores[i].numero;
-                numeroProductos.innerText = "5 productos";
+                numeroProductos.innerText = "5 productos...";
 
                 titulo.setAttribute('title', proveedores[i].razon_social);
                 numeroProductos.setAttribute('href', "");
@@ -92,9 +121,37 @@
                 grilla.appendChild(celdaProveedor);
             }
 
+
         }).catch(function (err) {
             console.log('Problema de pedido: ' + err.message);
         });
+
+// LEER :  https://medium.com/@johnwadelinatoc/manipulating-the-dom-with-fetch-7bfddf9c526b
+//
+// https://medium.com/@johnwadelinatoc/manipulating-the-dom-with-fetch-7bfddf9c526b
+//
+//        const selectorPagina = document.querySelectorAll(".barra-paginas");
+//
+//
+//        selectorPagina.forEach(selector => {
+//
+//            const numerosPagina = selector.children;
+//            numerosPagina[paginaActiva - 1].classList.toggle('activa');
+//            const holderViejo = selector[paginaActiva];
+//            holderViejo.classList.toggle('activa');
+//
+//            function cambiarPagina() {
+//                let holderNuevo = this;
+//                this.classList.toggle('activa');
+//                holderViejo.classList.toggle('activa');
+//                holderViejo = holderNuevo;
+//            }
+//
+//            barra.forEach(numero => numero.addEventListener('click', cambiarPagina));
+//        });
+//
+
+
 
     </script>
 
