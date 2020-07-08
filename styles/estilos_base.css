@@ -97,6 +97,10 @@ img {
     transform: translateX(-24em);
     transition: transform .3s ease-out;
 }
+.menu-navegacion>div{
+    margin-bottom: 1.2em;
+    font-size: 1.3rem;
+}
 
 .menu-navegacion.open {
     visibility: visible;
@@ -172,6 +176,10 @@ img {
         box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);
         visibility: visible;
         transform: translateX(0);
+    }
+    .menu-navegacion>div{
+        margin-bottom: 0;
+        font-size: inherit;
     }
     .sticky{
         transform: translateY(-5em);
