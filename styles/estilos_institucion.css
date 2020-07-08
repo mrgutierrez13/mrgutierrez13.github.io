@@ -7,20 +7,21 @@
 
 .institucion-texto>div {
     padding: 1em;
+    font-size: 1.6rem;
 }
 
 .institucion-texto>div h2 {
     padding-bottom: 1em;
 }
 
-@media screen and (min-width: 73rem) {
+@media screen and (min-width: 100rem) {
     .institucion-texto>div {
         padding: 1em 2em;
     }
 }
 
 .institucion-texto>div p, #objetivos ol {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: justify;
     padding-left: .5em;
 }
@@ -38,8 +39,7 @@
 =============*/
 
 .contenido>h2 {
-    text-align: center;
-    font-size: 2rem;
+    text-align: center;    
     padding-bottom: 1em;
 }
 
@@ -56,7 +56,7 @@
 
 @media screen and (min-width: 73rem) {
     .contenedor-perfiles {
-        grid-template-columns: repeat(4, minmax(16em, 1fr));
+        grid-template-columns: repeat(4, minmax(22em, 1fr));
     }
     .perfil.nivel1 {
         grid-column: span 4;
@@ -67,7 +67,7 @@
 }
 
 .perfil {
-    max-width: 16em;
+    max-width: 22em;
     border: .6em double hsl(0, 0%, 80%);    
     text-align: center;
     box-shadow: 1px 1px 4px 1px hsla(0, 0%, 0%, 0.5); 
@@ -83,11 +83,11 @@
 .perfil h3 {
     padding: .4em;
     font-weight: 600;
-    font-size: 1.1rem;    
+    font-size: 1.4rem;    
 }
 
 .perfil .nombre{
     color: hsl(0, 0%, 20%);
     padding-bottom: .5em;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }

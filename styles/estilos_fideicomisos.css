@@ -1,10 +1,10 @@
 .contenido{
     padding: 0 5em;
     text-align: justify;
+    font-size: 1.8rem;  
 }
 
-.contenido>text{
-    font-size: 1.2rem;    
+.contenido>text{      
     padding: 1em 0;
 }
 .fideicomiso-descripcion{
@@ -18,7 +18,7 @@
 
 .fideicomiso-descripcion>h1{
     grid-area: titulo-fid;
-    font-size: 1.5rem;
+    font-size: 2rem;
     background-color: var(--color-dark-letra);
     padding:0.6em 0 0.5em 1em;
     color: white;
