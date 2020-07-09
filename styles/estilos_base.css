@@ -556,3 +556,45 @@ footer {
 .footer-contacto-redes img:hover {
     filter: invert(20%) sepia(63%) saturate(2892%) hue-rotate(178deg) brightness(97%) contrast(103%);
 }
+
+.footer-esquema{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em 0;
+}
+.footer-esquema-lista{
+    padding-bottom: 2em;
+}
+
+#footer-esquema-lista-cabeza>ul{
+    padding-left: 0;
+}
+#footer-esquema-lista-cabeza a::before{
+    content: '';
+}
+
+.footer-esquema-lista>h2{
+    font-size: 1.4rem;
+    padding-bottom: .5em;
+}
+.footer-esquema-lista>ul{
+    font-size: 1.3rem;
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-esquema-lista a{
+    padding-bottom: .5em;
+    color: inherit;    
+    text-decoration: none;
+}
+
+.footer-esquema-lista a:hover{
+    text-decoration: underline;
+}
+.footer-esquema-lista a::before{
+    content: "\00BB \0020";
+    font-size: 1.6rem;
+}
