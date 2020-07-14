@@ -35,8 +35,8 @@ function cargarElemento(nombreHTML, elementoDOM) {
 //logica para menu de navegacion mobil
 
 function toggleNav() {
-  let nav = document.querySelector(".menu-navegacion");
-  let navBack = document.querySelector(".menu-navegacion-backdrop");
+  const nav = document.querySelector(".menu-navegacion");
+  const navBack = document.querySelector(".menu-navegacion-backdrop");
   nav.classList.toggle("open");
   navBack.classList.toggle("open");
 }
@@ -46,22 +46,26 @@ function toggleNav() {
 let lastScrollTop = 0;
 
 function siguePantalla() {
-  let navbar = document.querySelector(".menu-navegacion");
+  if (document.querySelector(".menu-navegacion") != null) {
+    const navbar = document.querySelector(".menu-navegacion");
 
-  // Evalua el primero, si este no es valido usa el segundo (short circuit evaluation)
-  let st = window.pageYOffset || document.documentElement.scrollTop;
+    // Evalua el primero, si este no es valido usa el segundo (short circuit evaluation)
+    let st = window.pageYOffset || document.documentElement.scrollTop;
 
-  navbar.classList.add("sticky");
+    navbar.classList.add("sticky");
 
-  if (st > lastScrollTop) {
-    // downscroll code
-    navbar.classList.remove("efecto");
+    if (st > lastScrollTop) {
+      // downscroll code
+      navbar.classList.remove("efecto");
+    } else {
+      // upscroll code
+      navbar.classList.add("efecto");
+    }
+
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
   } else {
-    // upscroll code
-    navbar.classList.add("efecto");
+    console.log("navbar aun no cargo.");
   }
-
-  lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 }
 
 window.addEventListener("scroll", siguePantalla, false);
