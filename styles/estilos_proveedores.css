@@ -14,7 +14,7 @@
 }
 
 
-.barra-paginas a {
+.barra-paginas>button {
     padding: .5em 1em;
     width: 2.5em;
     text-decoration: none;
