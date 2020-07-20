@@ -13,41 +13,27 @@
         <div class="cabezera"></div>
         <div class="contenido">
             <h1>Directorio de Brokers</h1>
-            <ul id="authors"></ul>
+            <div class="contenedor-tabla-directorio">
+                <div class="grilla"></div>
+            </div>
         </div>
         <footer></footer>
     </div>
     <script src="scripts/cargar_base.js"></script>
     <script>
 
-        function createNode(element) {
-            return document.createElement(element);
-        }
+        "use strict";
 
-        function append(parent, el) {
-            return parent.appendChild(el);
-        }
+        fetch("db/brokers_empresas_original.json")
+            .then((response) => response.json())
+            .then((json) => {
+                let proveedores = json;
 
-        const ul = document.getElementById('authors');
-        const url = 'https://randomuser.me/api/?results=10';
-
-        fetch(url)
-            .then((resp) => resp.json())
-            .then(function (data) {
-                let authors = data.results;
-                return authors.map(function (author) {
-                    let li = createNode('li'),
-                        img = createNode('img'),
-                        span = createNode('span');
-                    img.src = author.picture.medium;
-                    span.innerHTML = `${author.name.first} ${author.name.last}`;
-                    append(li, img);
-                    append(li, span);
-                    append(ul, li);
-                })
             })
-            .catch(function (error) {
-                console.log(error);
-            });   
+            .catch(function (err) {
+                console.log("Problema de pedido: " + err.message);
+            });
+
+
     </script>
 </body>

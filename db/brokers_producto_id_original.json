@@ -1,0 +1,182 @@
+[
+	{
+		"id_pro" : 1,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "PARQUET DE MADERA",
+		"des_pro" : "Tablillas y frisos para parqués distinta de la de conífera , sin ensamblar"
+	},
+	{
+		"id_pro" : 2,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "VENTANAS DE MADERA ",
+		"des_pro" : "Ventanas, puertas vidriera, y sus marcos y contramarcos de madera"
+	},
+	{
+		"id_pro" : 3,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "PUERTAS DE MADERA ",
+		"des_pro" : "Puertas y sus marcos, contramarcos y umbrales, de madera"
+	},
+	{
+		"id_pro" : 4,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "CAMISAS DE ALGODÓN",
+		"des_pro" : "Camisas de puntos de algodón  para hombres o niños"
+	},
+	{
+		"id_pro" : 5,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "JEANS",
+		"des_pro" : "Pantalones largos, pantalones con peto, pantalones cortos (calzones) y «shorts», de tejidos llamados «mezclilla o denim»"
+	},
+	{
+		"id_pro" : 6,
+		"dod_nan" : 100850,
+		"nom_pro" : "QUINUA ",
+		"des_pro" : "Quinoa (Chenopodium quinoa)"
+	},
+	{
+		"id_pro" : 7,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "SAL DE MESA",
+		"des_pro" : "Sal de mesa"
+	},
+	{
+		"id_pro" : 8,
+		"dod_nan" : 1701140000,
+		"nom_pro" : "AZÚCAR ",
+		"des_pro" : "Los demás azúcares de caña"
+	},
+	{
+		"id_pro" : 9,
+		"dod_nan" : 903000000,
+		"nom_pro" : "MATE",
+		"des_pro" : "Yerba mate."
+	},
+	{
+		"id_pro" : 10,
+		"dod_nan" : 801210000,
+		"nom_pro" : "CASTAÑA",
+		"des_pro" : "Nueces del Brasil ,con cáscara"
+	},
+	{
+		"id_pro" : 11,
+		"dod_nan" : 90111,
+		"nom_pro" : "CAFÉ",
+		"des_pro" : "Café sin descafeinar"
+	},
+	{
+		"id_pro" : 12,
+		"dod_nan" : 1207999910,
+		"nom_pro" : "CHIA",
+		"des_pro" : "Semillas de chía"
+	},
+	{
+		"id_pro" : 13,
+		"dod_nan" : 1207409000,
+		"nom_pro" : "SÉSAMO",
+		"des_pro" : "Las demás semillas: Sésamo"
+	},
+	{
+		"id_pro" : 14,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "ABRIGO DE ALPACA",
+		"des_pro" : "Abrigos, impermeables, chaquetones, capas y artículos similares, de lana o pelo fino"
+	},
+	{
+		"id_pro" : 15,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "MUEBLES DE MADERA",
+		"des_pro" : "Los demás muebles de madera"
+	},
+	{
+		"id_pro" : 16,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "JOYERÍA DE PLATA",
+		"des_pro" : "Joyería de plata, incluso revestida o chapada de otro metal precioso (plaqué)"
+	},
+	{
+		"id_pro" : 17,
+		"dod_nan" : 603,
+		"nom_pro" : "FLORES ",
+		"des_pro" : "Flores y capullos, cortados para ramos o adornos, frescos, secos, blanqueados, teñidos, impregnados o preparados de otra forma."
+	},
+	{
+		"id_pro" : 18,
+		"dod_nan" : 2008910000,
+		"nom_pro" : "PALMITOS",
+		"des_pro" : "Palmitos"
+	},
+	{
+		"id_pro" : 19,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "CERVEZA DE MALTA.",
+		"des_pro" : "Cerveza de malta."
+	},
+	{
+		"id_pro" : 20,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "CARTERAS DE CUERO",
+		"des_pro" : "Carteras con la superficie exterior de cuero natural o cuero regenerado"
+	},
+	{
+		"id_pro" : 21,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "JOYERIA DE ORO",
+		"des_pro" : "Articulos de joyeria de los demás metales preciosos, incluso revestidos o chapados de metal precioso (plaqué)"
+	},
+	{
+		"id_pro" : 22,
+		"dod_nan" : 1008909020,
+		"nom_pro" : "AMARANTO",
+		"des_pro" : "Amaranthus hypochondriacus"
+	},
+	{
+		"id_pro" : 23,
+		"dod_nan" : 110620100,
+		"nom_pro" : "MACA ",
+		"des_pro" : "Lepidium meyenii"
+	},
+	{
+		"id_pro" : 24,
+		"dod_nan" : 1008909010,
+		"nom_pro" : "CAÑAHUA ",
+		"des_pro" : "Chenopodium pallidicaule"
+	},
+	{
+		"id_pro" : 25,
+		"dod_nan" : 200820,
+		"nom_pro" : "PIÑA ",
+		"des_pro" : "Fruto  Ananás"
+	},
+	{
+		"id_pro" : 26,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "VINO",
+		"des_pro" : "Vino espumoso "
+	},
+	{
+		"id_pro" : 27,
+		"dod_nan" : 2147483647,
+		"nom_pro" : "BARRAS DE ESTAÑO ",
+		"des_pro" : "Barras y alambres de estaño aleado, para soldadura"
+	},
+	{
+		"id_pro" : 28,
+		"dod_nan" : 902100000,
+		"nom_pro" : "TÉ",
+		"des_pro" : "Té verde (sin fermentar) presentado en envases inmediatos con un contenido inferior o igual a 3 kg"
+	},
+	{
+		"id_pro" : 29,
+		"dod_nan" : 803101000,
+		"nom_pro" : "PLATANOS",
+		"des_pro" : "Platanos Frescos"
+	},
+	{
+		"id_pro" : 30,
+		"dod_nan" : 207120000,
+		"nom_pro" : "POLLOS",
+		"des_pro" : "Pollos sin trocear, congelados"
+	}
+]

@@ -1,0 +1,446 @@
+[
+	{
+		"id_emp_pais" : 1,
+		"id_emp" : 1,
+		"id_pais" : 39,
+		"ciudad" : "SANTIAGO"
+	},
+	{
+		"id_emp_pais" : 2,
+		"id_emp" : 2,
+		"id_pais" : 24,
+		"ciudad" : "EL ALTO"
+	},
+	{
+		"id_emp_pais" : 3,
+		"id_emp" : 2,
+		"id_pais" : 42,
+		"ciudad" : "BOGOTÁ"
+	},
+	{
+		"id_emp_pais" : 4,
+		"id_emp" : 2,
+		"id_pais" : 96,
+		"ciudad" : "TOKYO"
+	},
+	{
+		"id_emp_pais" : 5,
+		"id_emp" : 2,
+		"id_pais" : 48,
+		"ciudad" : "SAN JOSÉ"
+	},
+	{
+		"id_emp_pais" : 6,
+		"id_emp" : 2,
+		"id_pais" : 145,
+		"ciudad" : "LIMA"
+	},
+	{
+		"id_emp_pais" : 7,
+		"id_emp" : 2,
+		"id_pais" : 27,
+		"ciudad" : "SAU PAULO"
+	},
+	{
+		"id_emp_pais" : 8,
+		"id_emp" : 3,
+		"id_pais" : 24,
+		"ciudad" : "SANTA CRUZ"
+	},
+	{
+		"id_emp_pais" : 9,
+		"id_emp" : 3,
+		"id_pais" : 96,
+		"ciudad" : "TOKYO"
+	},
+	{
+		"id_emp_pais" : 10,
+		"id_emp" : 4,
+		"id_pais" : 24,
+		"ciudad" : "LA PAZ"
+	},
+	{
+		"id_emp_pais" : 11,
+		"id_emp" : 4,
+		"id_pais" : 96,
+		"ciudad" : "TOKYO"
+	},
+	{
+		"id_emp_pais" : 12,
+		"id_emp" : 5,
+		"id_pais" : 4,
+		"ciudad" : "EPPSTEIN"
+	},
+	{
+		"id_emp_pais" : 13,
+		"id_emp" : 6,
+		"id_pais" : 61,
+		"ciudad" : "ORLANDO"
+	},
+	{
+		"id_emp_pais" : 14,
+		"id_emp" : 7,
+		"id_pais" : 10,
+		"ciudad" : "BUENOS AIRES"
+	},
+	{
+		"id_emp_pais" : 15,
+		"id_emp" : 8,
+		"id_pais" : 4,
+		"ciudad" : "MÜNSTER"
+	},
+	{
+		"id_emp_pais" : 16,
+		"id_emp" : 9,
+		"id_pais" : 36,
+		"ciudad" : "VANCOUVER"
+	},
+	{
+		"id_emp_pais" : 17,
+		"id_emp" : 10,
+		"id_pais" : 36,
+		"ciudad" : "MONTREAL"
+	},
+	{
+		"id_emp_pais" : 18,
+		"id_emp" : 11,
+		"id_pais" : 96,
+		"ciudad" : "OSAKA"
+	},
+	{
+		"id_emp_pais" : 19,
+		"id_emp" : 12,
+		"id_pais" : 24,
+		"ciudad" : "LA PAZ"
+	},
+	{
+		"id_emp_pais" : 20,
+		"id_emp" : 12,
+		"id_pais" : 61,
+		"ciudad" : "MIAMI"
+	},
+	{
+		"id_emp_pais" : 21,
+		"id_emp" : 13,
+		"id_pais" : 24,
+		"ciudad" : "LA PAZ"
+	},
+	{
+		"id_emp_pais" : 22,
+		"id_emp" : 13,
+		"id_pais" : 60,
+		"ciudad" : "MADRID"
+	},
+	{
+		"id_emp_pais" : 23,
+		"id_emp" : 14,
+		"id_pais" : 24,
+		"ciudad" : "LA PAZ"
+	},
+	{
+		"id_emp_pais" : 24,
+		"id_emp" : 14,
+		"id_pais" : 39,
+		"ciudad" : "SANTIAGO"
+	},
+	{
+		"id_emp_pais" : 25,
+		"id_emp" : 14,
+		"id_pais" : 145,
+		"ciudad" : "LIMA"
+	},
+	{
+		"id_emp_pais" : 26,
+		"id_emp" : 15,
+		"id_pais" : 61,
+		"ciudad" : "MIAMI"
+	},
+	{
+		"id_emp_pais" : 27,
+		"id_emp" : 16,
+		"id_pais" : 24,
+		"ciudad" : "LA PAZ"
+	},
+	{
+		"id_emp_pais" : 28,
+		"id_emp" : 16,
+		"id_pais" : 61,
+		"ciudad" : "MIAMI"
+	},
+	{
+		"id_emp_pais" : 29,
+		"id_emp" : 17,
+		"id_pais" : 154,
+		"ciudad" : "BUCAREST"
+	},
+	{
+		"id_emp_pais" : 30,
+		"id_emp" : 18,
+		"id_pais" : 61,
+		"ciudad" : "MIAMI"
+	},
+	{
+		"id_emp_pais" : 31,
+		"id_emp" : 18,
+		"id_pais" : 36,
+		"ciudad" : "OTTAWA"
+	},
+	{
+		"id_emp_pais" : 32,
+		"id_emp" : 18,
+		"id_pais" : 39,
+		"ciudad" : "SANTIAGO"
+	},
+	{
+		"id_emp_pais" : 33,
+		"id_emp" : 19,
+		"id_pais" : 142,
+		"ciudad" : "PANAMA CITY"
+	},
+	{
+		"id_emp_pais" : 34,
+		"id_emp" : 20,
+		"id_pais" : 61,
+		"ciudad" : "ILLINOIS"
+	},
+	{
+		"id_emp_pais" : 35,
+		"id_emp" : 21,
+		"id_pais" : 61,
+		"ciudad" : "MIAMI"
+	},
+	{
+		"id_emp_pais" : 36,
+		"id_emp" : 22,
+		"id_pais" : 61,
+		"ciudad" : "TAMPA"
+	},
+	{
+		"id_emp_pais" : 37,
+		"id_emp" : 23,
+		"id_pais" : 61,
+		"ciudad" : "COLORADO"
+	},
+	{
+		"id_emp_pais" : 38,
+		"id_emp" : 24,
+		"id_pais" : 61,
+		"ciudad" : "OREGON"
+	},
+	{
+		"id_emp_pais" : 39,
+		"id_emp" : 25,
+		"id_pais" : 60,
+		"ciudad" : "BARCELONA"
+	},
+	{
+		"id_emp_pais" : 40,
+		"id_emp" : 26,
+		"id_pais" : 60,
+		"ciudad" : "BARCELONA"
+	},
+	{
+		"id_emp_pais" : 41,
+		"id_emp" : 27,
+		"id_pais" : 4,
+		"ciudad" : "ALLGAU"
+	},
+	{
+		"id_emp_pais" : 42,
+		"id_emp" : 28,
+		"id_pais" : 93,
+		"ciudad" : "JERUSALEN"
+	},
+	{
+		"id_emp_pais" : 43,
+		"id_emp" : 29,
+		"id_pais" : 36,
+		"ciudad" : "ONTARIO"
+	},
+	{
+		"id_emp_pais" : 44,
+		"id_emp" : 30,
+		"id_pais" : 96,
+		"ciudad" : "TOKYO"
+	},
+	{
+		"id_emp_pais" : 45,
+		"id_emp" : 31,
+		"id_pais" : 96,
+		"ciudad" : "OSAKA"
+	},
+	{
+		"id_emp_pais" : 46,
+		"id_emp" : 32,
+		"id_pais" : 96,
+		"ciudad" : "TOKYO"
+	},
+	{
+		"id_emp_pais" : 47,
+		"id_emp" : 33,
+		"id_pais" : 46,
+		"ciudad" : "SEOUL"
+	},
+	{
+		"id_emp_pais" : 48,
+		"id_emp" : 34,
+		"id_pais" : 54,
+		"ciudad" : "EL CAIRO"
+	},
+	{
+		"id_emp_pais" : 49,
+		"id_emp" : 35,
+		"id_pais" : 117,
+		"ciudad" : "SELANGOR"
+	},
+	{
+		"id_emp_pais" : 50,
+		"id_emp" : 36,
+		"id_pais" : 113,
+		"ciudad" : "MEXICO DF"
+	},
+	{
+		"id_emp_pais" : 51,
+		"id_emp" : 37,
+		"id_pais" : 137,
+		"ciudad" : "NAPIER"
+	},
+	{
+		"id_emp_pais" : 52,
+		"id_emp" : 38,
+		"id_pais" : 145,
+		"ciudad" : "AREQUIPA"
+	},
+	{
+		"id_emp_pais" : 53,
+		"id_emp" : 39,
+		"id_pais" : 56,
+		"ciudad" : "ABU DAVI"
+	},
+	{
+		"id_emp_pais" : 54,
+		"id_emp" : 40,
+		"id_pais" : 166,
+		"ciudad" : "SINGAPUR"
+	},
+	{
+		"id_emp_pais" : 55,
+		"id_emp" : 41,
+		"id_pais" : 174,
+		"ciudad" : "YVERDON-LES-BAINS"
+	},
+	{
+		"id_emp_pais" : 56,
+		"id_emp" : 42,
+		"id_pais" : 173,
+		"ciudad" : "SOLLENTUNA"
+	},
+	{
+		"id_emp_pais" : 57,
+		"id_emp" : 43,
+		"id_pais" : 178,
+		"ciudad" : "TAIPEI"
+	},
+	{
+		"id_emp_pais" : 58,
+		"id_emp" : 44,
+		"id_pais" : 81,
+		"ciudad" : "BAMERELD"
+	},
+	{
+		"id_emp_pais" : 59,
+		"id_emp" : 45,
+		"id_pais" : 81,
+		"ciudad" : "GENT"
+	},
+	{
+		"id_emp_pais" : 60,
+		"id_emp" : 46,
+		"id_pais" : 88,
+		"ciudad" : "EDINBURGH"
+	},
+	{
+		"id_emp_pais" : 61,
+		"id_emp" : 47,
+		"id_pais" : 88,
+		"ciudad" : "THAMES"
+	},
+	{
+		"id_emp_pais" : 62,
+		"id_emp" : 48,
+		"id_pais" : 60,
+		"ciudad" : "BARCELONA"
+	},
+	{
+		"id_emp_pais" : 63,
+		"id_emp" : 49,
+		"id_pais" : 27,
+		"ciudad" : "SAO PAULO"
+	},
+	{
+		"id_emp_pais" : 64,
+		"id_emp" : 50,
+		"id_pais" : 60,
+		"ciudad" : "BILBAO"
+	},
+	{
+		"id_emp_pais" : 65,
+		"id_emp" : 51,
+		"id_pais" : 60,
+		"ciudad" : "MURCIA"
+	},
+	{
+		"id_emp_pais" : 66,
+		"id_emp" : 52,
+		"id_pais" : 24,
+		"ciudad" : "LA PAZ"
+	},
+	{
+		"id_emp_pais" : 67,
+		"id_emp" : 52,
+		"id_pais" : 155,
+		"ciudad" : "MOSCU"
+	},
+	{
+		"id_emp_pais" : 68,
+		"id_emp" : 52,
+		"id_pais" : 61,
+		"ciudad" : "MIAMI"
+	},
+	{
+		"id_emp_pais" : 69,
+		"id_emp" : 52,
+		"id_pais" : 40,
+		"ciudad" : "BEIJING"
+	},
+	{
+		"id_emp_pais" : 70,
+		"id_emp" : 53,
+		"id_pais" : 24,
+		"ciudad" : "LA PAZ"
+	},
+	{
+		"id_emp_pais" : 71,
+		"id_emp" : 53,
+		"id_pais" : 10,
+		"ciudad" : "BUENOS AIRES"
+	},
+	{
+		"id_emp_pais" : 72,
+		"id_emp" : 53,
+		"id_pais" : 39,
+		"ciudad" : "SANTIAGO"
+	},
+	{
+		"id_emp_pais" : 73,
+		"id_emp" : 53,
+		"id_pais" : 42,
+		"ciudad" : "BOGOTA"
+	},
+	{
+		"id_emp_pais" : 74,
+		"id_emp" : 53,
+		"id_pais" : 145,
+		"ciudad" : "LIMA"
+	}
+]
