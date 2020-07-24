@@ -11,35 +11,49 @@
     <div class="barra-enlaces"></div>
     <div class="contenedor">
         <div class="cabezera"></div>
-        <div class="contenido">            
+        <div class="contenido">
             <h1>Boletines Informativos</h1>
-            <div class="matriz-boletines">
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-0-1.pdf"><img src="images/boletines_portadas/portada-00-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-1-2.pdf"><img src="images/boletines_portadas/portada-01-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-2-3.pdf"><img src="images/boletines_portadas/portada-02-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-3-4.pdf"><img src="images/boletines_portadas/portada-03-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-4-5.pdf"><img src="images/boletines_portadas/portada-04-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-5-6.pdf"><img src="images/boletines_portadas/portada-05-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-6-7.pdf"><img src="images/boletines_portadas/portada-06-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-7-8.pdf"><img src="images/boletines_portadas/portada-07-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-8-9.pdf"><img src="images/boletines_portadas/portada-08-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-9-10.pdf"><img src="images/boletines_portadas/portada-09-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-10-11.pdf"><img src="images/boletines_portadas/portada-10-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-11-12.pdf"><img src="images/boletines_portadas/portada-11-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-12-13.pdf"><img src="images/boletines_portadas/portada-12-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-13-14.pdf"><img src="images/boletines_portadas/portada-13-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-14-15.pdf"><img src="images/boletines_portadas/portada-14-compressor.png"></a>
-                <a href="http://vcie.produccion.gob.bo/siexco/web/bundles/portal/boletines/boletin-nro-15-16.pdf"><img src="images/boletines_portadas/portada-15-compressor.png"></a>
-            </div>
+            <div class="matriz-boletines"></div>
         </div>
         <footer></footer>
     </div>
     <script src="scripts/cargar_base.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        "use strict"
 
-            'use strict';
+        fetch('db/boletines.json').then(function (response) {
+            return response.json();
+        }).then(function (json) {
+            let boletines = json;
+
+            const tabla = document.querySelector('.matriz-boletines');
+
+            for (let i = 0; i < boletines.length; i++) {
+
+                //crear elementos DOM
+                const enlace = document.createElement('a');
+                const imagen = document.createElement('img');
+
+                //definir enlaces
+                let directorio_pdf = 'boletines/' + boletines[i].nombre_archivo;
+                enlace.setAttribute('href', directorio_pdf);
+
+                let directorio_portadas = 'images/boletines_portadas/' + boletines[i].nombre_imagen;
+                imagen.setAttribute('src', directorio_portadas);
+
+
+                enlace.appendChild(imagen);
+                tabla.appendChild(enlace);
+                mostrarImagenes(imagen);
+            }
+
+        }).catch(function (err) {
+            console.log('Problema de pedido: ' + err.message);
+        });
+
+
+        function mostrarImagenes(img) {
 
             // define variables
             let items = document.querySelectorAll(".matriz-boletines>a");
@@ -65,10 +79,10 @@
             }
 
             // listen for events
-            window.addEventListener("load", callbackFunc);
+            img.addEventListener("load", callbackFunc);
             window.addEventListener("resize", callbackFunc);
             window.addEventListener("scroll", callbackFunc);
+        }
 
-        });
     </script>
 </body>
