@@ -70,3 +70,7 @@ function siguePantalla() {
 
 window.addEventListener("scroll", siguePantalla, false);
 window.addEventListener("load", siguePantalla, false);
+
+
+///BUEN ESTILO PARA WIDGET VCI TE ASESORA
+// https://www.bl.ink/blog/referrer-data/

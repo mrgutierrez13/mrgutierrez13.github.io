@@ -153,9 +153,23 @@
       }
     }
 
+
+    fetch('dummy.txt', {
+      method: 'DELETE' // or 'PUT'
+    })
+      .then(() => {
+        console.log('Success');
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+
     // LEER :  https://medium.com/@johnwadelinatoc/manipulating-the-dom-with-fetch-7bfddf9c526b
     //
     // https://softwareontheroad.com/pagination-in-nodejs-mongo/
+
+    //https://blog.usejournal.com/using-fetch-to-update-the-dom-e448b9c82036
 
 
 

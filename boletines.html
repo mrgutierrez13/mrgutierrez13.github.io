@@ -38,6 +38,8 @@
                 //definir enlaces
                 let directorio_pdf = 'boletines/' + boletines[i].nombre_archivo;
                 enlace.setAttribute('href', directorio_pdf);
+                enlace.setAttribute('target', "_blank");
+                enlace.setAttribute('rel', "noopener noreferrer");
 
                 let directorio_portadas = 'images/boletines_portadas/' + boletines[i].nombre_imagen;
                 imagen.setAttribute('src', directorio_portadas);
