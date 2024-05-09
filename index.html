@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dinamica MediaLab</title>
+    <style>
+        :root {
+            --entel-oscuro: hsl(210, 100%, 31%);
+            --entel-claro: #00a1e6;
+            --hover: #f6f9fc;
+            --sombra: 0 3px 5px #00000005, 0 0 2px #0000000d, 0 1px 4px #00000014;
+            --color-fondo: #eff3f8;
+            --color-fuente-suave: #495057;
+            --color-contraste-tabla: #f8f9fa;
+            --color-resalta: #212121;
+            --color-borde: #dfe7ef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            transition: 100ms;
+            box-sizing: border-box;
+            font-family: "TT Hoves", sans-serif;
+            color: inherit;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 1rem;
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--color-resalta);
+        }
+
+        h5 {
+            font-size: 1.25rem;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 14px;
+        }
+
+        @media screen and (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        body {
+            background-color: var(--color-fondo);
+            position: relative;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #reel {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 0;
+        }
+        #overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+        #menu{
+            position: fixed;
+            z-index: 2;
+            display: flex;
+            justify-content: right;
+            width: 100%;
+        }
+        #menu>div{
+            padding: 3rem;
+        }
+        #t-grande{
+            position: absolute;
+            bottom: 15%;
+            left: 3rem;
+            font-size: 100px;
+        }
+        #t-segundo{
+            position: absolute;
+            top: 25%;
+            right: 5rem;
+            font-size: 40px;
+        }
+        .linea{
+            position: absolute;
+        }
+        #linea-izq{
+            left: 1rem;
+            height: 90%;
+            top: 5%;
+            border-left: 0.1px white solid;
+        }
+        #linea-der{
+            right: 1rem;
+            height: 90%;
+            top: 5%;
+            border-left: 0.1px white solid;
+        }
+        #linea-hor{
+            right: 1rem;
+            width: calc(100% - 2rem);
+            bottom: 15%;
+            border-bottom: 0.1px white solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <div>Nosotros</div>
+        <div>Trabajos</div>
+        <div>Servicios</div>
+        <div>Institucional</div>
+        <div>Contáctanos</div>
+    </div>
+
+    <div id="overlay">
+        <div id="t-grande">Dinámica MediaLab</div>
+        <div id="t-segundo">Ideas que conectan</div>
+        <div id="linea-izq" class="linea"></div>
+        <div id="linea-der" class="linea"></div>
+        <div id="linea-hor" class="linea"></div>
+    </div>
+    <video autoplay muted loop id="reel">
+        <source src="reel.mp4" type="video/mp4">
+    </video>
+</body>
+
+</html>
