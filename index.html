@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <title>Dinamica MediaLab</title>
     <style>
         :root {
@@ -84,7 +85,7 @@
             top: 0;
             left: 0;
             background: rgba(0, 0, 0, 0.5);
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             z-index: 1;
         }
@@ -95,11 +96,11 @@
             display: flex;
             justify-content: right;
             width: 100%;
-            transition: transform 300ms cubic-bezier(.7, .7, .12, .79), opacity 500ms ease-in;
+            transition: transform 500ms cubic-bezier(.7, .7, .12, .79), opacity 500ms ease-in;
             mask-image: linear-gradient(#000 70%, transparent 30%, transparent 0);
         }
 
-        #menu>div {
+        #menu>a {
             padding: 3rem;
         }
 
@@ -118,7 +119,7 @@
 
         #t-segundo {
             font-size: 40px;
-            transition: transform 300ms cubic-bezier(.7, .7, .12, .79), opacity 500ms ease-in;
+            transition: transform 500ms cubic-bezier(.7, .7, .12, .79), opacity 500ms ease-in;
             opacity: 1;
         }
 
@@ -185,16 +186,76 @@
         #linea-der.inicial {
             transform: scaleY(0);
         }
+
+        #fondo-video {
+            height: 100vh;
+            width: 100%;
+        }
+
+        #contenido {
+            position: relative;
+            width: 100%;
+            background-color: var(--color-borde);
+            z-index: 2;
+        }
+
+        .servicios {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .servicios h2 {
+            text-align: center;
+        }
+
+        .servicios ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .servicios li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #00a1e6;
+        }
+
+        .servicios li:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        .info h3 {
+            margin-bottom: 10px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .info p {
+            margin: 0;
+        }
     </style>
 </head>
 
 <body>
     <div id="menu" class="inicial">
-        <div>Nosotros</div>
-        <div>Trabajos</div>
-        <div>Servicios</div>
-        <div>Institucional</div>
-        <div>Contáctanos</div>
+        <a href="/">Nosotros</a>
+        <a href="/">Trabajos</a>
+        <a href="/">Servicios</a>
+        <a href="/">Institucional</a>
+        <a href="/contactanos">Contáctanos</a>
     </div>
 
     <div id="overlay">
@@ -211,6 +272,36 @@
     <video autoplay muted loop id="reel">
         <source src="reel.mp4" type="video/mp4">
     </video>
+    <div id="fondo-video"></div>
+    <div id="contenido">
+        <section class="servicios">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Branding</li>
+                <li>Activación BTL</li>
+                <li>Servicios de publicidad</li>
+                <li>Producción audiovisual</li>
+                <li>Streaming</li>
+                <li>Pauteo redes sociales</li>
+                <li>Medios ATL</li>
+                <li>Mensajería masiva</li>
+                <li>Gestión redes sociales</li>
+                <li>Desarrollo web</li>
+                <li>Monitoreo digital</li>
+            </ul>
+        </section>
+        <footer>
+            <div class="info">
+                <h3>Dirección</h3>
+                <p>Av. Simón Bolívar N° 1909, edificio Altar II, piso 3</p>
+            </div>
+            <div class="info">
+                <h3>Teléfonos</h3>
+                <p>+591 2110087 (fijo)</p>
+                <p>+591 71554919 (celular)</p>
+            </div>
+        </footer>
+    </div>
     <script>
         window.addEventListener("load", () => {
             document.getElementById("linea-hor").classList.remove("inicial")
