@@ -78,7 +78,8 @@
             min-height: 100%;
             z-index: 0;
         }
-        #overlay{
+
+        #overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -87,54 +88,108 @@
             height: 100vh;
             z-index: 1;
         }
-        #menu{
+
+        #menu {
             position: fixed;
             z-index: 2;
             display: flex;
             justify-content: right;
             width: 100%;
+            transition: transform 300ms cubic-bezier(.7, .7, .12, .79), opacity 500ms ease-in;
+            mask-image: linear-gradient(#000 70%, transparent 30%, transparent 0);
         }
-        #menu>div{
+
+        #menu>div {
             padding: 3rem;
         }
-        #t-grande{
+
+        #cont-t-grande {
             position: absolute;
+            overflow: hidden;
             bottom: 15%;
             left: 3rem;
-            font-size: 100px;
+            mask-image: none;
         }
-        #t-segundo{
+
+        #t-grande {
+            font-size: 100px;
+            transition: 600ms ease-out;
+        }
+
+        #t-segundo {
+            font-size: 40px;
+            transition: transform 300ms cubic-bezier(.7, .7, .12, .79), opacity 500ms ease-in;
+            opacity: 1;
+        }
+
+        #cont-t-segundo {
             position: absolute;
+            overflow: hidden;
             top: 25%;
             right: 5rem;
-            font-size: 40px;
+            padding-bottom: 100px;
+            mask-image: linear-gradient(#000 30%, transparent 70%, transparent 0);
         }
-        .linea{
+
+        .linea {
             position: absolute;
         }
-        #linea-izq{
+
+        #linea-izq {
             left: 1rem;
             height: 90%;
             top: 5%;
             border-left: 0.1px white solid;
+            transform: scaleY(1);
+            transition: transform 800ms ease-out;
+            transform-origin: bottom;
         }
-        #linea-der{
+
+        #linea-der {
             right: 1rem;
             height: 90%;
             top: 5%;
             border-left: 0.1px white solid;
+            transform: scaleY(1);
+            transition: transform 800ms ease-out;
+            transform-origin: bottom;
         }
-        #linea-hor{
+
+        #linea-hor {
             right: 1rem;
             width: calc(100% - 2rem);
             bottom: 15%;
             border-bottom: 0.1px white solid;
+            transform: scaleX(1);
+            transition: transform 800ms ease-out;
+        }
+
+        #linea-hor.inicial {
+            transform: scaleX(0);
+        }
+
+        #t-grande.inicial {
+            transform: translateY(100%);
+        }
+
+        #t-segundo.inicial {
+            transform: translateY(150%);
+            opacity: 0;
+        }
+
+        #menu.inicial {
+            transform: translateY(-100%);
+        }
+
+        #linea-izq.inicial,
+        #linea-der.inicial {
+            transform: scaleY(0);
         }
     </style>
 </head>
 
 <body>
-    <div id="menu">
+    <div id="menu" class="inicial">
         <div>Nosotros</div>
         <div>Trabajos</div>
         <div>Servicios</div>
@@ -143,15 +198,33 @@
     </div>
 
     <div id="overlay">
-        <div id="t-grande">Dinámica MediaLab</div>
-        <div id="t-segundo">Ideas que conectan</div>
-        <div id="linea-izq" class="linea"></div>
-        <div id="linea-der" class="linea"></div>
-        <div id="linea-hor" class="linea"></div>
+        <div id="cont-t-grande">
+            <div id="t-grande" class="inicial">Dinámica MediaLab</div>
+        </div>
+        <div id="cont-t-segundo">
+            <div id="t-segundo" class="inicial">Ideas que conectan</div>
+        </div>
+        <div id="linea-izq" class="linea inicial"></div>
+        <div id="linea-der" class="linea inicial"></div>
+        <div id="linea-hor" class="linea inicial"></div>
     </div>
     <video autoplay muted loop id="reel">
         <source src="reel.mp4" type="video/mp4">
     </video>
+    <script>
+        window.addEventListener("load", () => {
+            document.getElementById("linea-hor").classList.remove("inicial")
+            setTimeout(() => {
+                document.getElementById("t-grande").classList.remove("inicial")
+                document.getElementById("linea-der").classList.remove("inicial")
+                document.getElementById("linea-izq").classList.remove("inicial")
+            }, 800)
+            setTimeout(() => {
+                document.getElementById("t-segundo").classList.remove("inicial")
+                document.getElementById("menu").classList.remove("inicial")
+            }, 1400)
+        });
+    </script>
 </body>
 
 </html>
